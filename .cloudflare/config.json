@@ -1,0 +1,17 @@
+{
+  "build": {
+    "command": "bun run build",
+    "output": "dist"
+  },
+  "routes": [
+    {
+      "pattern": "/api/*",
+      "function": "_worker"
+    },
+    {
+      "pattern": "/*",
+      "serve": "/index.html",
+      "status": 200
+    }
+  ]
+}
