@@ -27,9 +27,24 @@ const Checkout = () => {
           currency: 'gbp' // Changed to GBP since you're using £ symbols
         }),
       })
-      .then(res => res.json())
-      .then(data => setClientSecret(data.clientSecret))
-      .catch(error => console.error('Error creating payment intent:', error));
+      .then(async res => {
+        const data = await res.json();
+        if (!res.ok) {
+          throw new Error(data.error || 'Failed to create payment intent');
+        }
+        return data;
+      })
+      .then(data => {
+        if (!data.clientSecret) {
+          throw new Error('No client secret returned');
+        }
+        console.log('Payment intent created successfully');
+        setClientSecret(data.clientSecret);
+      })
+      .catch(error => {
+        console.error('Error creating payment intent:', error);
+        // TODO: Show error to user
+      });
     }
   }, [packageData]);
 

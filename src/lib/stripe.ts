@@ -1,4 +1,7 @@
 import { loadStripe } from '@stripe/stripe-js';
 
-// Replace with your publishable key
-export const stripePromise = loadStripe(process.env.VITE_STRIPE_PUBLISHABLE_KEY || '');
+// For debugging
+console.log('Stripe Key:', import.meta.env.VITE_STRIPE_PUBLISHABLE_KEY);
+
+// Use import.meta.env for Vite environment variables
+export const stripePromise = loadStripe(import.meta.env.VITE_STRIPE_PUBLISHABLE_KEY);

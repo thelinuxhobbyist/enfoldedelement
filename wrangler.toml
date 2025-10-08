@@ -1,0 +1,14 @@
+name = "enfoldedelement"
+compatibility_date = "2025-10-08"
+
+[site]
+bucket = "./dist"
+
+[build]
+command = "bun run build"
+[build.upload]
+format = "service-worker"
+
+[[routes]]
+pattern = "/api/*"
+script = "./functions/_worker.js"
