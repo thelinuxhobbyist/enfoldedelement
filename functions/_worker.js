@@ -1,4 +1,9 @@
-import { stripe } from './stripe';
+import Stripe from 'stripe';
+
+// Initialize Stripe with the secret key from environment variables
+const stripe = new Stripe(process.env.STRIPE_SECRET_KEY || '', {
+  apiVersion: '2023-10-16',
+});
 
 export default {
   async fetch(request, env) {
@@ -17,16 +22,19 @@ export default {
       }
 
       // Create Payment Intent endpoint
-      if (url.pathname === "/create-payment-intent" && request.method === "POST") {
-        const { amount, currency = "usd" } = await request.json();
+      if (url.pathname === "/api/create-payment-intent" && request.method === "POST") {
+        try {
+          const { amount, currency = "gbp" } = await request.json();
+          
+          console.log('Creating payment intent:', { amount, currency });
 
-        const paymentIntent = await stripe.paymentIntents.create({
-          amount: Math.round(amount * 100),
-          currency,
-          automatic_payment_methods: {
-            enabled: true,
-          },
-        });
+          const paymentIntent = await stripe.paymentIntents.create({
+            amount: Math.round(amount * 100), // Convert to cents/pence
+            currency,
+            automatic_payment_methods: {
+              enabled: true,
+            },
+          });
 
         return new Response(JSON.stringify({ clientSecret: paymentIntent.client_secret }), {
           headers: {
