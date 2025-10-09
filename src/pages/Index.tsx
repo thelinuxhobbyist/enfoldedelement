@@ -22,14 +22,14 @@ const Index = () => {
               </div>
               
               <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
-                Transform Your
-                <span className="block mt-2 bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent animate-pulse">
-                  Brand Identity
+                Modern Britain Speaks More Than English
+                <span className="block mt-2 bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
+                  And So Should Your Business
                 </span>
               </h1>
               
               <p className="text-xl text-muted-foreground max-w-xl">
-                Professional design packages tailored for businesses of all sizes. From startups to established brands, we bring your vision to life.
+                Recognising language as a bridge to cultural connection, we design for impact and help you reach new audiences in a multicultural Britain.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4">
