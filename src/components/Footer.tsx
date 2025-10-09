@@ -6,15 +6,6 @@ export const Footer = () => {
 
   const footerLinks = [
     {
-      title: "Services",
-      links: [
-        { name: "All Packages", href: "/packages" },
-        { name: "Brand Design", href: "/packages?category=Branding" },
-        { name: "Web Design", href: "/packages?category=Web Design" },
-        { name: "Social Media", href: "/packages?category=Social Media" },
-      ],
-    },
-    {
       title: "Company",
       links: [
         { name: "About Us", href: "/about" },
