@@ -1,0 +1,117 @@
+import { Package, createPackage } from '@/types/package';
+import { logoDesignFields, websiteDesignFields, brandingFields } from './onboarding-fields';
+
+export const packages: Package[] = [
+  createPackage({
+    name: "Logo Design Basic",
+    slug: "logo-design-basic",
+    price: 299,
+    shortDescription: "Professional logo design for your brand",
+    description: "Get a professional logo design that makes your brand stand out. Perfect for new businesses and startups.",
+    inclusions: [
+      "3 Initial Concepts",
+      "2 Revision Rounds",
+      "Final Files in All Formats",
+      "Brand Style Guide"
+    ],
+    category: "Logo Design",
+    featured: true,
+    perfectFor: [
+      "New businesses needing a professional identity",
+      "Startups looking to establish their brand",
+      "Small businesses rebranding for growth"
+    ],
+    onboardingFields: logoDesignFields
+  }),
+  
+  createPackage({
+    name: "Business Card Design",
+    slug: "business-card-design",
+    price: 45,
+    shortDescription: "Professional business card design with multiple concepts",
+    description: "Leave a memorable impression with premium business card designs that reflect your professional brand.",
+    inclusions: [
+      "2 Initial Concepts",
+      "1 Revision Round",
+      "Print-Ready Files",
+      "Digital Files"
+    ],
+    category: "Print Design",
+    perfectFor: [
+      "Professionals needing business cards",
+      "Companies updating their stationery",
+      "Freelancers establishing their presence"
+    ],
+    onboardingFields: brandingFields
+  }),
+
+  createPackage({
+    name: "Logo Design Pro",
+    slug: "logo-design-pro",
+    price: 200,
+    shortDescription: "Premium logo design with unlimited revisions",
+    description: "Get a distinctive, memorable logo that perfectly represents your brand with our premium design service.",
+    inclusions: [
+      "5 Initial Concepts",
+      "Unlimited Revisions",
+      "All File Formats",
+      "Brand Guidelines",
+      "Social Media Kit",
+      "Stationery Design"
+    ],
+    category: "Branding",
+    featured: true,
+    perfectFor: [
+      "Established businesses rebranding",
+      "Companies needing comprehensive brand assets",
+      "Businesses ready for professional growth"
+    ],
+    onboardingFields: logoDesignFields
+  }),
+
+  createPackage({
+    name: "Email Newsletter Template",
+    slug: "email-newsletter-template",
+    price: 150,
+    shortDescription: "Custom email template design that converts",
+    description: "Get a responsive, branded email newsletter template that looks great on all devices and email clients.",
+    inclusions: [
+      "Custom Design",
+      "Responsive Layout",
+      "Major Email Client Testing",
+      "HTML & Images Files",
+      "Setup Instructions"
+    ],
+    category: "Email Design",
+    perfectFor: [
+      "Businesses with email marketing campaigns",
+      "Newsletter publishers",
+      "Digital marketers"
+    ],
+    onboardingFields: websiteDesignFields
+  }),
+
+  createPackage({
+    name: "Complete Brand Package",
+    slug: "complete-brand-package",
+    price: 599,
+    shortDescription: "Full branding package for new businesses",
+    description: "Everything you need to launch your brand with a professional and cohesive identity.",
+    inclusions: [
+      "Logo Design",
+      "Business Cards",
+      "Letterhead Design",
+      "Email Signature",
+      "Brand Guidelines",
+      "Social Media Kit"
+    ],
+    category: "Branding",
+    featured: true,
+    perfectFor: [
+      "New businesses launching their brand",
+      "Companies undergoing complete rebranding",
+      "Startups needing full brand identity"
+    ],
+    onboardingFields: brandingFields
+  })
+];
