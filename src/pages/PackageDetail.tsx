@@ -1,5 +1,6 @@
 import { useParams, Link, useNavigate } from "react-router-dom";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 import { packages } from "@/data/packages";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -166,14 +167,7 @@ const PackageDetail = () => {
         </section>
       )}
 
-      {/* Footer */}
-      <footer className="bg-secondary/30 border-t border-border py-12">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center text-muted-foreground">
-            <p>&copy; 2024 Enfolded Media. All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 };

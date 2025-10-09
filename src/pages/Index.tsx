@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 import heroImage from "@/assets/hero-image.jpg";
 import { ArrowRight, Sparkles, Package, Zap } from "lucide-react";
 
@@ -136,14 +137,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-secondary/30 border-t border-border py-12">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center text-muted-foreground">
-            <p>&copy; 2024 Enfolded Media. All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 };

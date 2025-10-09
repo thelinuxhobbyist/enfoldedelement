@@ -7,6 +7,12 @@ All colors MUST be HSL.
 */
 
 @layer base {
+  html {
+    font-family: 'Font Awesome 6 Free', 'Font Awesome 6 Brands', system-ui, sans-serif;
+  }
+}
+
+@layer base {
   :root {
     --background: 240 20% 99%;
     --foreground: 260 15% 15%;
