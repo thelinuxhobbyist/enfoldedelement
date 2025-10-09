@@ -24,7 +24,8 @@ export function CheckoutForm() {
     const { error } = await stripe.confirmPayment({
       elements,
       confirmParams: {
-        return_url: `${window.location.origin}/payment/success`,
+        // Get the package slug from the URL
+        return_url: `${window.location.origin}/onboarding?package=${window.location.pathname.split('/').pop()}`,
       },
     });
 

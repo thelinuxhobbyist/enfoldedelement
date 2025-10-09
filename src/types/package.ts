@@ -15,7 +15,6 @@ export interface OnboardingField {
 }
 
 export interface Package {
-  id: string;            // Auto-generated using nanoid
   name: string;          // Package name
   slug: string;          // URL-friendly name
   price: number;         // Price in GBP
@@ -25,17 +24,17 @@ export interface Package {
   perfectFor: string;   // Description of who this package is perfect for
   category: string;     // Category like "Branding", "Web Design"
   featured?: boolean;   // Optional: show as featured
-  onboardingFields: OnboardingField[]; // Questions for this package
+  onboardingTemplate: string; // ID of the onboarding template to use
 }
 
-// Helper function to create a new package with auto-generated ID
-export const createPackage = (pkg: Omit<Package, 'id'>): Package => ({
-  id: nanoid(),
-  ...pkg
-});
+export interface PackageWithId extends Package {
+  id: string; // Auto-generated using createPackageWithId
+}
 
-// Helper function to create onboarding fields with auto-generated IDs
-export const createField = (field: Omit<OnboardingField, 'id'>): OnboardingField => ({
-  id: nanoid(),
-  ...field
-});
+// Helper function to create an array of packages with auto-generated IDs
+export const createPackagesWithIds = (packages: Package[]): PackageWithId[] => {
+  return packages.map((pkg) => ({
+    id: nanoid(),
+    ...pkg
+  }));
+};

@@ -1,24 +1,59 @@
 import { useEffect } from 'react';
 import { useNavigate, useSearchParams } from 'react-router-dom';
-import { CheckCircle2, XCircle } from 'lucide-react';
+import { useStripe } from '@stripe/react-stripe-js';
+import { CheckCircle2 } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 import Navbar from '@/components/Navbar';
 
 const PaymentSuccess = () => {
+  const stripe = useStripe();
   const navigate = useNavigate();
   const { toast } = useToast();
   const [searchParams] = useSearchParams();
-  const paymentIntentId = searchParams.get('payment_intent');
 
   useEffect(() => {
-    if (paymentIntentId) {
-      // You can verify the payment on the server here if needed
-      toast({
-        title: "Payment Successful! 🎉",
-        description: "Thank you for your purchase. We'll be in touch soon.",
-      });
+    if (!stripe) {
+      return;
     }
-  }, [paymentIntentId, toast]);
+
+    const clientSecret = searchParams.get('payment_intent_client_secret');
+
+    if (clientSecret) {
+      stripe
+        .retrievePaymentIntent(clientSecret)
+        .then(({ paymentIntent }) => {
+          if (paymentIntent?.status === 'succeeded') {
+            // Get package slug from return_url
+            const redirectUrl = paymentIntent.return_url;
+            if (redirectUrl) {
+              try {
+                const url = new URL(redirectUrl);
+                const packageSlug = url.searchParams.get('package');
+                if (packageSlug) {
+                  // Show success toast
+                  toast({
+                    title: "Payment Successful! 🎉",
+                    description: "Please complete the project details form to get started.",
+                  });
+                  
+                  // Redirect to onboarding
+                  navigate(`/onboarding?package=${packageSlug}`);
+                  return;
+                }
+              } catch (e) {
+                console.error('Error parsing return URL:', e);
+              }
+            }
+          }
+          // Fallback to packages page if anything goes wrong
+          navigate('/packages');
+        })
+        .catch((error) => {
+          console.error('Error retrieving payment intent:', error);
+          navigate('/packages');
+        });
+    }
+  }, [stripe, searchParams, toast, navigate]);
 
   return (
     <div className="min-h-screen bg-background">

@@ -1,18 +1,8 @@
-export interface Package {
-  id: string;
-  name: string;
-  slug: string;
-  price: number;
-  description: string;
-  shortDescription: string;
-  inclusions: string[];
-  category: string;
-  featured?: boolean;
-}
+import { Package, PackageWithId, createPackagesWithIds } from '@/types/package';
 
-export const packages: Package[] = [
+// Define the base packages without IDs
+const basePackages: Package[] = [
   {
-    id: "test-package",
     name: "Test Package",
     slug: "test-package",
     price: 0.30,
@@ -24,10 +14,11 @@ export const packages: Package[] = [
       "Test Feature 3"
     ],
     category: "Test",
-    featured: false
+    featured: false,
+    perfectFor: "Testing the system",
+    onboardingTemplate: "marketing_basic"
   },
   {
-    id: "1",
     name: "Startup Brand Pack",
     slug: "startup-brand-pack",
     price: 150,
@@ -44,9 +35,10 @@ export const packages: Package[] = [
     ],
     category: "Branding",
     featured: true,
+    perfectFor: "New businesses and startups looking to establish a strong brand identity",
+    onboardingTemplate: "branding_basic"
   },
   {
-    id: "2",
     name: "Event Poster Design",
     slug: "event-poster-design",
     price: 60,
@@ -60,9 +52,10 @@ export const packages: Package[] = [
       "Source files included",
     ],
     category: "Marketing",
+    perfectFor: "Event organizers and promoters looking for eye-catching promotional materials",
+    onboardingTemplate: "marketing_basic"
   },
   {
-    id: "3",
     name: "Social Media Package",
     slug: "social-media-package",
     price: 120,
@@ -78,9 +71,10 @@ export const packages: Package[] = [
     ],
     category: "Social Media",
     featured: true,
+    perfectFor: "Brands and businesses looking to build a cohesive social media presence",
+    onboardingTemplate: "social_media"
   },
   {
-    id: "4",
     name: "Website Design Package",
     slug: "website-design-package",
     price: 450,
@@ -97,9 +91,10 @@ export const packages: Package[] = [
     ],
     category: "Web Design",
     featured: true,
+    perfectFor: "Businesses needing a professional online presence",
+    onboardingTemplate: "web_design"
   },
   {
-    id: "5",
     name: "Business Card Design",
     slug: "business-card-design",
     price: 45,
@@ -113,9 +108,10 @@ export const packages: Package[] = [
       "1 revision round",
     ],
     category: "Print Design",
+    perfectFor: "Professionals and businesses needing high-quality business cards",
+    onboardingTemplate: "print_design"
   },
   {
-    id: "6",
     name: "Logo Design Pro",
     slug: "logo-design-pro",
     price: 200,
@@ -132,9 +128,10 @@ export const packages: Package[] = [
       "Trademark-ready files",
     ],
     category: "Branding",
+    perfectFor: "Businesses needing a professional, versatile logo with comprehensive file formats",
+    onboardingTemplate: "logo_design"
   },
   {
-    id: "7",
     name: "Email Newsletter Template",
     slug: "email-newsletter-template",
     price: 85,
@@ -149,9 +146,10 @@ export const packages: Package[] = [
       "Tutorial documentation",
     ],
     category: "Marketing",
+    perfectFor: "Businesses looking to improve their email marketing with professional templates",
+    onboardingTemplate: "marketing_basic"
   },
   {
-    id: "8",
     name: "Brand Refresh Package",
     slug: "brand-refresh-package",
     price: 350,
@@ -167,5 +165,10 @@ export const packages: Package[] = [
       "3 revision rounds",
     ],
     category: "Branding",
-  },
+    perfectFor: "Established businesses looking to modernize their brand while maintaining recognition",
+    onboardingTemplate: "branding_basic"
+  }
 ];
+
+// Create the final packages array with auto-generated IDs
+export const packages: PackageWithId[] = createPackagesWithIds(basePackages);

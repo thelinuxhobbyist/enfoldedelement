@@ -12,6 +12,12 @@ const PackageDetail = () => {
   const navigate = useNavigate();
   const packageData = packages.find((pkg) => pkg.slug === slug);
 
+  const handleCheckout = () => {
+    // Store package data for later use
+    localStorage.setItem('currentPackage', JSON.stringify(packageData));
+    navigate(`/checkout/${slug}`);
+  };
+
   if (!packageData) {
     return (
       <div className="min-h-screen bg-background">
