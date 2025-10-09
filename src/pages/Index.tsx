@@ -12,32 +12,34 @@ const Index = () => {
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-b from-background via-secondary/20 to-background">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary/10 via-transparent to-transparent"></div>
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32 relative">
-          <div className="max-w-4xl mx-auto space-y-8">
-            <div className="inline-flex items-center px-4 py-2 bg-primary/10 rounded-full border border-primary/20">
-              <Sparkles className="w-4 h-4 text-primary mr-2" />
-              <span className="text-sm font-medium text-primary">Premium Design Services</span>
-            </div>
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-32 lg:py-40 relative">
+          <div className="max-w-4xl mx-auto space-y-12">
+            <div className="space-y-8">
+              <div className="relative">
+                <div className="absolute -inset-1 bg-gradient-to-r from-primary to-accent blur-2xl opacity-10 animate-pulse"></div>
+                <h1 className="relative text-5xl md:text-6xl lg:text-7xl font-bold leading-tight text-center">
+                  Modern Britain Speaks
+                  <span className="block mt-4 text-transparent bg-clip-text bg-gradient-to-r from-primary via-accent to-primary animate-gradient">
+                    More Than English
+                  </span>
+                  <span className="block mt-4 text-4xl md:text-5xl lg:text-6xl bg-gradient-to-r from-primary/80 via-accent/80 to-primary/80 bg-clip-text text-transparent">
+                    And So Should Your Business
+                  </span>
+                </h1>
+              </div>
             
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight text-center">
-              Modern Britain Speaks More Than English
-              <span className="block mt-2 bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
-                And So Should Your Business
-              </span>
-            </h1>
-            
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto text-center">
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto text-center leading-relaxed">
               Recognising language as a bridge to cultural connection, we design for impact and help you reach new audiences in a multicultural Britain.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button variant="hero" size="lg" asChild>
+            <div className="flex flex-col sm:flex-row gap-6 justify-center pt-4">
+              <Button variant="hero" size="lg" className="text-lg px-8" asChild>
                 <Link to="/packages">
                   Explore Packages
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
               </Button>
-              <Button variant="outline" size="lg" asChild>
+              <Button variant="outline" size="lg" className="text-lg px-8" asChild>
                 <Link to="/packages">View All Services</Link>
               </Button>
             </div>

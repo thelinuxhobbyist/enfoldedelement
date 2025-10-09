@@ -1,4 +1,5 @@
 import { useParams, Link, useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { packages } from "@/data/packages";
@@ -12,6 +13,16 @@ const PackageDetail = () => {
   const { slug } = useParams();
   const navigate = useNavigate();
   const packageData = packages.find((pkg) => pkg.slug === slug);
+
+  // Force a re-render when the slug changes and scroll to top
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    // Re-fetch package data when slug changes
+    const currentPackage = packages.find((pkg) => pkg.slug === slug);
+    if (!currentPackage) {
+      navigate('/packages');
+    }
+  }, [slug, navigate]);
 
   const handleCheckout = () => {
     // Store package data for later use
