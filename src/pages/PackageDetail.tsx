@@ -1,5 +1,5 @@
 import { useParams, Link, useNavigate } from "react-router-dom";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { packages } from "@/data/packages";
@@ -12,25 +12,27 @@ import { ArrowLeft, Check, ShoppingCart } from "lucide-react";
 const PackageDetail = () => {
   const { slug } = useParams();
   const navigate = useNavigate();
-  const packageData = packages.find((pkg) => pkg.slug === slug);
+  const [currentPackage, setCurrentPackage] = useState(packages.find((pkg) => pkg.slug === slug));
 
-  // Force a re-render when the slug changes and scroll to top
+  // Update package data and scroll to top when slug changes
   useEffect(() => {
-    window.scrollTo(0, 0);
-    // Re-fetch package data when slug changes
-    const currentPackage = packages.find((pkg) => pkg.slug === slug);
-    if (!currentPackage) {
+    const packageData = packages.find((pkg) => pkg.slug === slug);
+    if (!packageData) {
       navigate('/packages');
+      return;
     }
+    setCurrentPackage(packageData);
+    window.scrollTo(0, 0);
   }, [slug, navigate]);
 
   const handleCheckout = () => {
+    if (!currentPackage) return;
     // Store package data for later use
-    localStorage.setItem('currentPackage', JSON.stringify(packageData));
-    navigate(`/checkout/${slug}`);
+    localStorage.setItem('currentPackage', JSON.stringify(currentPackage));
+    navigate(`/checkout/${currentPackage.slug}`);
   };
 
-  if (!packageData) {
+  if (!currentPackage) {
     return (
       <div className="min-h-screen bg-background">
         <Navbar />
@@ -45,7 +47,7 @@ const PackageDetail = () => {
   }
 
   const relatedPackages = packages
-    .filter((pkg) => pkg.category === packageData.category && pkg.id !== packageData.id)
+    .filter((pkg) => pkg.category === currentPackage.category && pkg.id !== currentPackage.id)
     .slice(0, 3);
 
   const handleBuyNow = () => {
@@ -76,17 +78,17 @@ const PackageDetail = () => {
             <div className="lg:col-span-2 space-y-8">
               <div>
                 <Badge variant="secondary" className="mb-4">
-                  {packageData.category}
+                  {currentPackage.category}
                 </Badge>
-                <h1 className="text-5xl font-bold mb-4">{packageData.name}</h1>
-                <p className="text-xl text-muted-foreground">{packageData.description}</p>
+                <h1 className="text-5xl font-bold mb-4">{currentPackage.name}</h1>
+                <p className="text-xl text-muted-foreground">{currentPackage.description}</p>
               </div>
 
               <Card>
                 <CardContent className="p-8">
                   <h2 className="text-2xl font-bold mb-6">What's Included</h2>
                   <div className="space-y-4">
-                    {packageData.inclusions.map((inclusion, index) => (
+                    {currentPackage.inclusions.map((inclusion, index) => (
                       <div key={index} className="flex items-start">
                         <div className="flex-shrink-0 w-6 h-6 bg-accent/10 rounded-full flex items-center justify-center mr-4 mt-0.5">
                           <Check className="w-4 h-4 text-accent" />
@@ -102,7 +104,7 @@ const PackageDetail = () => {
                 <CardContent className="p-8">
                   <h3 className="text-xl font-bold mb-3">Perfect For</h3>
                   <p className="text-muted-foreground">
-                    This package is ideal for businesses looking to {packageData.shortDescription.toLowerCase()}.
+                    This package is ideal for businesses looking to {currentPackage.shortDescription.toLowerCase()}.
                     Whether you're just starting out or looking to refresh your existing materials, we've got you covered.
                   </p>
                 </CardContent>
@@ -118,7 +120,7 @@ const PackageDetail = () => {
                       <p className="text-sm text-muted-foreground mb-2">Package Price</p>
                       <div className="flex items-baseline">
                         <span className="text-5xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                          £{packageData.price}
+                          £{currentPackage.price}
                         </span>
                       </div>
                     </div>
