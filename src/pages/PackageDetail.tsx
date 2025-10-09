@@ -1,6 +1,7 @@
 import { useParams, Link, useNavigate } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useMemo } from "react";
 import Navbar from "@/components/Navbar";
+import { getRecommendedPackages } from "@/utils/recommendations";
 import Footer from "@/components/Footer";
 import { packages } from "@/data/packages";
 import { Button } from "@/components/ui/button";
@@ -46,9 +47,11 @@ const PackageDetail = () => {
     );
   }
 
-  const relatedPackages = packages
-    .filter((pkg) => pkg.category === currentPackage.category && pkg.id !== currentPackage.id)
-    .slice(0, 3);
+  // Get recommended packages based on multiple factors
+  const recommendedPackages = useMemo(() => 
+    getRecommendedPackages(currentPackage, packages),
+    [currentPackage]
+  );
 
   const handleBuyNow = () => {
     navigate(`/checkout/${slug}`);
@@ -166,14 +169,23 @@ const PackageDetail = () => {
         </div>
       </section>
 
-      {/* Related Packages */}
-      {relatedPackages.length > 0 && (
+      {/* Recommended Packages */}
+      {recommendedPackages.length > 0 && (
         <section className="py-16 bg-secondary/30">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-bold mb-8">Other Packages You Might Like</h2>
+            <h2 className="text-3xl font-bold mb-4">Recommended Packages</h2>
+            <p className="text-muted-foreground mb-8">
+              Based on your interest in {currentPackage.name}, you might also like these packages:
+            </p>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {relatedPackages.map((pkg) => (
-                <PackageCard key={pkg.id} package={pkg} />
+              {recommendedPackages.map((pkg) => (
+                <PackageCard 
+                  key={pkg.id} 
+                  package={pkg}
+                  onClick={() => {
+                    navigate(`/packages/${pkg.slug}`);
+                  }}
+                />
               ))}
             </div>
           </div>

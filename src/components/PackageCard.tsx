@@ -7,9 +7,10 @@ import { ArrowRight, Star } from "lucide-react";
 
 interface PackageCardProps {
   package: Package;
+  onClick?: () => void;
 }
 
-const PackageCard = ({ package: pkg }: PackageCardProps) => {
+const PackageCard = ({ package: pkg, onClick }: PackageCardProps) => {
   return (
     <Card className="group h-full flex flex-col overflow-hidden border-border hover:shadow-[var(--shadow-card-hover)] transition-all duration-300 hover:-translate-y-1">
       <CardHeader className="relative">
@@ -50,11 +51,23 @@ const PackageCard = ({ package: pkg }: PackageCardProps) => {
         </ul>
       </CardContent>
       <CardFooter>
-        <Button variant="default" className="w-full group/button" asChild>
-          <Link to={`/packages/${pkg.slug}`}>
-            View Details
-            <ArrowRight className="ml-2 h-4 w-4 group-hover/button:translate-x-1 transition-transform" />
-          </Link>
+        <Button 
+          variant="default" 
+          className="w-full group/button" 
+          onClick={onClick}
+          asChild={!onClick}
+        >
+          {onClick ? (
+            <>
+              View Details
+              <ArrowRight className="ml-2 h-4 w-4 group-hover/button:translate-x-1 transition-transform" />
+            </>
+          ) : (
+            <Link to={`/packages/${pkg.slug}`}>
+              View Details
+              <ArrowRight className="ml-2 h-4 w-4 group-hover/button:translate-x-1 transition-transform" />
+            </Link>
+          )}
         </Button>
       </CardFooter>
     </Card>
