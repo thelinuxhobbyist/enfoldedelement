@@ -87,9 +87,9 @@ const Checkout = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
           <h1 className="text-4xl font-bold mb-8">Checkout</h1>
 
-          <div className="grid lg:grid-cols-3 gap-8">
+          <div className="flex flex-col-reverse lg:grid lg:grid-cols-3 gap-8">
             {/* Payment Form */}
-            <div className="lg:col-span-2">
+            <div className="lg:col-span-2 mt-8 lg:mt-0">
               <Card>
                 <CardHeader>
                   <CardTitle>Payment Information</CardTitle>
@@ -117,7 +117,7 @@ const Checkout = () => {
             </div>
 
             {/* Order Summary */}
-            <div>
+            <div className="lg:order-last">
               <Card>
                 <CardHeader>
                   <CardTitle>Order Summary</CardTitle>
