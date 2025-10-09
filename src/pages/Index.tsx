@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import heroImage from "@/assets/hero-image.jpg";
 import { ArrowRight, Sparkles, Package, Zap } from "lucide-react";
 
 const Index = () => {
@@ -14,60 +13,49 @@ const Index = () => {
       <section className="relative overflow-hidden bg-gradient-to-b from-background via-secondary/20 to-background">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary/10 via-transparent to-transparent"></div>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32 relative">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-8">
-              <div className="inline-flex items-center px-4 py-2 bg-primary/10 rounded-full border border-primary/20">
-                <Sparkles className="w-4 h-4 text-primary mr-2" />
-                <span className="text-sm font-medium text-primary">Premium Design Services</span>
-              </div>
-              
-              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
-                Modern Britain Speaks More Than English
-                <span className="block mt-2 bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
-                  And So Should Your Business
-                </span>
-              </h1>
-              
-              <p className="text-xl text-muted-foreground max-w-xl">
-                Recognising language as a bridge to cultural connection, we design for impact and help you reach new audiences in a multicultural Britain.
-              </p>
-              
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Button variant="hero" size="lg" asChild>
-                  <Link to="/packages">
-                    Explore Packages
-                    <ArrowRight className="ml-2 h-5 w-5" />
-                  </Link>
-                </Button>
-                <Button variant="outline" size="lg" asChild>
-                  <Link to="/packages">View All Services</Link>
-                </Button>
-              </div>
-
-              {/* Stats */}
-              <div className="flex gap-8 pt-8">
-                <div>
-                  <div className="text-3xl font-bold text-primary">500+</div>
-                  <div className="text-sm text-muted-foreground">Projects Delivered</div>
-                </div>
-                <div>
-                  <div className="text-3xl font-bold text-primary">98%</div>
-                  <div className="text-sm text-muted-foreground">Client Satisfaction</div>
-                </div>
-                <div>
-                  <div className="text-3xl font-bold text-primary">24hr</div>
-                  <div className="text-sm text-muted-foreground">Turnaround Time</div>
-                </div>
-              </div>
+          <div className="max-w-4xl mx-auto space-y-8">
+            <div className="inline-flex items-center px-4 py-2 bg-primary/10 rounded-full border border-primary/20">
+              <Sparkles className="w-4 h-4 text-primary mr-2" />
+              <span className="text-sm font-medium text-primary">Premium Design Services</span>
             </div>
             
-            <div className="relative">
-              <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-accent/20 rounded-3xl blur-3xl"></div>
-              <img 
-                src={heroImage} 
-                alt="Creative design workspace" 
-                className="relative rounded-3xl shadow-2xl border border-border w-full h-auto object-cover"
-              />
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight text-center">
+              Modern Britain Speaks More Than English
+              <span className="block mt-2 bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
+                And So Should Your Business
+              </span>
+            </h1>
+            
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto text-center">
+              Recognising language as a bridge to cultural connection, we design for impact and help you reach new audiences in a multicultural Britain.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button variant="hero" size="lg" asChild>
+                <Link to="/packages">
+                  Explore Packages
+                  <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
+              </Button>
+              <Button variant="outline" size="lg" asChild>
+                <Link to="/packages">View All Services</Link>
+              </Button>
+            </div>
+
+            {/* Stats */}
+            <div className="flex justify-center gap-12 pt-8">
+              <div className="text-center">
+                <div className="text-3xl font-bold text-primary">500+</div>
+                <div className="text-sm text-muted-foreground">Projects Delivered</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-primary">98%</div>
+                <div className="text-sm text-muted-foreground">Client Satisfaction</div>
+              </div>
+              <div className="text-center">
+                <div className="text-3xl font-bold text-primary">24hr</div>
+                <div className="text-sm text-muted-foreground">Turnaround Time</div>
+              </div>
             </div>
           </div>
         </div>
