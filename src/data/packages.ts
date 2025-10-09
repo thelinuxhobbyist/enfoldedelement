@@ -12,6 +12,21 @@ export interface Package {
 
 export const packages: Package[] = [
   {
+    id: "test-package",
+    name: "Test Package",
+    slug: "test-package",
+    price: 0.30,
+    shortDescription: "A test package for system verification",
+    description: "This is a low-cost test package to verify the payment system is working correctly.",
+    inclusions: [
+      "Test Feature 1",
+      "Test Feature 2",
+      "Test Feature 3"
+    ],
+    category: "Test",
+    featured: false
+  },
+  {
     id: "1",
     name: "Startup Brand Pack",
     slug: "startup-brand-pack",
