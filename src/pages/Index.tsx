@@ -16,7 +16,6 @@ const Index = () => {
           <div className="max-w-4xl mx-auto space-y-12">
             <div className="space-y-8">
               <div className="relative">
-                <div className="absolute -inset-1 bg-gradient-to-r from-primary to-accent blur-2xl opacity-10 animate-pulse"></div>
                 <h1 className="relative text-5xl md:text-6xl lg:text-7xl font-bold leading-tight text-center">
                   <span className="block bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent animate-gradient">
                     Modern Britain Speaks
