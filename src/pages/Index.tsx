@@ -10,14 +10,14 @@ const Index = () => {
       <Navbar />
       
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-background">
-        <div className="absolute inset-0 pointer-events-none"></div>
+      <section className="relative overflow-hidden bg-gradient-to-b from-background via-secondary/20 to-background">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary/10 via-transparent to-transparent"></div>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-32 lg:py-40 relative">
           <div className="max-w-4xl mx-auto space-y-12">
             <div className="space-y-8">
               <div className="relative">
                 <h1 className="relative text-5xl md:text-6xl lg:text-7xl font-bold leading-tight text-center text-foreground">
-                  <span className="block text-accent">
+                  <span className="block text-primary">
                     Modern Britain Speaks
                     <span className="ml-2">More Than English</span>
                   </span>
