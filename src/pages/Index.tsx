@@ -18,11 +18,11 @@ const Index = () => {
               <div className="relative">
                 <div className="absolute -inset-1 bg-gradient-to-r from-primary to-accent blur-2xl opacity-10 animate-pulse"></div>
                 <h1 className="relative text-5xl md:text-6xl lg:text-7xl font-bold leading-tight text-center">
-                  Modern Britain Speaks
-                  <span className="block mt-4 text-transparent bg-clip-text bg-gradient-to-r from-primary via-accent to-primary animate-gradient">
-                    More Than English
+                  <span className="block bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent animate-gradient">
+                    Modern Britain Speaks
+                    <span className="ml-2">More Than English</span>
                   </span>
-                  <span className="block mt-4 text-4xl md:text-5xl lg:text-6xl bg-gradient-to-r from-primary/80 via-accent/80 to-primary/80 bg-clip-text text-transparent">
+                  <span className="block mt-3 text-3xl md:text-4xl lg:text-5xl text-muted-foreground">
                     And So Should Your Business
                   </span>
                 </h1>
