@@ -63,7 +63,7 @@ const basePackages: Package[] = [
     description: "Elevate your social media presence with professionally designed content that engages your audience and builds your brand.",
     inclusions: [
       "30 custom post designs",
-      "Platform optimization (Instagram, Facebook, Twitter)",
+  "Platform optimization (Instagram, Facebook, X)",
       "Hashtag research and strategy",
       "Content calendar",
       "Story templates (15 designs)",

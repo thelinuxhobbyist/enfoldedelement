@@ -90,7 +90,7 @@ export const onboardingTemplates: Record<string, OnboardingTemplate> = {
         type: 'select',
         label: 'Primary Social Platform',
         required: true,
-        options: ['Instagram', 'Facebook', 'Twitter', 'LinkedIn', 'TikTok']
+  options: ['Instagram', 'Facebook', 'X (Twitter)', 'LinkedIn', 'TikTok']
       },
       {
         id: 'brand-voice',

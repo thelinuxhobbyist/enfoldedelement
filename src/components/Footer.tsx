@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Instagram, Twitter, Facebook, Youtube, Mail } from 'lucide-react';
+import { Instagram, X, Facebook, Youtube, Mail } from 'lucide-react';
 
 export const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -18,7 +18,7 @@ export const Footer = () => {
 
   const socialLinks = [
     { icon: Instagram, href: "https://instagram.com/enfoldedteam" },
-    { icon: Twitter, href: "https://twitter.com/enfoldedteam" },
+    { icon: X, href: "https://twitter.com/enfoldedteam" },
     { icon: Facebook, href: "https://facebook.com/enfoldedteam" },
     { icon: Youtube, href: "https://youtube.com/@enfoldedteam" },
   ];
