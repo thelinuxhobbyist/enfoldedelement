@@ -17,7 +17,7 @@ const Index = () => {
             <div className="space-y-8">
               <div className="relative">
                 <h1 className="relative text-5xl md:text-6xl lg:text-7xl font-bold leading-tight text-center text-foreground">
-                  <span className="block text-primary">
+                  <span className="block text-accent">
                     Modern Britain Speaks
                     <span className="ml-2">More Than English</span>
                   </span>

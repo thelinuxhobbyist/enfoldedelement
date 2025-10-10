@@ -32,7 +32,7 @@ const PackageCard = ({ package: pkg, onClick }: PackageCardProps) => {
       </CardHeader>
       <CardContent className="flex-grow">
         <div className="flex items-baseline mb-4">
-          <span className="text-4xl font-bold text-primary">
+          <span className="text-4xl font-bold text-accent">
             £{pkg.price}
           </span>
         </div>
