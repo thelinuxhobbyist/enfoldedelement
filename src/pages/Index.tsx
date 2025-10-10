@@ -10,14 +10,14 @@ const Index = () => {
       <Navbar />
       
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-b from-background via-secondary/20 to-background">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary/10 via-transparent to-transparent"></div>
+      <section className="relative overflow-hidden bg-background">
+        <div className="absolute inset-0 pointer-events-none"></div>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-32 lg:py-40 relative">
           <div className="max-w-4xl mx-auto space-y-12">
             <div className="space-y-8">
               <div className="relative">
-                <h1 className="relative text-5xl md:text-6xl lg:text-7xl font-bold leading-tight text-center">
-                  <span className="block bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent animate-gradient">
+                <h1 className="relative text-5xl md:text-6xl lg:text-7xl font-bold leading-tight text-center text-foreground">
+                  <span className="block text-primary">
                     Modern Britain Speaks
                     <span className="ml-2">More Than English</span>
                   </span>
@@ -75,7 +75,7 @@ const Index = () => {
           
           <div className="grid md:grid-cols-3 gap-8">
             <div className="group p-8 rounded-2xl bg-card border border-border hover:shadow-[var(--shadow-card-hover)] transition-all duration-300 hover:-translate-y-1">
-              <div className="w-14 h-14 bg-gradient-to-br from-primary to-accent rounded-xl flex items-center justify-center mb-6">
+              <div className="w-14 h-14 bg-primary rounded-xl flex items-center justify-center mb-6">
                 <Package className="w-7 h-7 text-primary-foreground" />
               </div>
               <h3 className="text-2xl font-bold mb-3">Flexible Packages</h3>
@@ -85,7 +85,7 @@ const Index = () => {
             </div>
             
             <div className="group p-8 rounded-2xl bg-card border border-border hover:shadow-[var(--shadow-card-hover)] transition-all duration-300 hover:-translate-y-1">
-              <div className="w-14 h-14 bg-gradient-to-br from-primary to-accent rounded-xl flex items-center justify-center mb-6">
+              <div className="w-14 h-14 bg-primary rounded-xl flex items-center justify-center mb-6">
                 <Zap className="w-7 h-7 text-primary-foreground" />
               </div>
               <h3 className="text-2xl font-bold mb-3">Fast Delivery</h3>
@@ -95,7 +95,7 @@ const Index = () => {
             </div>
             
             <div className="group p-8 rounded-2xl bg-card border border-border hover:shadow-[var(--shadow-card-hover)] transition-all duration-300 hover:-translate-y-1">
-              <div className="w-14 h-14 bg-gradient-to-br from-primary to-accent rounded-xl flex items-center justify-center mb-6">
+              <div className="w-14 h-14 bg-primary rounded-xl flex items-center justify-center mb-6">
                 <Sparkles className="w-7 h-7 text-primary-foreground" />
               </div>
               <h3 className="text-2xl font-bold mb-3">Premium Quality</h3>
@@ -110,7 +110,7 @@ const Index = () => {
       {/* CTA Section */}
       <section className="py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-gradient-to-r from-primary to-accent rounded-3xl p-12 text-center shadow-2xl">
+          <div className="bg-primary rounded-3xl p-12 text-center shadow-2xl">
             <h2 className="text-4xl font-bold text-primary-foreground mb-4">
               Ready to Elevate Your Brand?
             </h2>

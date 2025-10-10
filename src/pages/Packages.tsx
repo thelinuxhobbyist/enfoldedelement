@@ -32,7 +32,7 @@ const Packages = () => {
       <Navbar />
 
       {/* Header Section */}
-      <section className="bg-gradient-to-b from-secondary/30 to-background py-16 border-b border-border">
+  <section className="bg-secondary/30 py-16 border-b border-border">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
             <h1 className="text-5xl font-bold mb-4">Our Design Packages</h1>

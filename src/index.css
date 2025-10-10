@@ -42,9 +42,10 @@ All colors MUST be HSL.
 
     --radius: 0.75rem;
     
-  --gradient-primary: linear-gradient(135deg, hsl(257 72% 33%), hsl(346 90% 38%));
-  --gradient-accent: linear-gradient(135deg, hsl(346 90% 38%), hsl(257 72% 33%));
-  --gradient-hero: linear-gradient(180deg, hsl(0 0% 100%), hsl(240 20% 98%));
+  /* Gradients disabled per brand preference */
+  --gradient-primary: none;
+  --gradient-accent: none;
+  --gradient-hero: none;
     
     --shadow-card: 0 4px 20px -2px hsl(262 52% 47% / 0.1);
     --shadow-card-hover: 0 8px 30px -4px hsl(262 52% 47% / 0.15);
@@ -100,9 +101,10 @@ All colors MUST be HSL.
   --input: 260 18% 20%;
   --ring: 257 72% 60%;
     
-  --gradient-primary: linear-gradient(135deg, hsl(257 72% 60%), hsl(346 90% 50%));
-  --gradient-accent: linear-gradient(135deg, hsl(346 90% 50%), hsl(257 72% 60%));
-  --gradient-hero: linear-gradient(180deg, hsl(260 30% 7%), hsl(260 25% 12%));
+  /* Gradients disabled per brand preference */
+  --gradient-primary: none;
+  --gradient-accent: none;
+  --gradient-hero: none;
     
     --shadow-card: 0 4px 20px -2px hsl(0 0% 0% / 0.3);
     --shadow-card-hover: 0 8px 30px -4px hsl(0 0% 0% / 0.4);

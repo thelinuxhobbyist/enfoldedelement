@@ -122,7 +122,7 @@ const PackageDetail = () => {
                     <div>
                       <p className="text-sm text-muted-foreground mb-2">Package Price</p>
                       <div className="flex items-baseline">
-                        <span className="text-5xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+                        <span className="text-5xl font-bold text-primary">
                           £{currentPackage.price}
                         </span>
                       </div>

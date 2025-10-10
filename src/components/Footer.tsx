@@ -30,9 +30,7 @@ export const Footer = () => {
           {/* Brand Section */}
           <div className="space-y-4">
             <Link to="/" className="flex items-center space-x-2">
-              <span className="text-xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                Enfolded Media
-              </span>
+              <span className="text-xl font-bold text-primary">Enfolded Media</span>
             </Link>
             <p className="text-muted-foreground">
               Transforming brands through creative design solutions.
