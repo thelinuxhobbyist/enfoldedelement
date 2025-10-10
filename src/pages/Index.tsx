@@ -27,12 +27,12 @@ const Index = () => {
                   </span>
                 </h1>
               </div>
-            
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto text-center leading-relaxed">
+
+              <p className="text-xl text-muted-foreground max-w-2xl mx-auto text-center leading-relaxed">
               Recognising language as a bridge to cultural connection, we design for impact and help you reach new audiences in a multicultural Britain.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-6 justify-center pt-4">
+              <div className="flex flex-col sm:flex-row gap-6 justify-center pt-4">
               <Button variant="hero" size="lg" className="text-lg px-8" asChild>
                 <Link to="/packages">
                   Explore Packages
@@ -42,10 +42,10 @@ const Index = () => {
               <Button variant="outline" size="lg" className="text-lg px-8" asChild>
                 <Link to="/packages">View All Services</Link>
               </Button>
-            </div>
+              </div>
 
             {/* Stats */}
-            <div className="flex justify-center gap-12 pt-8">
+              <div className="flex justify-center gap-12 pt-8">
               <div className="text-center">
                 <div className="text-3xl font-bold text-primary">500+</div>
                 <div className="text-sm text-muted-foreground">Projects Delivered</div>
@@ -57,6 +57,7 @@ const Index = () => {
               <div className="text-center">
                 <div className="text-3xl font-bold text-primary">24hr</div>
                 <div className="text-sm text-muted-foreground">Turnaround Time</div>
+              </div>
               </div>
             </div>
           </div>
