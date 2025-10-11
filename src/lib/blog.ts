@@ -1,11 +1,14 @@
 import matter from 'gray-matter';
 import type { BlogFrontmatter, BlogMeta, BlogPost } from '@/types/blog';
 
-// Eagerly import all markdown files as raw strings (relative path to this file)
-const rawPosts = import.meta.glob('../content/blog/**/*.md?raw', { eager: true, import: 'default' }) as Record<string, string>;
+// Eagerly import markdown files via multiple patterns to support various bundlers
+const globA = import.meta.glob('/src/content/blog/**/*.md?raw', { eager: true, import: 'default' }) as Record<string, string>;
+const globB = import.meta.glob('/src/content/blog/*.md?raw', { eager: true, import: 'default' }) as Record<string, string>;
+const globC = import.meta.glob('../content/blog/**/*.md?raw', { eager: true, import: 'default' }) as Record<string, string>;
+const rawPosts = { ...globA, ...globB, ...globC } as Record<string, string>;
 
 const pathToSlug = (path: string) => {
-  const match = path.match(/content\/blog\/(.*)\.md$/);
+  const match = path.match(/content\/blog\/(.*)\.md(?:\?raw)?$/);
   return match ? match[1] : path;
 };
 
@@ -35,7 +38,7 @@ export function getAllPostMeta(): BlogMeta[] {
 }
 
 export function getPostBySlug(slug: string): BlogPost | undefined {
-  const entry = Object.entries(rawPosts).find(([path]) => path.endsWith(`content/blog/${slug}.md`));
+  const entry = Object.entries(rawPosts).find(([path]) => path.endsWith(`content/blog/${slug}.md`) || path.endsWith(`content/blog/${slug}.md?raw`));
   if (!entry) return undefined;
   const raw = entry[1];
   const { data, content } = matter(raw);
