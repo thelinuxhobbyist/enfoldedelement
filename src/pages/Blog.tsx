@@ -1,7 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Link } from "react-router-dom";
-import { getAllPostMeta } from "@/lib/blog";
+import { getAllPostMeta, getBlogDiscoveryDebug } from "@/lib/blog";
 import { useEffect } from "react";
 
 const Blog = () => {
@@ -27,7 +27,17 @@ const Blog = () => {
       <main className="py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           {posts.length === 0 ? (
-            <p className="text-muted-foreground">No posts yet.</p>
+            <div className="text-muted-foreground space-y-2">
+              <p>No posts yet.</p>
+              {(() => {
+                const d = getBlogDiscoveryDebug();
+                return (
+                  <pre className="text-xs whitespace-pre-wrap break-words bg-muted/40 p-3 rounded-md border border-border">
+                    {`debug: discovered=${d.count}\n` + d.keys.map((k) => `- ${k}`).join('\n')}
+                  </pre>
+                );
+              })()}
+            </div>
           ) : (
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {posts.map((post) => {

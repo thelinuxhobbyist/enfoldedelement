@@ -80,3 +80,13 @@ export function getPostBySlug(slug: string): BlogPost | undefined {
     return undefined;
   }
 }
+
+// Debug helper for visibility in production
+export function getBlogDiscoveryDebug() {
+  try {
+    const entries = Object.keys(rawPosts);
+    return { count: entries.length, keys: entries };
+  } catch {
+    return { count: 0, keys: [] as string[] };
+  }
+}
