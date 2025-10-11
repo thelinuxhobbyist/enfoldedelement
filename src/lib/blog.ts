@@ -15,9 +15,13 @@ const mdModules = import.meta.glob([
   '/src/content/blog/**/*.md',
 ], { eager: true, query: '?raw', import: 'default' }) as Record<string, string>;
 
-const rawPosts = generated
-  ? Object.fromEntries(generated.map((p) => [`/src/content/blog/${p.slug}.md`, matter.stringify(p.content, p.frontmatter as any)]))
-  : { ...mdModules };
+const fromIndex: BlogPost[] | undefined = generated?.map((p) => ({
+  slug: p.slug,
+  content: p.content,
+  frontmatter: p.frontmatter as BlogFrontmatter,
+}));
+
+const rawPosts = fromIndex ? undefined : { ...mdModules };
 
 const pathToSlug = (path: string) => {
   const cleaned = path.replace(/\?.*$/, '');
@@ -27,9 +31,19 @@ const pathToSlug = (path: string) => {
 
 export function getAllPosts(): BlogPost[] {
   try {
-  const entries = Object.entries(rawPosts);
+    if (fromIndex && Array.isArray(fromIndex)) {
+      if (typeof window !== 'undefined') {
+        console.info('[blog] discovered via index.json:', fromIndex.length);
+      }
+      const safeTime = (d: unknown) => {
+        const t = d instanceof Date ? d.getTime() : new Date(String(d ?? '')).getTime();
+        return isFinite(t) ? t : 0;
+      };
+      return [...fromIndex].sort((a, b) => safeTime(b.frontmatter.pubDate) - safeTime(a.frontmatter.pubDate));
+    }
+
+    const entries = Object.entries(rawPosts || {});
     if (typeof window !== 'undefined') {
-      // Light debug to help verify discovery in production
       console.info('[blog] discovered markdown files:', entries.length);
     }
     const posts: BlogPost[] = entries.flatMap(([path, raw]) => {
@@ -37,11 +51,7 @@ export function getAllPosts(): BlogPost[] {
         const text = typeof raw === 'string' ? raw : String(raw ?? '');
         const { data, content } = matter(text);
         const fm = data as BlogFrontmatter;
-        return [{
-          slug: pathToSlug(path),
-          content,
-          frontmatter: fm,
-        }];
+        return [{ slug: pathToSlug(path), content, frontmatter: fm }];
       } catch (err) {
         console.error('[blog] Failed to parse markdown at', path, err);
         return [] as BlogPost[];
@@ -53,9 +63,7 @@ export function getAllPosts(): BlogPost[] {
       return isFinite(t) ? t : 0;
     };
 
-    return posts
-      .filter((p) => Boolean(p.frontmatter?.title))
-      .sort((a, b) => safeTime(b.frontmatter.pubDate) - safeTime(a.frontmatter.pubDate));
+  return posts.sort((a, b) => safeTime(b.frontmatter.pubDate) - safeTime(a.frontmatter.pubDate));
   } catch (e) {
     console.error('[blog] getAllPosts error:', e);
     return [];
@@ -73,16 +81,15 @@ export function getAllPostMeta(): BlogMeta[] {
 
 export function getPostBySlug(slug: string): BlogPost | undefined {
   try {
-    const entry = Object.entries(rawPosts).find(([path]) => path.replace(/\?.*$/, '').endsWith(`content/blog/${slug}.md`));
+    if (fromIndex && Array.isArray(fromIndex)) {
+      return fromIndex.find((p) => p.slug === slug);
+    }
+    const entry = Object.entries(rawPosts || {}).find(([path]) => path.replace(/\?.*$/, '').endsWith(`content/blog/${slug}.md`));
     if (!entry) return undefined;
     const raw = entry[1];
     const text = typeof raw === 'string' ? raw : String(raw ?? '');
     const { data, content } = matter(text);
-    return {
-      slug,
-      content,
-      frontmatter: data as BlogFrontmatter,
-    };
+    return { slug, content, frontmatter: data as BlogFrontmatter };
   } catch (e) {
     console.error('[blog] getPostBySlug error:', slug, e);
     return undefined;
@@ -92,7 +99,10 @@ export function getPostBySlug(slug: string): BlogPost | undefined {
 // Debug helper for visibility in production
 export function getBlogDiscoveryDebug() {
   try {
-    const entries = Object.keys(rawPosts);
+    if (fromIndex && Array.isArray(fromIndex)) {
+      return { count: fromIndex.length, keys: fromIndex.map((p) => p.slug) };
+    }
+    const entries = Object.keys(rawPosts || {});
     return { count: entries.length, keys: entries };
   } catch {
     return { count: 0, keys: [] as string[] };
