@@ -2,7 +2,7 @@ import matter from 'gray-matter';
 import type { BlogFrontmatter, BlogMeta, BlogPost } from '@/types/blog';
 
 // Eagerly import all markdown files as raw strings (relative path to this file)
-const rawPosts = import.meta.glob('../content/blog/*.md?raw', { eager: true, import: 'default' }) as Record<string, string>;
+const rawPosts = import.meta.glob('../content/blog/**/*.md?raw', { eager: true, import: 'default' }) as Record<string, string>;
 
 const pathToSlug = (path: string) => {
   const match = path.match(/content\/blog\/(.*)\.md$/);
@@ -10,7 +10,12 @@ const pathToSlug = (path: string) => {
 };
 
 export function getAllPosts(): BlogPost[] {
-  const posts: BlogPost[] = Object.entries(rawPosts).map(([path, raw]) => {
+  const entries = Object.entries(rawPosts);
+  if (typeof window !== 'undefined') {
+    // Light debug to help verify discovery in production
+    console.info('[blog] discovered markdown files:', entries.length);
+  }
+  const posts: BlogPost[] = entries.map(([path, raw]) => {
     const { data, content } = matter(raw);
     const fm = data as BlogFrontmatter;
     return {
