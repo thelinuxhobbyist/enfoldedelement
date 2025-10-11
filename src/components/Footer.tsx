@@ -10,6 +10,7 @@ export const Footer = () => {
       links: [
         { name: "About Us", href: "/about" },
         { name: "Contact", href: "/contact" },
+  { name: "Blog", href: "/blog" },
         { name: "Terms of Service", href: "/terms" },
         { name: "Privacy Policy", href: "/privacy" },
       ],

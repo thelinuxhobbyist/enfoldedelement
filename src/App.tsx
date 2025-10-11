@@ -11,6 +11,8 @@ import NotFound from "./pages/NotFound";
 import PaymentSuccess from "./pages/PaymentSuccess";
 import PaymentCancelled from "./pages/PaymentCancelled";
 import Privacy from "./pages/Privacy";
+import Blog from "./pages/Blog";
+import BlogPost from "./pages/BlogPost";
 
 const queryClient = new QueryClient();
 
@@ -25,6 +27,8 @@ const App = () => (
           <Route path="/packages" element={<Packages />} />
           <Route path="/packages/:slug" element={<PackageDetail />} />
           <Route path="/checkout/:slug" element={<Checkout />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/blog/:slug" element={<BlogPost />} />
           <Route path="/payment/success" element={<PaymentSuccess />} />
           <Route path="/payment/cancelled" element={<PaymentCancelled />} />
           <Route path="/privacy" element={<Privacy />} />
