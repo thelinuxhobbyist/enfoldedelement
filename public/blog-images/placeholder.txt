@@ -1,1 +1,0 @@
-Place blog images in this folder. Example: multilingual.jpg
