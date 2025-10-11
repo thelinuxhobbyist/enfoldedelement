@@ -19,8 +19,21 @@
   },
   {
     "slug": "digital-media",
-    "content": "",
-    "frontmatter": {}
+    "content": "\nAccessible design helps everyone. Start by ensuring sufficient color contrast, using semantic headings, and providing clear focus states. Include alt text for images and label form elements properly. Finally, test with keyboard navigation and screen readers.\n",
+    "frontmatter": {
+      "title": "Designing With Accessibility in Mind",
+      "description": "Practical steps to make your designs more inclusive.",
+      "pubDate": "2025-09-20T00:00:00.000Z",
+      "author": "Neil",
+      "image": {
+        "url": "/assets/blog-images/another-image.webp",
+        "alt": "Accessible design elements"
+      },
+      "tags": [
+        "Accessibility",
+        "Design"
+      ]
+    }
   },
   {
     "slug": "example-post-with-image",
