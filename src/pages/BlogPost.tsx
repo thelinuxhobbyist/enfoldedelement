@@ -39,8 +39,11 @@ const BlogPost = () => {
           <header className="mb-6">
             <h1>{post.frontmatter.title}</h1>
             <p className="text-sm text-muted-foreground">
-              {new Date(post.frontmatter.pubDate).toLocaleDateString(undefined, { year: 'numeric', month: 'long', day: 'numeric' })}
-              {post.frontmatter.author ? ` • ${post.frontmatter.author}` : ''}
+              {(() => {
+                const t = new Date(String(post.frontmatter.pubDate ?? ''));
+                const dateStr = isNaN(t.getTime()) ? '' : t.toLocaleDateString(undefined, { year: 'numeric', month: 'long', day: 'numeric' });
+                return `${dateStr}${post.frontmatter.author ? (dateStr ? ' • ' : '') + post.frontmatter.author : ''}`;
+              })()}
             </p>
           </header>
           {img && (

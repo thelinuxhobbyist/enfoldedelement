@@ -40,9 +40,14 @@ export function getAllPosts(): BlogPost[] {
       }
     });
 
+    const safeTime = (d: unknown) => {
+      const t = d instanceof Date ? d.getTime() : new Date(String(d ?? '')).getTime();
+      return isFinite(t) ? t : 0;
+    };
+
     return posts
-      .filter((p) => p.frontmatter?.title && p.frontmatter?.pubDate)
-      .sort((a, b) => new Date(b.frontmatter.pubDate).getTime() - new Date(a.frontmatter.pubDate).getTime());
+      .filter((p) => Boolean(p.frontmatter?.title))
+      .sort((a, b) => safeTime(b.frontmatter.pubDate) - safeTime(a.frontmatter.pubDate));
   } catch (e) {
     console.error('[blog] getAllPosts error:', e);
     return [];

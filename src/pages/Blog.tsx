@@ -45,7 +45,10 @@ const Blog = () => {
                         </Link>
                       </h2>
                       <p className="text-sm text-muted-foreground">
-                        {new Date(post.frontmatter.pubDate).toLocaleDateString(undefined, { year: 'numeric', month: 'long', day: 'numeric' })}
+                        {(() => {
+                          const t = new Date(String(post.frontmatter.pubDate ?? ''));
+                          return isNaN(t.getTime()) ? '' : t.toLocaleDateString(undefined, { year: 'numeric', month: 'long', day: 'numeric' });
+                        })()}
                       </p>
                       <p className="text-muted-foreground line-clamp-3">{post.frontmatter.description}</p>
                       <div>
