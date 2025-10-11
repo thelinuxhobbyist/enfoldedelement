@@ -46,7 +46,17 @@ const Blog = () => {
                 return (
                   <article key={post.slug} className="group bg-card border border-border rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-[var(--shadow-card-hover)]">
                     {img && (
-                      <img src={img} alt={alt} loading="lazy" className="w-full h-48 object-cover" />
+                      <img
+                        src={img}
+                        alt={alt}
+                        loading="lazy"
+                        className="w-full h-48 object-cover"
+                        onError={(e) => {
+                          const t = e.currentTarget as HTMLImageElement;
+                          t.onerror = null;
+                          t.src = '/placeholder.svg';
+                        }}
+                      />
                     )}
                     <div className="p-6 space-y-3">
                       <h2 className="text-2xl font-bold">

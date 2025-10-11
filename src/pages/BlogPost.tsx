@@ -47,7 +47,17 @@ const BlogPost = () => {
             </p>
           </header>
           {img && (
-            <img src={img} alt={alt} loading="lazy" className="w-full rounded-xl border border-border" />
+            <img
+              src={img}
+              alt={alt}
+              loading="lazy"
+              className="w-full rounded-xl border border-border"
+              onError={(e) => {
+                const t = e.currentTarget as HTMLImageElement;
+                t.onerror = null;
+                t.src = '/placeholder.svg';
+              }}
+            />
           )}
           <div className="mt-6 prose prose-stone dark:prose-invert max-w-none">
             <ReactMarkdown remarkPlugins={[remarkGfm]}>{markdown}</ReactMarkdown>
