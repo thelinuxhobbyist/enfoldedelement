@@ -1,0 +1,38 @@
+[
+  {
+    "slug": "another-sample-post",
+    "content": "\nAccessible design helps everyone. Start by ensuring sufficient color contrast, using semantic headings, and providing clear focus states. Include alt text for images and label form elements properly. Finally, test with keyboard navigation and screen readers.\n",
+    "frontmatter": {
+      "title": "Designing With Accessibility in Mind",
+      "description": "Practical steps to make your designs more inclusive.",
+      "pubDate": "2025-09-20T00:00:00.000Z",
+      "author": "Neil",
+      "image": {
+        "url": "/blog-images/another-image.webp",
+        "alt": "Accessible design elements"
+      },
+      "tags": [
+        "Accessibility",
+        "Design"
+      ]
+    }
+  },
+  {
+    "slug": "how-to-choose-a-multilingual-web-design",
+    "content": "\nDesigning for multiple languages can feel complicated, but a few principles go a long way:\n\n- Choose fonts that support your target scripts (e.g., Latin, Arabic, Cyrillic).\n- Allow flexible layout to support longer strings and different directions (LTR/RTL).\n- Avoid text embedded in images — keep copy as real text.\n- Test content with real translations, not placeholders.\n\nA multilingual design respects cultural nuance and improves accessibility for everyone.\n",
+    "frontmatter": {
+      "title": "How to Choose a Multilingual Web Design",
+      "description": "Simple tips to make your design look professional in any language.",
+      "pubDate": "2025-10-12T00:00:00.000Z",
+      "author": "Neil",
+      "image": {
+        "url": "/blog-images/multilingual.jpg",
+        "alt": "Multilingual web layout"
+      },
+      "tags": [
+        "Design",
+        "Multilingual"
+      ]
+    }
+  }
+]

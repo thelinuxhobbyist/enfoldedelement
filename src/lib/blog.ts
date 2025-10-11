@@ -1,17 +1,25 @@
 import matter from 'gray-matter';
 import type { BlogFrontmatter, BlogMeta, BlogPost } from '@/types/blog';
 
-// Eagerly import markdown files. Use Vite alias (@) and relative pattern, with `as: 'raw'` so content is a string.
+// Preferred: load from generated JSON index (scripts/build-blog-index.mjs)
+// Fallback in dev: use glob if JSON index is missing.
+// Try static import for the JSON index; TypeScript will resolve via Vite
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
+import generatedJson from '@/content/blog-index.json';
+const generated: BlogPost[] | undefined = Array.isArray(generatedJson) ? (generatedJson as BlogPost[]) : undefined;
+
 const mdModules = import.meta.glob([
   '@/content/blog/**/*.md',
   '../content/blog/**/*.md',
   '/src/content/blog/**/*.md',
 ], { eager: true, query: '?raw', import: 'default' }) as Record<string, string>;
 
-const rawPosts = { ...mdModules } as Record<string, string>;
+const rawPosts = generated
+  ? Object.fromEntries(generated.map((p) => [`/src/content/blog/${p.slug}.md`, matter.stringify(p.content, p.frontmatter as any)]))
+  : { ...mdModules };
 
 const pathToSlug = (path: string) => {
-  // Normalize and extract slug between content/blog/ and .md
   const cleaned = path.replace(/\?.*$/, '');
   const match = cleaned.match(/content\/blog\/(.*)\.md$/);
   return match ? match[1] : cleaned;
@@ -19,7 +27,7 @@ const pathToSlug = (path: string) => {
 
 export function getAllPosts(): BlogPost[] {
   try {
-    const entries = Object.entries(rawPosts);
+  const entries = Object.entries(rawPosts);
     if (typeof window !== 'undefined') {
       // Light debug to help verify discovery in production
       console.info('[blog] discovered markdown files:', entries.length);
