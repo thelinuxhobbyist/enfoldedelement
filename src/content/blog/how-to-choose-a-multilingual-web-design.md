@@ -4,7 +4,7 @@ description: "Simple tips to make your design look professional in any language.
 pubDate: 2025-10-12
 author: "Neil"
 image:
-  url: "/blog-images/multilingual.jpg"
+  url: "/assets/blog-images/multilingual.jpg"
   alt: "Multilingual web layout"
 tags: ["Design", "Multilingual"]
 ---
