@@ -31,15 +31,16 @@ const pathToSlug = (path: string) => {
 
 export function getAllPosts(): BlogPost[] {
   try {
-    if (fromIndex && Array.isArray(fromIndex)) {
+    const useIndex = Array.isArray(fromIndex) && fromIndex.length > 0;
+    if (useIndex) {
       if (typeof window !== 'undefined') {
-        console.info('[blog] discovered via index.json:', fromIndex.length);
+        console.info('[blog] discovered via index.json:', fromIndex!.length);
       }
       const safeTime = (d: unknown) => {
         const t = d instanceof Date ? d.getTime() : new Date(String(d ?? '')).getTime();
         return isFinite(t) ? t : 0;
       };
-      return [...fromIndex].sort((a, b) => safeTime(b.frontmatter.pubDate) - safeTime(a.frontmatter.pubDate));
+      return [...fromIndex!].sort((a, b) => safeTime(b.frontmatter.pubDate) - safeTime(a.frontmatter.pubDate));
     }
 
     const entries = Object.entries(rawPosts || {});
@@ -81,8 +82,9 @@ export function getAllPostMeta(): BlogMeta[] {
 
 export function getPostBySlug(slug: string): BlogPost | undefined {
   try {
-    if (fromIndex && Array.isArray(fromIndex)) {
-      return fromIndex.find((p) => p.slug === slug);
+    const useIndex = Array.isArray(fromIndex) && fromIndex.length > 0;
+    if (useIndex) {
+      return fromIndex!.find((p) => p.slug === slug);
     }
     const entry = Object.entries(rawPosts || {}).find(([path]) => path.replace(/\?.*$/, '').endsWith(`content/blog/${slug}.md`));
     if (!entry) return undefined;
@@ -99,8 +101,9 @@ export function getPostBySlug(slug: string): BlogPost | undefined {
 // Debug helper for visibility in production
 export function getBlogDiscoveryDebug() {
   try {
-    if (fromIndex && Array.isArray(fromIndex)) {
-      return { count: fromIndex.length, keys: fromIndex.map((p) => p.slug) };
+    if (Array.isArray(fromIndex)) {
+      const idxCount = fromIndex.length;
+      if (idxCount > 0) return { count: idxCount, keys: fromIndex.map((p) => p.slug) };
     }
     const entries = Object.keys(rawPosts || {});
     return { count: entries.length, keys: entries };
