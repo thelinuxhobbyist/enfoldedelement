@@ -18,6 +18,29 @@
     }
   },
   {
+    "slug": "digital-media",
+    "content": "",
+    "frontmatter": {}
+  },
+  {
+    "slug": "example-post-with-image",
+    "content": "\nThis post demonstrates how to reference images from `public/assets/blog-images`.\n\nFrontmatter hero image above is used on the list card and post header.\n\nInline image in markdown:\n\n![A diagram referenced from assets](/assets/blog-images/example-diagram.png)\n\nIf the files don’t exist yet, add them to:\n\n- public/assets/blog-images/example-hero.jpg\n- public/assets/blog-images/example-diagram.png\n\nCommit and push; the build will include them automatically.\n",
+    "frontmatter": {
+      "title": "Example Post With Image",
+      "description": "Shows how to reference images stored under public/assets/blog-images",
+      "pubDate": "2025-10-11T00:00:00.000Z",
+      "author": "Team Enfolded",
+      "image": {
+        "url": "/assets/blog-images/example-hero.jpg",
+        "alt": "Example hero image"
+      },
+      "tags": [
+        "Guide",
+        "Images"
+      ]
+    }
+  },
+  {
     "slug": "how-to-choose-a-multilingual-web-design",
     "content": "\nDesigning for multiple languages can feel complicated, but a few principles go a long way:\n\n- Choose fonts that support your target scripts (e.g., Latin, Arabic, Cyrillic).\n- Allow flexible layout to support longer strings and different directions (LTR/RTL).\n- Avoid text embedded in images — keep copy as real text.\n- Test content with real translations, not placeholders.\n\nA multilingual design respects cultural nuance and improves accessibility for everyone.\n",
     "frontmatter": {
