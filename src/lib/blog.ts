@@ -6,7 +6,7 @@ import type { BlogFrontmatter, BlogMeta, BlogPost } from '@/types/blog';
 // Try static import for the JSON index; TypeScript will resolve via Vite
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
-import generatedJson from '@/content/blog-index.json';
+import generatedJson from '../content/blog-index.json';
 const generated: BlogPost[] | undefined = Array.isArray(generatedJson) ? (generatedJson as BlogPost[]) : undefined;
 
 const mdModules = import.meta.glob([
