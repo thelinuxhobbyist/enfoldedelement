@@ -18,38 +18,60 @@ const pathToSlug = (path: string) => {
 };
 
 export function getAllPosts(): BlogPost[] {
-  const entries = Object.entries(rawPosts);
-  if (typeof window !== 'undefined') {
-    // Light debug to help verify discovery in production
-    console.info('[blog] discovered markdown files:', entries.length);
-  }
-  const posts: BlogPost[] = entries.map(([path, raw]) => {
-    const { data, content } = matter(raw);
-    const fm = data as BlogFrontmatter;
-    return {
-      slug: pathToSlug(path),
-      content,
-      frontmatter: fm,
-    };
-  });
+  try {
+    const entries = Object.entries(rawPosts);
+    if (typeof window !== 'undefined') {
+      // Light debug to help verify discovery in production
+      console.info('[blog] discovered markdown files:', entries.length);
+    }
+    const posts: BlogPost[] = entries.flatMap(([path, raw]) => {
+      try {
+        const text = typeof raw === 'string' ? raw : String(raw ?? '');
+        const { data, content } = matter(text);
+        const fm = data as BlogFrontmatter;
+        return [{
+          slug: pathToSlug(path),
+          content,
+          frontmatter: fm,
+        }];
+      } catch (err) {
+        console.error('[blog] Failed to parse markdown at', path, err);
+        return [] as BlogPost[];
+      }
+    });
 
-  return posts
-    .filter((p) => p.frontmatter?.title && p.frontmatter?.pubDate)
-    .sort((a, b) => new Date(b.frontmatter.pubDate).getTime() - new Date(a.frontmatter.pubDate).getTime());
+    return posts
+      .filter((p) => p.frontmatter?.title && p.frontmatter?.pubDate)
+      .sort((a, b) => new Date(b.frontmatter.pubDate).getTime() - new Date(a.frontmatter.pubDate).getTime());
+  } catch (e) {
+    console.error('[blog] getAllPosts error:', e);
+    return [];
+  }
 }
 
 export function getAllPostMeta(): BlogMeta[] {
-  return getAllPosts().map(({ content, ...meta }) => meta);
+  try {
+    return getAllPosts().map(({ content, ...meta }) => meta);
+  } catch (e) {
+    console.error('[blog] getAllPostMeta error:', e);
+    return [];
+  }
 }
 
 export function getPostBySlug(slug: string): BlogPost | undefined {
-  const entry = Object.entries(rawPosts).find(([path]) => path.replace(/\?.*$/, '').endsWith(`content/blog/${slug}.md`));
-  if (!entry) return undefined;
-  const raw = entry[1];
-  const { data, content } = matter(raw);
-  return {
-    slug,
-    content,
-    frontmatter: data as BlogFrontmatter,
-  };
+  try {
+    const entry = Object.entries(rawPosts).find(([path]) => path.replace(/\?.*$/, '').endsWith(`content/blog/${slug}.md`));
+    if (!entry) return undefined;
+    const raw = entry[1];
+    const text = typeof raw === 'string' ? raw : String(raw ?? '');
+    const { data, content } = matter(text);
+    return {
+      slug,
+      content,
+      frontmatter: data as BlogFrontmatter,
+    };
+  } catch (e) {
+    console.error('[blog] getPostBySlug error:', slug, e);
+    return undefined;
+  }
 }
