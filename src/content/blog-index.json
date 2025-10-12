@@ -1,23 +1,5 @@
 [
   {
-    "slug": "another-sample-post",
-    "content": "\nAccessible design helps everyone. Start by ensuring sufficient color contrast, using semantic headings, and providing clear focus states. Include alt text for images and label form elements properly. Finally, test with keyboard navigation and screen readers.\n",
-    "frontmatter": {
-      "title": "Designing With Accessibility in Mind",
-      "description": "Practical steps to make your designs more inclusive.",
-      "pubDate": "2025-09-20T00:00:00.000Z",
-      "author": "Neil",
-      "image": {
-        "url": "/assets/blog-images/another-image.webp",
-        "alt": "Accessible design elements"
-      },
-      "tags": [
-        "Accessibility",
-        "Design"
-      ]
-    }
-  },
-  {
     "slug": "digital-media",
     "content": "\nAccessible design helps everyone. Start by ensuring sufficient color contrast, using semantic headings, and providing clear focus states. Include alt text for images and label form elements properly. Finally, test with keyboard navigation and screen readers.\n",
     "frontmatter": {
@@ -26,7 +8,7 @@
       "pubDate": "2025-09-20T00:00:00.000Z",
       "author": "Neil",
       "image": {
-        "url": "/assets/blog-images/example-hero.jpg",
+        "url": "/assets/blog-images/example-hero.jpg?v=1",
         "alt": "Accessible design elements"
       },
       "tags": [
@@ -37,7 +19,7 @@
   },
   {
     "slug": "example-post-with-image",
-    "content": "\nThis post demonstrates how to reference images from `public/assets/blog-images`.\n\nFrontmatter hero image above is used on the list card and post header.\n\nInline image in markdown:\n\n![A diagram referenced from assets](/assets/blog-images/example-diagram.png)\n\nIf the files don’t exist yet, add them to:\n\n- public/assets/blog-images/example-hero.jpg\n- public/assets/blog-images/example-diagram.png\n\nCommit and push; the build will include them automatically.\n",
+    "content": "\nThis post demonstrates how to reference images from `public/assets/blog-images`.\n\nFrontmatter hero image above is used on the list card and post header.\n\nInline image in markdown:\n\n<!-- Example inline image (add your own file to public/assets/blog-images to use): -->\n<!-- ![A diagram referenced from assets](/assets/blog-images/example-diagram.png) -->\n\nIf the files don’t exist yet, add them to:\n\n- public/assets/blog-images/example-hero.jpg\n\nCommit and push; the build will include them automatically.\n",
     "frontmatter": {
       "title": "Example Post With Image",
       "description": "Shows how to reference images stored under public/assets/blog-images",

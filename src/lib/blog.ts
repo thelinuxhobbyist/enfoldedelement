@@ -15,11 +15,13 @@ const mdModules = import.meta.glob([
   '/src/content/blog/**/*.md',
 ], { eager: true, query: '?raw', import: 'default' }) as Record<string, string>;
 
-const fromIndex: BlogPost[] | undefined = generated?.map((p) => ({
-  slug: p.slug,
-  content: p.content,
-  frontmatter: p.frontmatter as BlogFrontmatter,
-}));
+const fromIndex: BlogPost[] | undefined = generated
+  ?.map((p) => ({
+    slug: p.slug,
+    content: p.content,
+    frontmatter: p.frontmatter as BlogFrontmatter,
+  }))
+  .filter((p) => !(p.frontmatter as BlogFrontmatter)?.draft);
 
 const rawPosts = fromIndex ? undefined : { ...mdModules };
 
@@ -47,12 +49,13 @@ export function getAllPosts(): BlogPost[] {
     if (typeof window !== 'undefined') {
       console.info('[blog] discovered markdown files:', entries.length);
     }
-    const posts: BlogPost[] = entries.flatMap(([path, raw]) => {
+  const posts: BlogPost[] = entries.flatMap(([path, raw]) => {
       try {
         const text = typeof raw === 'string' ? raw : String(raw ?? '');
         const { data, content } = matter(text);
         const fm = data as BlogFrontmatter;
-        return [{ slug: pathToSlug(path), content, frontmatter: fm }];
+    if (fm && fm.draft) return [] as BlogPost[];
+    return [{ slug: pathToSlug(path), content, frontmatter: fm }];
       } catch (err) {
         console.error('[blog] Failed to parse markdown at', path, err);
         return [] as BlogPost[];

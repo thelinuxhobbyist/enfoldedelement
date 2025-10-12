@@ -15,11 +15,11 @@ Frontmatter hero image above is used on the list card and post header.
 
 Inline image in markdown:
 
-![A diagram referenced from assets](/assets/blog-images/example-diagram.png)
+<!-- Example inline image (add your own file to public/assets/blog-images to use): -->
+<!-- ![A diagram referenced from assets](/assets/blog-images/example-diagram.png) -->
 
 If the files don’t exist yet, add them to:
 
 - public/assets/blog-images/example-hero.jpg
-- public/assets/blog-images/example-diagram.png
 
 Commit and push; the build will include them automatically.

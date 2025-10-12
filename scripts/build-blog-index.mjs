@@ -35,6 +35,8 @@ function toSlug(file) {
     for (const f of files) {
       const raw = await readFile(f, 'utf8');
       const { data, content } = matter(raw);
+      // Skip drafts
+      if (data && data.draft === true) continue;
       posts.push({
         slug: toSlug(f),
         content,

@@ -5,6 +5,7 @@ export type BlogFrontmatter = {
   author?: string;
   image?: { url: string; alt?: string } | string;
   tags?: string[];
+  draft?: boolean;
 };
 
 export type BlogPost = {
