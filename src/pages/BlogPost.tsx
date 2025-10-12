@@ -28,7 +28,7 @@ const BlogPost = () => {
   }, [post]);
 
   const rawImg = typeof post.frontmatter.image === 'string' ? post.frontmatter.image : post.frontmatter.image?.url;
-  const img = rawImg && rawImg.startsWith('/assets/blog-images') ? rawImg : undefined;
+  const img = rawImg && (rawImg.startsWith('/assets/blog-images') || rawImg.startsWith('/assets/blog-images-v2')) ? rawImg : undefined;
   const alt = typeof post.frontmatter.image === 'string' ? post.frontmatter.title : post.frontmatter.image?.alt || post.frontmatter.title;
 
   return (

@@ -12,3 +12,6 @@
 
 /assets/blog-images/*
   Cache-Control: no-store
+
+/assets/blog-images-v2/*
+  Cache-Control: no-store

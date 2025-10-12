@@ -4,7 +4,7 @@ description: "Practical steps to make your designs more inclusive."
 pubDate: 2025-09-20
 author: "Neil"
 image:
-  url: "/assets/blog-images/example-hero.jpg?v=1"
+  url: "/assets/blog-images-v2/red-banner-v1.jpg"
   alt: "Accessible design elements"
 tags: ["Accessibility", "Design"]
 ---

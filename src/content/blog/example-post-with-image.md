@@ -4,7 +4,7 @@ description: "Shows how to reference images stored under public/assets/blog-imag
 pubDate: 2025-10-11
 author: "Team Enfolded"
 image:
-  url: "/assets/blog-images/example-hero.jpg?v=1"
+  url: "/assets/blog-images-v2/red-banner-v1.jpg"
   alt: "Example hero image"
 tags: ["Guide", "Images"]
 ---
