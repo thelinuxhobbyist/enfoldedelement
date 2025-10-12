@@ -37,9 +37,11 @@ const Navbar = () => {
                 {item.name}
               </Link>
             ))}
-            <Button variant="hero" size="sm" asChild>
-              <Link to="/packages">Get Started</Link>
-            </Button>
+            {!isActive("/packages") && (
+              <Button variant="hero" size="sm" asChild>
+                <Link to="/packages">Get Started</Link>
+              </Button>
+            )}
           </div>
 
           {/* Mobile menu button */}
@@ -70,13 +72,15 @@ const Navbar = () => {
                 {item.name}
               </Link>
             ))}
-            <div className="pt-2">
-              <Button variant="hero" className="w-full" asChild>
-                <Link to="/packages" onClick={() => setMobileMenuOpen(false)}>
-                  Get Started
-                </Link>
-              </Button>
-            </div>
+            {!isActive("/packages") && (
+              <div className="pt-2">
+                <Button variant="hero" className="w-full" asChild>
+                  <Link to="/packages" onClick={() => setMobileMenuOpen(false)}>
+                    Get Started
+                  </Link>
+                </Button>
+              </div>
+            )}
           </div>
         </div>
       )}
