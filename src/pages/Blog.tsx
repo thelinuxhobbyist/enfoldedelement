@@ -41,7 +41,8 @@ const Blog = () => {
           ) : (
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {posts.map((post) => {
-                const img = typeof post.frontmatter.image === 'string' ? post.frontmatter.image : post.frontmatter.image?.url;
+                const rawImg = typeof post.frontmatter.image === 'string' ? post.frontmatter.image : post.frontmatter.image?.url;
+                const img = rawImg && rawImg.startsWith('/assets/blog-images') ? rawImg : undefined;
                 const alt = typeof post.frontmatter.image === 'string' ? post.frontmatter.title : post.frontmatter.image?.alt || post.frontmatter.title;
                 return (
                   <article key={post.slug} className="group bg-card border border-border rounded-2xl overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-[var(--shadow-card-hover)]">

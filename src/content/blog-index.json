@@ -26,7 +26,7 @@
       "pubDate": "2025-10-11T00:00:00.000Z",
       "author": "Team Enfolded",
       "image": {
-        "url": "/assets/blog-images/example-hero.jpg",
+        "url": "/assets/blog-images/example-hero.jpg?v=1",
         "alt": "Example hero image"
       },
       "tags": [
