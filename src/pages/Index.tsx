@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { ArrowRight, Building2, Globe, Users, BarChart4, Phone, Mail, MessageSquare } from "lucide-react";
 
 const Index = () => {
   return (
@@ -10,36 +9,25 @@ const Index = () => {
       <Navbar />
       
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-[#3F44AD]">
-        <div className="absolute inset-0"></div>
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-32 lg:py-40 relative">
-          <div className="max-w-4xl mx-auto space-y-12">
-            <div className="space-y-8">
-              <div className="relative">
-                <h1 className="relative text-5xl md:text-6xl lg:text-7xl font-bold leading-tight text-center text-white">
-                  <span className="block">
-                    Modern Britain
-                  </span>
-                  <span className="block">
-                    speaks more than English
-                  </span>
-                </h1>
-                <div className="text-center mt-3">
-                  <p className="text-xl font-medium text-white">— and so should your business.</p>
-                </div>
-              </div>
-
-              <p className="text-xl text-white/90 max-w-2xl mx-auto text-center leading-relaxed">
-                Recognising language as a bridge to cultural connection, we design for impact and help you reach new audiences in a multicultural Britain.
-              </p>
+      <section className="relative overflow-hidden bg-[#4A4FB5] text-white">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32 relative">
+          <div className="max-w-4xl mx-auto text-center space-y-8">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
+              Modern Britain<br />
+              speaks more than English
+            </h1>
+            <p className="text-lg font-medium">— and so should your business.</p>
             
-              <div className="flex justify-center pt-4">
-                <Button variant="default" size="lg" className="text-lg px-8" asChild>
-                  <Link to="/onboarding">
-                    Get Started
-                  </Link>
-                </Button>
-              </div>
+            <p className="text-xl max-w-3xl mx-auto leading-relaxed">
+              Recognising language as a bridge to cultural connection, we design for impact and help you reach new audiences in a multicultural Britain.
+            </p>
+            
+            <div className="pt-6">
+              <Button size="lg" className="bg-[#4A4FB5] hover:bg-[#3A3F95] text-white px-8 py-3 text-lg font-semibold rounded-md" asChild>
+                <Link to="/onboarding">
+                  Get Started
+                </Link>
+              </Button>
             </div>
           </div>
         </div>
@@ -48,50 +36,50 @@ const Index = () => {
       {/* Why Multilingual Matters Section */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4">Why Multilingual Matters</h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold mb-4 text-gray-900">Why Multilingual Matters</h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               The days when diverse talents and communities are valued by consumers and drive success.
             </p>
           </div>
           
-          <div className="grid md:grid-cols-4 gap-10 mt-14">
-            <div className="flex flex-col items-center text-center">
-              <div className="w-16 h-16 rounded-full bg-red-500 flex items-center justify-center mb-4">
-                <Users className="w-8 h-8 text-white" />
+          <div className="grid md:grid-cols-4 gap-8">
+            <div className="text-center">
+              <div className="w-16 h-16 bg-red-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-white text-2xl font-bold">1</span>
               </div>
               <h3 className="text-xl font-bold mb-2">1 in 6 UK</h3>
-              <p className="text-sm text-muted-foreground">
+              <p className="text-sm text-gray-600">
                 residents speak a language other than English at home
               </p>
             </div>
             
-            <div className="flex flex-col items-center text-center">
-              <div className="w-16 h-16 rounded-full bg-yellow-500 flex items-center justify-center mb-4">
-                <BarChart4 className="w-8 h-8 text-white" />
+            <div className="text-center">
+              <div className="w-16 h-16 bg-yellow-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-white text-2xl font-bold">£</span>
               </div>
               <h3 className="text-xl font-bold mb-2">£78 Billion</h3>
-              <p className="text-sm text-muted-foreground">
+              <p className="text-sm text-gray-600">
                 yearly revenue generated by ethnic minority businesses
               </p>
             </div>
             
-            <div className="flex flex-col items-center text-center">
-              <div className="w-16 h-16 rounded-full bg-red-500 flex items-center justify-center mb-4">
-                <Globe className="w-8 h-8 text-white" />
+            <div className="text-center">
+              <div className="w-16 h-16 bg-red-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-white text-2xl font-bold">❤</span>
               </div>
               <h3 className="text-xl font-bold mb-2">Cultural</h3>
-              <p className="text-sm text-muted-foreground">
+              <p className="text-sm text-gray-600">
                 native local insights offer a deeper connection with your audience
               </p>
             </div>
             
-            <div className="flex flex-col items-center text-center">
-              <div className="w-16 h-16 rounded-full bg-blue-500 flex items-center justify-center mb-4">
-                <Building2 className="w-8 h-8 text-white" />
+            <div className="text-center">
+              <div className="w-16 h-16 bg-red-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-white text-2xl font-bold">300</span>
               </div>
               <h3 className="text-xl font-bold mb-2">300+</h3>
-              <p className="text-sm text-muted-foreground">
+              <p className="text-sm text-gray-600">
                 languages spoken across the UK today
               </p>
             </div>
@@ -100,53 +88,65 @@ const Index = () => {
       </section>
 
       {/* Services Section */}
-      <section className="py-20 bg-[#3F44AD]">
+      <section className="py-20 bg-[#4A4FB5] text-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4 text-white">Our Multilingual Digital Media Services</h2>
-            <p className="text-lg max-w-2xl mx-auto text-white/90">
+            <h2 className="text-4xl font-bold mb-4">Our Multilingual Digital Media Services</h2>
+            <p className="text-lg max-w-3xl mx-auto">
               We bridge cultural gaps through thoughtful design and multilingual communication
             </p>
           </div>
           
           <div className="grid md:grid-cols-4 gap-6">
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <div className="bg-red-500 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
-                <Globe className="text-white w-6 h-6" />
+            <div className="bg-white text-gray-900 p-6 rounded-lg">
+              <div className="w-12 h-12 bg-red-500 rounded-lg flex items-center justify-center mb-4">
+                <span className="text-white text-xl">▶</span>
               </div>
               <h3 className="font-bold text-xl mb-2">Brand Identity</h3>
               <p className="text-sm text-gray-600">
                 Logo, color palette, typography & brand guidelines that resonate across cultures
               </p>
+              <p className="text-xs text-gray-500 mt-2">
+                Creative direction that speaks to your audience
+              </p>
             </div>
             
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <div className="bg-blue-500 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
-                <Globe className="text-white w-6 h-6" />
+            <div className="bg-white text-gray-900 p-6 rounded-lg">
+              <div className="w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center mb-4">
+                <span className="text-white text-xl">£</span>
               </div>
               <h3 className="font-bold text-xl mb-2">Online Presence</h3>
               <p className="text-sm text-gray-600">
                 Web design, social media, email & SEO content with effective multilingual impact
               </p>
+              <p className="text-xs text-gray-500 mt-2">
+                Digital marketing that connects with diverse audiences
+              </p>
             </div>
             
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <div className="bg-red-500 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
-                <Globe className="text-white w-6 h-6" />
+            <div className="bg-white text-gray-900 p-6 rounded-lg">
+              <div className="w-12 h-12 bg-red-500 rounded-lg flex items-center justify-center mb-4">
+                <span className="text-white text-xl">⚡</span>
               </div>
               <h3 className="font-bold text-xl mb-2">Promotional Design</h3>
               <p className="text-sm text-gray-600">
                 Posters, flyers, banners that work across cultural contexts in your community
               </p>
+              <p className="text-xs text-gray-500 mt-2">
+                Print and digital materials that engage your target audience
+              </p>
             </div>
             
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <div className="bg-blue-500 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
-                <Globe className="text-white w-6 h-6" />
+            <div className="bg-white text-gray-900 p-6 rounded-lg">
+              <div className="w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center mb-4">
+                <span className="text-white text-xl">🌐</span>
               </div>
               <h3 className="font-bold text-xl mb-2">Multilingual Digital Media</h3>
               <p className="text-sm text-gray-600">
                 Translate content, adapt & create engaging multilingual campaigns
+              </p>
+              <p className="text-xs text-gray-500 mt-2">
+                Professional translation with cultural insight
               </p>
             </div>
           </div>
@@ -154,19 +154,19 @@ const Index = () => {
       </section>
 
       {/* Communities Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Built for communities that matter</h2>
-            <p className="text-lg max-w-2xl mx-auto">
+            <h2 className="text-4xl font-bold mb-4 text-gray-900">Built for communities that matter</h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               We support organizations across business, education, healthcare, and community services to engage effectively with diverse communities.
             </p>
           </div>
           
           <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-white p-8 rounded-lg shadow-md">
-              <div className="bg-red-500 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
-                <Building2 className="text-white w-6 h-6" />
+            <div className="bg-white p-8 rounded-lg shadow-sm">
+              <div className="w-12 h-12 bg-red-500 rounded-lg flex items-center justify-center mb-4">
+                <span className="text-white text-xl">🏢</span>
               </div>
               <h3 className="font-bold text-xl mb-2">Local Businesses</h3>
               <p className="text-sm text-gray-600">
@@ -174,9 +174,9 @@ const Index = () => {
               </p>
             </div>
             
-            <div className="bg-white p-8 rounded-lg shadow-md">
-              <div className="bg-red-500 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
-                <Users className="text-white w-6 h-6" />
+            <div className="bg-white p-8 rounded-lg shadow-sm">
+              <div className="w-12 h-12 bg-red-500 rounded-lg flex items-center justify-center mb-4">
+                <span className="text-white text-xl">🏫</span>
               </div>
               <h3 className="font-bold text-xl mb-2">Schools & Councils</h3>
               <p className="text-sm text-gray-600">
@@ -184,9 +184,9 @@ const Index = () => {
               </p>
             </div>
             
-            <div className="bg-white p-8 rounded-lg shadow-md">
-              <div className="bg-red-500 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
-                <Users className="text-white w-6 h-6" />
+            <div className="bg-white p-8 rounded-lg shadow-sm">
+              <div className="w-12 h-12 bg-red-500 rounded-lg flex items-center justify-center mb-4">
+                <span className="text-white text-xl">👥</span>
               </div>
               <h3 className="font-bold text-xl mb-2">Community Groups</h3>
               <p className="text-sm text-gray-600">
@@ -194,9 +194,9 @@ const Index = () => {
               </p>
             </div>
             
-            <div className="bg-white p-8 rounded-lg shadow-md">
-              <div className="bg-red-500 w-12 h-12 rounded-lg flex items-center justify-center mb-4">
-                <Building2 className="text-white w-6 h-6" />
+            <div className="bg-white p-8 rounded-lg shadow-sm">
+              <div className="w-12 h-12 bg-red-500 rounded-lg flex items-center justify-center mb-4">
+                <span className="text-white text-xl">🏥</span>
               </div>
               <h3 className="font-bold text-xl mb-2">Healthcare & Services</h3>
               <p className="text-sm text-gray-600">
@@ -208,52 +208,52 @@ const Index = () => {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-20">
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Real impact, real results</h2>
-            <p className="text-lg max-w-2xl mx-auto">
+            <h2 className="text-4xl font-bold mb-4 text-gray-900">Real impact, real results</h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               See how our expert local businesses and organizations connect with their diverse communities through thoughtful design and translation.
             </p>
           </div>
           
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-white p-6 rounded-lg shadow-md">
+            <div className="bg-white p-6 rounded-lg border border-gray-200">
               <div className="flex justify-center mb-4">
-                <div className="flex text-yellow-400">
-                  <span>★★★★★</span>
+                <div className="flex text-yellow-400 text-sm">
+                  ★★★★★
                 </div>
               </div>
               <p className="text-sm text-gray-600 mb-4">
-                "The multilingual design helped our neighborhood restaurant reach previously unreachable demographics. Our business has increased by 30% after working with them."
+                "The multilingual design helped our neighbourhood restaurant reach previously unreachable demographics. Our business has increased by 30% after working with them."
               </p>
-              <div className="font-bold">Sarah Chen</div>
+              <div className="font-bold text-sm">Sarah Chen</div>
               <div className="text-xs text-gray-500">Restaurant Owner</div>
             </div>
             
-            <div className="bg-white p-6 rounded-lg shadow-md">
+            <div className="bg-white p-6 rounded-lg border border-gray-200">
               <div className="flex justify-center mb-4">
-                <div className="flex text-yellow-400">
-                  <span>★★★★★</span>
+                <div className="flex text-yellow-400 text-sm">
+                  ★★★★★
                 </div>
               </div>
               <p className="text-sm text-gray-600 mb-4">
                 "Their translation services are exceptional for our community. They understand what works for our community."
               </p>
-              <div className="font-bold">Ahmed Hassan</div>
+              <div className="font-bold text-sm">Ahmed Hassan</div>
               <div className="text-xs text-gray-500">Community Center Director</div>
             </div>
             
-            <div className="bg-white p-6 rounded-lg shadow-md">
+            <div className="bg-white p-6 rounded-lg border border-gray-200">
               <div className="flex justify-center mb-4">
-                <div className="flex text-yellow-400">
-                  <span>★★★★★</span>
+                <div className="flex text-yellow-400 text-sm">
+                  ★★★★★
                 </div>
               </div>
               <p className="text-sm text-gray-600 mb-4">
                 "Professional, understanding, and exceptionally responsive. They got our message across in our organization."
               </p>
-              <div className="font-bold">Maya Patel</div>
+              <div className="font-bold text-sm">Maya Patel</div>
               <div className="text-xs text-gray-500">Charity UK Director</div>
             </div>
           </div>
@@ -261,112 +261,39 @@ const Index = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-white rounded-3xl p-12 text-center shadow-2xl border border-gray-200">
-            <h2 className="text-4xl font-bold text-primary mb-4">
+          <div className="bg-white rounded-2xl p-12 text-center shadow-sm">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
               Let's Create Together
             </h2>
-            <p className="text-xl mb-8 max-w-2xl mx-auto">
+            <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
               Ready to reach new audiences? Contact us today and we'll discuss your project.
             </p>
             
-            <div className="flex flex-col md:flex-row justify-center gap-8 mt-10">
-              <div className="flex items-center justify-center">
-                <Phone className="text-red-500 w-6 h-6 mr-2" />
+            <div className="flex flex-col md:flex-row justify-center gap-8 mb-8">
+              <div className="flex items-center justify-center gap-2">
+                <div className="w-8 h-8 bg-red-500 rounded-full flex items-center justify-center">
+                  <span className="text-white text-sm">📞</span>
+                </div>
                 <span className="font-bold">01234 123 623</span>
               </div>
-              <div className="flex items-center justify-center">
-                <Mail className="text-red-500 w-6 h-6 mr-2" />
+              <div className="flex items-center justify-center gap-2">
+                <div className="w-8 h-8 bg-red-500 rounded-full flex items-center justify-center">
+                  <span className="text-white text-sm">✉</span>
+                </div>
                 <span className="font-bold">info@enfoldedmedia.com</span>
               </div>
             </div>
             
-            <div className="mt-12">
-              <p className="text-center mb-4">Connect instantly on WhatsApp</p>
-              <div className="flex justify-center">
-                <div className="bg-gray-100 p-4 rounded-lg">
-                  <div className="w-24 h-24 mx-auto">
-                    {/* QR Code would be an image here */}
-                  </div>
+            <div className="text-center">
+              <p className="text-sm text-gray-600 mb-4">Connect instantly on WhatsApp</p>
+              <div className="inline-block bg-gray-100 p-4 rounded-lg">
+                <div className="w-24 h-24 bg-gray-300 rounded flex items-center justify-center">
+                  <span className="text-xs text-gray-600">QR Code</span>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      <Footer />
-    </div>
-  );
-};
-
-export default Index;
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Features Section */}
-      <section className="py-20 bg-secondary/30">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Why Choose Enfolded Media?</h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              We deliver exceptional design solutions that help your business stand out
-            </p>
-          </div>
-          
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="group p-8 rounded-2xl bg-card border border-border hover:shadow-[var(--shadow-card-hover)] transition-all duration-300 hover:-translate-y-1">
-              <div className="w-14 h-14 bg-primary rounded-xl flex items-center justify-center mb-6">
-                <Package className="w-7 h-7 text-primary-foreground" />
-              </div>
-              <h3 className="text-2xl font-bold mb-3">Flexible Packages</h3>
-              <p className="text-muted-foreground">
-                Choose from a variety of design packages tailored to your specific needs and budget.
-              </p>
-            </div>
-            
-            <div className="group p-8 rounded-2xl bg-card border border-border hover:shadow-[var(--shadow-card-hover)] transition-all duration-300 hover:-translate-y-1">
-              <div className="w-14 h-14 bg-primary rounded-xl flex items-center justify-center mb-6">
-                <Zap className="w-7 h-7 text-primary-foreground" />
-              </div>
-              <h3 className="text-2xl font-bold mb-3">Fast Delivery</h3>
-              <p className="text-muted-foreground">
-                Get your designs delivered quickly without compromising on quality or creativity.
-              </p>
-            </div>
-            
-            <div className="group p-8 rounded-2xl bg-card border border-border hover:shadow-[var(--shadow-card-hover)] transition-all duration-300 hover:-translate-y-1">
-              <div className="w-14 h-14 bg-primary rounded-xl flex items-center justify-center mb-6">
-                <Sparkles className="w-7 h-7 text-primary-foreground" />
-              </div>
-              <h3 className="text-2xl font-bold mb-3">Premium Quality</h3>
-              <p className="text-muted-foreground">
-                Every design is crafted with attention to detail and professional excellence.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-primary rounded-3xl p-12 text-center shadow-2xl">
-            <h2 className="text-4xl font-bold text-primary-foreground mb-4">
-              Ready to Elevate Your Brand?
-            </h2>
-            <p className="text-xl text-primary-foreground/90 mb-8 max-w-2xl mx-auto">
-              Browse our packages and find the perfect solution for your design needs.
-            </p>
-            <Button variant="secondary" size="lg" className="shadow-lg" asChild>
-              <Link to="/packages">
-                View All Packages
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-            </Button>
           </div>
         </div>
       </section>
