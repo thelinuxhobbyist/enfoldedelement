@@ -38,19 +38,6 @@ export const Footer = () => {
             <p className="text-muted-foreground">
               Transforming brands through creative design solutions.
             </p>
-            <div className="flex space-x-4">
-              {socialLinks.map((social, index) => (
-                <a
-                  key={index}
-                  href={social.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-muted-foreground hover:text-primary transition-colors"
-                >
-                  <social.icon className="h-5 w-5" />
-                </a>
-              ))}
-            </div>
           </div>
 
           {/* Links Sections */}
@@ -74,9 +61,22 @@ export const Footer = () => {
 
           {/* Stay in touch (newsletter) */}
           <div className="space-y-4">
-            <h3 className="font-semibold">Stay in touch</h3>
-            <p className="text-sm text-muted-foreground">Get occasional updates and tips. No spam.</p>
-            <div className="h-10" />
+            <h3 className="font-semibold">Follow</h3>
+            <p className="text-sm text-muted-foreground">Follow Enfolded Media for updates, case studies, and behind-the-scenes.</p>
+            <div className="flex space-x-4 mt-2">
+              {socialLinks.map((social, index) => (
+                <a
+                  key={index}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-muted-foreground hover:text-primary transition-colors"
+                  aria-label={`Link to social ${index}`}
+                >
+                  <social.icon className="h-5 w-5" />
+                </a>
+              ))}
+            </div>
           </div>
         </div>
 
