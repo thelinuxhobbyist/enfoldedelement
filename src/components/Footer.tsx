@@ -1,5 +1,7 @@
 import { Link } from 'react-router-dom';
-import { Instagram, X, Facebook, Youtube, Mail } from 'lucide-react';
+import { Instagram, X, Facebook, Youtube } from 'lucide-react';
+
+// Newsletter signup removed — placeholder kept for layout
 
 export const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -70,18 +72,11 @@ export const Footer = () => {
             </div>
           ))}
 
-          {/* Contact Section */}
+          {/* Stay in touch (newsletter) */}
           <div className="space-y-4">
-            <h3 className="font-semibold">Contact Us</h3>
-            <div className="space-y-2">
-              <a 
-                href="mailto:hello@enfoldedmedia.com"
-                className="flex items-center space-x-2 text-muted-foreground hover:text-primary transition-colors"
-              >
-                <Mail className="h-4 w-4" />
-                <span>hello@enfoldedmedia.com</span>
-              </a>
-            </div>
+            <h3 className="font-semibold">Stay in touch</h3>
+            <p className="text-sm text-muted-foreground">Get occasional updates and tips. No spam.</p>
+            <div className="h-10" />
           </div>
         </div>
 
