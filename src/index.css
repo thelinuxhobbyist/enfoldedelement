@@ -154,9 +154,9 @@ All colors MUST be HSL.
 }
 
 .hero-sub {
-  font-size: 1.125rem; /* text-lg */
-  font-weight: 500;
-  opacity: 0.95;
+  font-size: 1.25rem; /* slightly larger than text-lg */
+  font-weight: 600; /* semi-bold */
+  opacity: 0.98;
 }
 
 .lead-paragraph {
