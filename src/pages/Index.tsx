@@ -10,14 +10,14 @@ const Index = () => {
       <Navbar />
       
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-b from-background via-secondary/20 to-background">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary/10 via-transparent to-transparent"></div>
+      <section className="relative overflow-hidden bg-[#3F44AD]">
+        <div className="absolute inset-0"></div>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-32 lg:py-40 relative">
           <div className="max-w-4xl mx-auto space-y-12">
             <div className="space-y-8">
               <div className="relative">
-                <h1 className="relative text-5xl md:text-6xl lg:text-7xl font-bold leading-tight text-center text-foreground">
-                  <span className="block text-primary">
+                <h1 className="relative text-5xl md:text-6xl lg:text-7xl font-bold leading-tight text-center text-white">
+                  <span className="block">
                     Modern Britain
                   </span>
                   <span className="block">
@@ -25,17 +25,17 @@ const Index = () => {
                   </span>
                 </h1>
                 <div className="text-center mt-3">
-                  <p className="text-xl font-medium">— and so should your business.</p>
+                  <p className="text-xl font-medium text-white">— and so should your business.</p>
                 </div>
               </div>
 
-              <p className="text-xl text-muted-foreground max-w-2xl mx-auto text-center leading-relaxed">
+              <p className="text-xl text-white/90 max-w-2xl mx-auto text-center leading-relaxed">
                 Recognising language as a bridge to cultural connection, we design for impact and help you reach new audiences in a multicultural Britain.
               </p>
             
               <div className="flex justify-center pt-4">
-                <Button variant="primary" size="lg" className="text-lg px-8" asChild>
-                  <Link to="/contact">
+                <Button variant="default" size="lg" className="text-lg px-8" asChild>
+                  <Link to="/onboarding">
                     Get Started
                   </Link>
                 </Button>
@@ -46,7 +46,7 @@ const Index = () => {
       </section>
 
       {/* Why Multilingual Matters Section */}
-      <section className="py-20 bg-background">
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-4">Why Multilingual Matters</h2>
@@ -100,11 +100,11 @@ const Index = () => {
       </section>
 
       {/* Services Section */}
-      <section className="py-20 bg-primary-800">
+      <section className="py-20 bg-[#3F44AD]">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Our Multilingual Digital Media Services</h2>
-            <p className="text-lg max-w-2xl mx-auto">
+            <h2 className="text-4xl font-bold mb-4 text-white">Our Multilingual Digital Media Services</h2>
+            <p className="text-lg max-w-2xl mx-auto text-white/90">
               We bridge cultural gaps through thoughtful design and multilingual communication
             </p>
           </div>
@@ -154,7 +154,7 @@ const Index = () => {
       </section>
 
       {/* Communities Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4">Built for communities that matter</h2>
