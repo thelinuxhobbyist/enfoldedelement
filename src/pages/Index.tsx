@@ -13,15 +13,17 @@ const Index = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32 relative">
           <div className="max-w-4xl mx-auto text-center space-y-8">
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
-              Build your perfect website.
+              Modern Britain<br />
+              speaks more than English
             </h1>
-            <p className="text-lg font-medium">
-              Browse our Packages
-              <span className="hidden sm:inline"> or</span> scroll down to discuss a custom project.
-            </p>
+            <p className="text-lg font-medium">— and so should your business.</p>
 
             <p className="text-xl max-w-3xl mx-auto leading-relaxed">
-              We create beautiful, conversion-focused websites and packages to fit your needs — or tailor a custom project with you.
+              Recognising language as a bridge to cultural connection, we design for impact and help you reach new audiences in a multicultural Britain.
+            </p>
+
+            <p className="text-lg font-medium mt-4">
+              Build your perfect website. Browse our Packages or scroll down to discuss a custom project.
             </p>
             
             <div className="pt-6">
