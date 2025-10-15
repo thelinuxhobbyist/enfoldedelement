@@ -1,8 +1,8 @@
 ---
-title: "How to Choose a Multilingual Web Design"
-description: "Simple tips to make your design look professional in any language."
-pubDate: 2025-10-12
-author: "Neil"
+title: "How to choose a multilingual web design service"
+description: "Use these 5 strategies to pick the right multilingual web design provider"
+pubDate: 2025-03-17
+author: "Neil Cass"
 image:
   url: "/assets/blog-images/multilingual.jpg"
   alt: "Multilingual web layout"

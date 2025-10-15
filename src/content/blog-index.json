@@ -6,7 +6,7 @@
       "title": "Accessibility: A Business Imperative",
       "description": "Why digital accessibility is not just a legal requirement but a strategic business advantage in today's market.",
       "pubDate": "2025-10-06T00:00:00.000Z",
-      "author": "David Washington",
+      "author": "Neil Cass",
       "image": {
         "url": "/assets/blog-images/example-hero.jpg",
         "alt": "Various accessibility symbols and inclusive design elements"
@@ -25,7 +25,7 @@
       "title": "Choosing the Perfect Brand Color Palette",
       "description": "A strategic guide to selecting and implementing effective color palettes that strengthen your brand identity.",
       "pubDate": "2025-10-07T00:00:00.000Z",
-      "author": "Emma Thompson",
+      "author": "Neil Cass",
       "image": {
         "url": "/assets/blog-images/example-hero.jpg",
         "alt": "Color palette samples with various hues and tones"
@@ -44,7 +44,7 @@
       "title": "Designing With Accessibility in Mind",
       "description": "Practical steps to make your designs more inclusive.",
       "pubDate": "2025-09-20T00:00:00.000Z",
-      "author": "Neil",
+      "author": "Neil Cass",
       "image": {
         "url": "/assets/blog-images/example-hero.jpg",
         "alt": "Accessible design elements"
@@ -77,10 +77,10 @@
     "slug": "how-to-choose-a-multilingual-web-design",
     "content": "\nDesigning for multiple languages can feel complicated, but a few principles go a long way:\n\n- Choose fonts that support your target scripts (e.g., Latin, Arabic, Cyrillic).\n- Allow flexible layout to support longer strings and different directions (LTR/RTL).\n- Avoid text embedded in images — keep copy as real text.\n- Test content with real translations, not placeholders.\n\nA multilingual design respects cultural nuance and improves accessibility for everyone.\n",
     "frontmatter": {
-      "title": "How to Choose a Multilingual Web Design",
-      "description": "Simple tips to make your design look professional in any language.",
-      "pubDate": "2025-10-12T00:00:00.000Z",
-      "author": "Neil",
+      "title": "How to choose a multilingual web design service",
+      "description": "Use these 5 strategies to pick the right multilingual web design provider",
+      "pubDate": "2025-03-17T00:00:00.000Z",
+      "author": "Neil Cass",
       "image": {
         "url": "/assets/blog-images/multilingual.jpg",
         "alt": "Multilingual web layout"
@@ -98,7 +98,7 @@
       "title": "The Importance of Brand Consistency",
       "description": "Learn why maintaining consistent branding across all channels is crucial for business success.",
       "pubDate": "2025-10-09T00:00:00.000Z",
-      "author": "Sarah Johnson",
+      "author": "Neil Cass",
       "image": {
         "url": "/assets/blog-images/example-hero.jpg",
         "alt": "Brand consistency illustration"
@@ -117,7 +117,7 @@
       "title": "Typography in User Experience",
       "description": "Discover how strategic typography choices can dramatically improve the user experience of your digital products.",
       "pubDate": "2025-10-08T00:00:00.000Z",
-      "author": "Miguel Chen",
+      "author": "Neil Cass",
       "image": {
         "url": "/assets/blog-images/example-hero.jpg",
         "alt": "Typography showcase with various font styles"
@@ -136,7 +136,7 @@
       "title": "Web Design Trends for 2026",
       "description": "Explore the cutting-edge web design trends that will dominate the digital landscape in 2026.",
       "pubDate": "2025-10-10T00:00:00.000Z",
-      "author": "Alex Rivera",
+      "author": "Neil Cass",
       "image": {
         "url": "/assets/blog-images/example-hero.jpg",
         "alt": "Futuristic web design concept"

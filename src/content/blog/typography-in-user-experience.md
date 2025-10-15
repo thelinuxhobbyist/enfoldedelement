@@ -2,7 +2,7 @@
 title: "Typography in User Experience"
 description: "Discover how strategic typography choices can dramatically improve the user experience of your digital products."
 pubDate: 2025-10-08
-author: "Miguel Chen"
+author: "Neil Cass"
 image:
   url: "/assets/blog-images/example-hero.jpg"
   alt: "Typography showcase with various font styles"

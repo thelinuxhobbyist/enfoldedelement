@@ -2,7 +2,7 @@
 title: "Designing With Accessibility in Mind"
 description: "Practical steps to make your designs more inclusive."
 pubDate: 2025-09-20
-author: "Neil"
+author: "Neil Cass"
 image:
   url: "/assets/blog-images/example-hero.jpg"
   alt: "Accessible design elements"

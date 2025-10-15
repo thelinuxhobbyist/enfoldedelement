@@ -2,7 +2,7 @@
 title: "Choosing the Perfect Brand Color Palette"
 description: "A strategic guide to selecting and implementing effective color palettes that strengthen your brand identity."
 pubDate: 2025-10-07
-author: "Emma Thompson"
+author: "Neil Cass"
 image:
   url: "/assets/blog-images/example-hero.jpg"
   alt: "Color palette samples with various hues and tones"

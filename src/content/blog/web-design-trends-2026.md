@@ -2,7 +2,7 @@
 title: "Web Design Trends for 2026"
 description: "Explore the cutting-edge web design trends that will dominate the digital landscape in 2026."
 pubDate: 2025-10-10
-author: "Alex Rivera"
+author: "Neil Cass"
 image:
   url: "/assets/blog-images/example-hero.jpg"
   alt: "Futuristic web design concept"

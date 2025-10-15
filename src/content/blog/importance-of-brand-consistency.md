@@ -2,7 +2,7 @@
 title: "The Importance of Brand Consistency"
 description: "Learn why maintaining consistent branding across all channels is crucial for business success."
 pubDate: 2025-10-09
-author: "Sarah Johnson"
+author: "Neil Cass"
 image:
   url: "/assets/blog-images/example-hero.jpg"
   alt: "Brand consistency illustration"
