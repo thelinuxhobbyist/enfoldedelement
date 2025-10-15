@@ -133,3 +133,44 @@ All colors MUST be HSL.
     @apply bg-background text-foreground;
   }
 }
+
+/* Small typographic utilities to improve visual hierarchy */
+.hero-title {
+  font-weight: 800; /* extra-bold */
+  line-height: 1.05;
+  font-size: 3rem; /* approx text-5xl */
+}
+
+@media (min-width: 768px) {
+  .hero-title {
+    font-size: 3.75rem; /* text-6xl */
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-title {
+    font-size: 4.5rem; /* text-7xl */
+  }
+}
+
+.hero-sub {
+  font-size: 1.125rem; /* text-lg */
+  font-weight: 500;
+  opacity: 0.95;
+}
+
+.lead-paragraph {
+  font-size: 1.125rem; /* text-xl */
+  max-width: 48rem; /* approx max-w-3xl */
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+  opacity: 0.95;
+}
+
+.section-title {
+  font-size: 1.875rem; /* text-3xl */
+  font-weight: 600;
+  color: rgb(17 24 39); /* text-gray-900 */
+}
+

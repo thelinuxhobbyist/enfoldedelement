@@ -12,17 +12,17 @@ const Index = () => {
       <section className="relative overflow-hidden bg-[#4A4FB5] text-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32 relative">
           <div className="max-w-4xl mx-auto text-center space-y-8">
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
+            <h1 className="hero-title">
               Modern Britain<br />
               speaks more than English
             </h1>
-            <p className="text-lg font-medium">— and so should your business.</p>
+            <p className="hero-sub">— and so should your business.</p>
 
-            <p className="text-xl max-w-3xl mx-auto leading-relaxed">
+            <p className="lead-paragraph">
               Recognising language as a bridge to cultural connection, we design for impact and help you reach new audiences in a multicultural Britain.
             </p>
 
-            <p className="text-lg font-medium mt-4">
+            <p className="hero-sub mt-4">
               Build your perfect website. Browse our Packages or scroll down to discuss a custom project.
             </p>
             
@@ -41,7 +41,7 @@ const Index = () => {
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4 text-gray-900">Why Multilingual Matters</h2>
+            <h2 className="section-title mb-4">Why Multilingual Matters</h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               The days when diverse talents and communities are valued by consumers and drive success.
             </p>
@@ -95,7 +95,7 @@ const Index = () => {
       <section className="py-20 bg-[#4A4FB5] text-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4">Our Multilingual Digital Media Services</h2>
+            <h2 className="section-title mb-4">Our Multilingual Digital Media Services</h2>
             <p className="text-lg max-w-3xl mx-auto">
               We bridge cultural gaps through thoughtful design and multilingual communication
             </p>
@@ -161,7 +161,7 @@ const Index = () => {
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4 text-gray-900">Built for communities that matter</h2>
+            <h2 className="section-title mb-4">Built for communities that matter</h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               We support organizations across business, education, healthcare, and community services to engage effectively with diverse communities.
             </p>
