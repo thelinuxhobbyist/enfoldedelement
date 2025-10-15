@@ -174,3 +174,9 @@ All colors MUST be HSL.
   color: rgb(17 24 39); /* text-gray-900 */
 }
 
+.cta-accent {
+  color: hsl(var(--accent));
+  opacity: 0.95;
+  font-weight: 600;
+}
+

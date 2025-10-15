@@ -15,15 +15,15 @@ const Index = () => {
             <h1 className="hero-title">
               Modern Britain<br />
               speaks more than English
+              <span className="hero-sub block mt-3 text-base font-medium">— and so should your business.</span>
             </h1>
-            <p className="hero-sub">— and so should your business.</p>
 
             <p className="lead-paragraph">
               Recognising language as a bridge to cultural connection, we design for impact and help you reach new audiences in a multicultural Britain.
             </p>
 
             <p className="hero-sub mt-4">
-              Build your perfect website. Browse our Packages or scroll down to discuss a custom project.
+              <span className="cta-accent">Build your perfect website.</span> Browse our Packages or scroll down to discuss a custom project.
             </p>
             
             <div className="pt-6">
