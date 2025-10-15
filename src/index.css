@@ -137,26 +137,28 @@ All colors MUST be HSL.
 /* Small typographic utilities to improve visual hierarchy */
 .hero-title {
   font-weight: 800; /* extra-bold */
-  line-height: 1.05;
-  font-size: 3rem; /* approx text-5xl */
+  line-height: 1.08;
+  font-size: 2.25rem; /* approx text-4xl */
 }
 
 @media (min-width: 768px) {
   .hero-title {
-    font-size: 3.75rem; /* text-6xl */
+    font-size: 3rem; /* approx text-5xl on md */
   }
 }
 
 @media (min-width: 1024px) {
   .hero-title {
-    font-size: 4.5rem; /* text-7xl */
+    font-size: 3.75rem; /* approx text-6xl on lg */
   }
 }
 
 .hero-sub {
-  font-size: 1.25rem; /* slightly larger than text-lg */
+  font-size: 1.125rem; /* text-lg */
   font-weight: 600; /* semi-bold */
   opacity: 0.98;
+  display: block;
+  margin-top: 0.5rem;
 }
 
 .lead-paragraph {
