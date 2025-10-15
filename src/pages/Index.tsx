@@ -22,9 +22,7 @@ const Index = () => {
               Recognising language as a bridge to cultural connection, we design for impact and help you reach new audiences in a multicultural Britain.
             </p>
 
-            <p className="hero-sub mt-4">
-              <span className="cta-accent">Build your perfect website.</span> Browse our Packages or scroll down to discuss a custom project.
-            </p>
+            {/* Removed the short CTA sentence at user's request */}
             
             <div className="pt-6">
               <Button size="lg" className="bg-[#4A4FB5] hover:bg-[#3A3F95] text-white px-8 py-3 text-lg font-semibold rounded-md" asChild>
