@@ -288,11 +288,11 @@ const Index = () => {
             
             <div className="text-center">
               <p className="text-sm text-gray-600 mb-4">Connect instantly on WhatsApp</p>
-              <div className="inline-block bg-gray-100 p-4 rounded-lg">
+              <div className="inline-block rounded-lg overflow-hidden">
                 <img
                   src="/assets/qr.png"
                   alt="WhatsApp QR Code"
-                  className="w-24 h-24"
+                  className="w-32 h-32 rounded-md"
                 />
               </div>
             </div>
