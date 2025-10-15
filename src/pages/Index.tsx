@@ -276,7 +276,7 @@ const Index = () => {
                 <div className="w-8 h-8 bg-red-500 rounded-full flex items-center justify-center">
                   <span className="text-white text-sm">📞</span>
                 </div>
-                <span className="font-bold">01234 123 623</span>
+                <span className="font-bold">07836 319 635</span>
               </div>
               <div className="flex items-center justify-center gap-2">
                 <div className="w-8 h-8 bg-red-500 rounded-full flex items-center justify-center">
@@ -289,9 +289,11 @@ const Index = () => {
             <div className="text-center">
               <p className="text-sm text-gray-600 mb-4">Connect instantly on WhatsApp</p>
               <div className="inline-block bg-gray-100 p-4 rounded-lg">
-                <div className="w-24 h-24 bg-gray-300 rounded flex items-center justify-center">
-                  <span className="text-xs text-gray-600">QR Code</span>
-                </div>
+                <img 
+                  src="/assets/whatsapp-qr.png" 
+                  alt="WhatsApp QR Code" 
+                  className="w-24 h-24"
+                />
               </div>
             </div>
           </div>
