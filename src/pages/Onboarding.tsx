@@ -61,6 +61,7 @@ const Onboarding = () => {
           packageName: packageData.name,
           packageId: packageData.id,
           submittedAt: new Date().toISOString(),
+          _replyto: data.email || "", // Add this to ensure Formspree knows where to send a confirmation
           formData: data
         })
       });
