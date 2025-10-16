@@ -137,37 +137,39 @@ All colors MUST be HSL.
 /* Small typographic utilities to improve visual hierarchy */
 .hero-title {
   font-weight: 800; /* extra-bold */
-  line-height: 1.08;
-  font-size: 2.25rem; /* approx text-4xl */
+  line-height: 1.02;
+  font-size: 2.25rem; /* base */
 }
 
 @media (min-width: 768px) {
   .hero-title {
-    font-size: 3rem; /* approx text-5xl on md */
+    font-size: 4.25rem; /* larger on md to match image */
   }
 }
 
 @media (min-width: 1024px) {
   .hero-title {
-    font-size: 3.75rem; /* approx text-6xl on lg */
+    font-size: 5.5rem; /* prominent large headline on lg */
+    text-wrap: balance;
   }
 }
 
 .hero-sub {
-  font-size: 1.125rem; /* text-lg */
+  font-size: 1.25rem; /* slightly larger */
   font-weight: 600; /* semi-bold */
   opacity: 0.98;
   display: block;
-  margin-top: 0.5rem;
+  margin-top: 0.75rem;
 }
 
 .lead-paragraph {
-  font-size: 1.125rem; /* text-xl */
-  max-width: 48rem; /* approx max-w-3xl */
+  font-size: 1.125rem; /* preserve readable size */
+  max-width: 56rem; /* slightly wider for larger hero */
   margin-left: auto;
   margin-right: auto;
-  line-height: 1.6;
+  line-height: 1.7;
   opacity: 0.95;
+  text-shadow: 0 1px 0 rgba(0,0,0,0.08);
 }
 
 .section-title {
