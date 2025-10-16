@@ -20,7 +20,6 @@ export interface Package {
   price: number;         // Price in GBP
   description: string;   // Full description
   shortDescription: string; // Brief description
-  inclusions: string[];  // What's included
   perfectFor: string;   // Description of who this package is perfect for
   category: string;     // Category like "Branding", "Web Design"
   featured?: boolean;   // Optional: show as featured

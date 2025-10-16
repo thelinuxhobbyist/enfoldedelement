@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Package } from "@/data/packages";
+import type { Package } from "@/types/package";
 import { ArrowRight, Star } from "lucide-react";
 
 interface PackageCardProps {
