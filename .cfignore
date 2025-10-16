@@ -20,3 +20,6 @@ npm-debug.log*
 # System Files
 .DS_Store
 Thumbs.db
+
+# Ignore legacy Hugo site artifacts
+hugo-site/
