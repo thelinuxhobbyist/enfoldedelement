@@ -9,9 +9,6 @@ const basePackages: Package[] = [
     shortDescription: "Branded profile creation for Instagram, Facebook, TikTok or LinkedIn.",
     description: "We create social media profiles with branded graphics, bios, and startup content. Great for growing your brand on any platform.",
     inclusions: [
-      "Professional design",
-      "Multiple revisions",
-      "Fast delivery (3-5 days)",
       "Professional branded graphics",
       "Platform-optimized content",
       "Account setup assistance"
@@ -29,11 +26,8 @@ const basePackages: Package[] = [
     description: "Beautiful, bold posters delivered in both print-ready and digital format. Multilingual options available.",
     inclusions: [
       "Print & digital formats",
-      "Multiple revisions",
-      "Fast delivery (3-5 days)",
-      "Print-ready high resolution",
-      "Multilingual design options",
-      "Professional layout design"
+      "Multilingual options",
+      "Professional layout"
     ],
     category: "Design",
     featured: false,
@@ -47,14 +41,10 @@ const basePackages: Package[] = [
     shortDescription: "Logo, business cards, flyer, and 3 social templates.",
     description: "Get your brand ready to launch: professional logo, business cards, flyer, and matching social media templates.",
     inclusions: [
-      "Professional design",
-      "Multiple revisions",
-      "Fast delivery (3-5 days)",
       "Professional logo design",
       "Business card design",
       "Promotional flyer design",
-      "3 social media templates",
-      "Brand guideline document"
+      "3 social media templates"
     ],
     category: "Branding",
     featured: true,
@@ -68,15 +58,10 @@ const basePackages: Package[] = [
     shortDescription: "A one-page static website with free hosting.",
     description: "Get your business online with a professional one-page website. Includes free hosting for the first year and a custom domain from the second year.",
     inclusions: [
-      "Professional design",
-      "Multiple revisions",
-      "Fast delivery (3-5 days)",
-      "Free hosting for the first year",
       "One-page responsive website",
       "Mobile-optimized design",
       "Contact form integration",
-      "SEO-friendly structure",
-      "SSL certificate included"
+      "Free hosting for first year"
     ],
     category: "Web Design",
     featured: true,
@@ -90,14 +75,10 @@ const basePackages: Package[] = [
     shortDescription: "Logo redesign, color scheme, and font style guide.",
     description: "Rejuvenate your brand with a new logo, updated color palette, and a complete style guide that fits your business vision.",
     inclusions: [
-      "Professional design",
-      "Multiple revisions",
-      "Fast delivery (3-5 days)",
       "Logo redesign",
       "Color scheme development",
       "Font style guide",
-      "Brand identity document",
-      "Vector files provided"
+      "Brand identity document"
     ],
     category: "Branding",
     featured: false,
@@ -111,15 +92,10 @@ const basePackages: Package[] = [
     shortDescription: "Email template design and setup on Mailchimp or similar.",
     description: "Reach your customers effectively with a customized email template designed to match your brand, and setup on Mailchimp or another platform.",
     inclusions: [
-      "Professional design",
-      "Multiple revisions",
-      "Fast delivery (3-5 days)",
       "Custom email template design",
       "Platform setup (Mailchimp/similar)",
       "Brand-matched styling",
-      "Mobile-responsive design",
-      "Test campaign setup",
-      "Basic analytics setup"
+      "Mobile-responsive design"
     ],
     category: "Marketing",
     featured: false,
@@ -133,15 +109,10 @@ const basePackages: Package[] = [
     shortDescription: "Ongoing updates, backups, and security for your site.",
     description: "Ensure your website remains secure, up-to-date, and running smoothly with monthly maintenance, backups, and content updates.",
     inclusions: [
-      "Monthly maintenance",
-      "Security updates",
-      "Content updates",
       "Monthly security updates",
       "Regular backups",
       "Content updates (up to 2 hours/month)",
-      "Performance monitoring",
-      "Security scanning",
-      "Priority support"
+      "Performance monitoring"
     ],
     category: "Support",
     featured: false,
@@ -155,15 +126,10 @@ const basePackages: Package[] = [
     shortDescription: "Setup your blog and create 3 posts.",
     description: "Get your blog set up with an SEO-friendly layout and 3 initial posts, to help engage visitors and improve SEO.",
     inclusions: [
-      "Professional design",
-      "Multiple revisions",
-      "Fast delivery (3-5 days)",
-      "Free hosting for the first year",
       "Blog setup and design",
       "3 professionally written posts",
       "SEO optimization",
-      "Comment system setup",
-      "Social sharing integration"
+      "Comment system setup"
     ],
     category: "Web Design",
     featured: true,
@@ -177,15 +143,10 @@ const basePackages: Package[] = [
     shortDescription: "High-converting landing page for your product or service.",
     description: "We design a focused landing page that drives conversions for your product, service, or promotional offer.",
     inclusions: [
-      "Professional design",
-      "Multiple revisions",
-      "Fast delivery (3-5 days)",
-      "Free hosting for the first year",
       "Conversion-optimized design",
       "Mobile-responsive layout",
       "Contact form integration",
-      "Analytics setup",
-      "A/B testing recommendations"
+      "Analytics setup"
     ],
     category: "Web Design",
     featured: true,
@@ -199,15 +160,10 @@ const basePackages: Package[] = [
     shortDescription: "A stunning portfolio website for photographers, designers, or artists.",
     description: "Showcase your creative work with a custom-designed portfolio, perfect for any artist, photographer, or designer.",
     inclusions: [
-      "Professional design",
-      "Multiple revisions",
-      "Fast delivery (3-5 days)",
       "Custom portfolio design",
       "Gallery functionality",
       "Contact form integration",
-      "Mobile-optimized display",
-      "Client testimonials section",
-      "Social media integration"
+      "Mobile-optimized display"
     ],
     category: "Web Design",
     featured: false,
@@ -221,15 +177,10 @@ const basePackages: Package[] = [
     shortDescription: "Expand your reach with a multilingual website.",
     description: "We set up a multilingual website, enabling you to reach customers across different languages and borders.",
     inclusions: [
-      "Professional design",
-      "Multiple revisions",
-      "Fast delivery (3-5 days)",
-      "Free hosting for the first year",
       "Multi-language setup",
       "Translation management system",
       "Language switcher integration",
-      "SEO optimization for each language",
-      "Cultural adaptation guidance"
+      "SEO optimization for each language"
     ],
     category: "Web Design",
     featured: true,
@@ -243,14 +194,10 @@ const basePackages: Package[] = [
     shortDescription: "1-on-1 consultation to define your brand.",
     description: "In this session, we help you clarify your brand vision, mission, and target audience, setting a clear direction for your marketing.",
     inclusions: [
-      "2-hour consultation",
-      "Brand analysis",
-      "Strategy document",
+      "2-hour consultation session",
       "Brand vision development",
       "Target audience analysis",
-      "Competitive analysis",
-      "Brand positioning guide",
-      "Action plan document"
+      "Brand positioning guide"
     ],
     category: "Consulting",
     featured: false,
@@ -264,15 +211,10 @@ const basePackages: Package[] = [
     shortDescription: "Automate email and SMS campaigns.",
     description: "We set up automated email or SMS sequences to engage with leads and customers, improving your marketing efficiency.",
     inclusions: [
-      "Automation setup",
-      "Multiple campaigns",
-      "Analytics tracking",
       "Email automation sequences",
       "SMS campaign setup",
       "Lead nurturing workflows",
-      "Analytics and reporting",
-      "Platform integration",
-      "Performance optimization"
+      "Analytics and reporting"
     ],
     category: "Marketing",
     featured: false,
