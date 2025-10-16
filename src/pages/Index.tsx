@@ -13,16 +13,16 @@ const Index = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32 relative">
           <div className="max-w-4xl mx-auto text-center space-y-8">
             <h1 className="hero-title">
-              Modern Britain<br />
-              speaks more than English
-              <span className="hero-sub block mt-3 text-base font-medium">— and so should your business.</span>
+              Modern Britain speaks more than English. Your business should too.
             </h1>
 
-            <p className="lead-paragraph">
-              Recognising language as a bridge to cultural connection, we design for impact and help you reach new audiences in a multicultural Britain.
+            <p className="lead-paragraph mt-3">
+              We design for impact, recognising language as the bridge to cultural connection that helps you reach new audiences.
             </p>
 
-            <p className="hero-sub mt-4">
+            <div className="h-4" />
+
+            <p className="hero-sub mt-2">
               Browse our Packages or get in touch for something custom.
             </p>
             
@@ -32,6 +32,9 @@ const Index = () => {
                   View Packages
                 </Link>
               </Button>
+            </div>
+            <div className="mt-3">
+              <a href="#contact" className="text-sm text-white/80">Or email us to discuss a custom project</a>
             </div>
           </div>
         </div>
