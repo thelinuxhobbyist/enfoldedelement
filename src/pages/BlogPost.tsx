@@ -10,27 +10,7 @@ const BlogPost = () => {
   const { slug } = useParams();
   const post = slug ? getPostBySlug(slug) : undefined;
 
-  const markdown = useMemo(() => {
-    if (!post) return '';
-    let md = post.content || '';
-    const title = String(post.frontmatter.title || '').trim();
-    // If the markdown starts with an H1 that matches the frontmatter title, remove it
-    // Also defensively strip a leading H1 if present to avoid duplicate headings
-    try {
-      const escapeRegExp = (s: string) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-      if (title) {
-        const re = new RegExp('^\\s*#\\s+' + escapeRegExp(title) + '\\s*\\n+', 'i');
-        if (re.test(md)) md = md.replace(re, '');
-      }
-      // Fallback: strip any single leading H1 line
-      md = md.replace(/^\s*#\s+.*\n+/, '');
-    } catch (e) {
-      // If anything goes wrong, fall back to the raw content
-      // eslint-disable-next-line no-console
-      console.warn('[blog] failed to sanitize markdown heading', e);
-    }
-    return md;
-  }, [post]);
+  const markdown = useMemo(() => (post ? post.content : ""), [post]);
 
   if (!post) return <Navigate to="/blog" replace />;
   useEffect(() => {

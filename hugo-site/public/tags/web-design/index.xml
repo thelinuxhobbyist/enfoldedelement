@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Web Design on Enfolded Media</title>
+    <link>//localhost:1313/tags/web-design/</link>
+    <description>Recent content in Web Design on Enfolded Media</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 05 Oct 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/web-design/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>5 Web Design Trends to Watch in 2026</title>
+      <link>//localhost:1313/blog/web-design-trends-2026/</link>
+      <pubDate>Sun, 05 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/blog/web-design-trends-2026/</guid>
+      <description>&lt;h1 id=&#34;5-web-design-trends-to-watch-in-2026&#34;&gt;5 Web Design Trends to Watch in 2026&lt;/h1&gt;&#xA;&lt;p&gt;As technology evolves and user expectations shift, web design continues to transform. Here are five trends that we predict will shape the digital landscape in 2026.&lt;/p&gt;&#xA;&lt;h2 id=&#34;1-advanced-spatial-interfaces&#34;&gt;1. Advanced Spatial Interfaces&lt;/h2&gt;&#xA;&lt;p&gt;With the mainstream adoption of mixed reality devices, websites are beginning to incorporate spatial elements that blend the physical and digital worlds. These interfaces allow users to interact with content in three-dimensional space, creating immersive experiences that go beyond traditional flat designs.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

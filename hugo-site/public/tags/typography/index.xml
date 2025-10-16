@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Typography on Enfolded Media</title>
+    <link>//localhost:1313/tags/typography/</link>
+    <description>Recent content in Typography on Enfolded Media</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 15 Sep 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/typography/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The Role of Typography in User Experience</title>
+      <link>//localhost:1313/blog/typography-in-user-experience/</link>
+      <pubDate>Mon, 15 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/blog/typography-in-user-experience/</guid>
+      <description>&lt;h1 id=&#34;the-role-of-typography-in-user-experience&#34;&gt;The Role of Typography in User Experience&lt;/h1&gt;&#xA;&lt;p&gt;Typography is often the unsung hero of user experience design. While flashy images and animations might initially catch a user&amp;rsquo;s attention, it&amp;rsquo;s typography that does the heavy lifting of communication and usability.&lt;/p&gt;&#xA;&lt;h2 id=&#34;beyond-aesthetics-typography-as-functionality&#34;&gt;Beyond Aesthetics: Typography as Functionality&lt;/h2&gt;&#xA;&lt;p&gt;Typography isn&amp;rsquo;t just about making text look good—it&amp;rsquo;s about making it work well. Good typographic choices create:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Hierarchy&lt;/strong&gt; that guides users through content&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Readability&lt;/strong&gt; that reduces cognitive load&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Consistency&lt;/strong&gt; that builds familiarity and trust&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Accessibility&lt;/strong&gt; that ensures content is available to everyone&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;key-typography-considerations-for-ux-design&#34;&gt;Key Typography Considerations for UX Design&lt;/h2&gt;&#xA;&lt;h3 id=&#34;1-font-selection&#34;&gt;1. Font Selection&lt;/h3&gt;&#xA;&lt;p&gt;Choose typefaces that align with your brand personality while prioritizing readability. Consider:&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

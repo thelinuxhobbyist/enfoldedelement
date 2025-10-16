@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Enfolded Media</title>
+    <link>//localhost:1313/tags/</link>
+    <description>Recent content in Tags on Enfolded Media</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 09 Oct 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="//localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Branding</title>
+      <link>//localhost:1313/tags/branding/</link>
+      <pubDate>Thu, 09 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/branding/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Design</title>
+      <link>//localhost:1313/tags/design/</link>
+      <pubDate>Thu, 09 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/design/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Marketing</title>
+      <link>//localhost:1313/tags/marketing/</link>
+      <pubDate>Thu, 09 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/marketing/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Trends</title>
+      <link>//localhost:1313/tags/trends/</link>
+      <pubDate>Sun, 05 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/trends/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>UX/UI</title>
+      <link>//localhost:1313/tags/ux/ui/</link>
+      <pubDate>Sun, 05 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/ux/ui/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Web Design</title>
+      <link>//localhost:1313/tags/web-design/</link>
+      <pubDate>Sun, 05 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/web-design/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Accessibility</title>
+      <link>//localhost:1313/tags/accessibility/</link>
+      <pubDate>Wed, 01 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/accessibility/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Inclusive Design</title>
+      <link>//localhost:1313/tags/inclusive-design/</link>
+      <pubDate>Wed, 01 Oct 2025 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/inclusive-design/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Color Theory</title>
+      <link>//localhost:1313/tags/color-theory/</link>
+      <pubDate>Sun, 28 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/color-theory/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Typography</title>
+      <link>//localhost:1313/tags/typography/</link>
+      <pubDate>Mon, 15 Sep 2025 00:00:00 +0000</pubDate>
+      <guid>//localhost:1313/tags/typography/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Blue</title>
+      <link>//localhost:1313/tags/blue/</link>
+      <pubDate>Wed, 15 Mar 2023 11:00:00 -0700</pubDate>
+      <guid>//localhost:1313/tags/blue/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Green</title>
+      <link>//localhost:1313/tags/green/</link>
+      <pubDate>Wed, 15 Mar 2023 11:00:00 -0700</pubDate>
+      <guid>//localhost:1313/tags/green/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Red</title>
+      <link>//localhost:1313/tags/red/</link>
+      <pubDate>Wed, 15 Mar 2023 11:00:00 -0700</pubDate>
+      <guid>//localhost:1313/tags/red/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,44 @@
+baseURL: "/"
+languageCode: "en-us"
+title: "Enfolded Media"
+theme: "enfoldedelement"
+
+params:
+  description: "Design, Development & Digital Creativity"
+  images: ["/images/site-social.jpg"]
+  mainSections: ["blog"]
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+  highlight:
+    noClasses: false
+
+build:
+  writeStats: true
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
+taxonomies:
+  tag: "tags"
+  category: "categories"
+
+menu:
+  main:
+    - identifier: "home"
+      name: "Home"
+      url: "/"
+      weight: 1
+    - identifier: "packages"
+      name: "Packages"
+      url: "/packages/"
+      weight: 2
+    - identifier: "blog"
+      name: "Blog"
+      url: "/blog/"
+      weight: 3
