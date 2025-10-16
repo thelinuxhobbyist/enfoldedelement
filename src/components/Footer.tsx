@@ -36,7 +36,7 @@ export const Footer = () => {
               <span className="text-xl font-bold text-primary">Enfolded Media</span>
             </Link>
             <p className="text-muted-foreground">
-              Transforming brands through creative design solutions.
+              Multilingual. Impactful. Designed for your audience.
             </p>
           </div>
 
