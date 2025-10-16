@@ -31,24 +31,9 @@ const PackageCard = ({ package: pkg, onClick }: PackageCardProps) => {
         <CardDescription className="text-base mt-2">{pkg.shortDescription}</CardDescription>
       </CardHeader>
       <CardContent className="flex-grow">
-        <div className="flex items-baseline mb-4">
-          <span className="text-4xl font-bold text-primary">
-            £{pkg.price}
-          </span>
+        <div className="flex items-baseline">
+          <span className="text-4xl font-bold text-primary">£{pkg.price}</span>
         </div>
-        <ul className="space-y-2">
-          {pkg.inclusions.slice(0, 3).map((inclusion, index) => (
-            <li key={index} className="flex items-start text-sm text-muted-foreground">
-              <span className="text-accent mr-2 mt-0.5">✓</span>
-              {inclusion}
-            </li>
-          ))}
-          {pkg.inclusions.length > 3 && (
-            <li className="text-sm text-muted-foreground italic">
-              + {pkg.inclusions.length - 3} more features
-            </li>
-          )}
-        </ul>
       </CardContent>
       <CardFooter>
         <Button 
