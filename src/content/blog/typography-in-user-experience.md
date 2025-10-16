@@ -34,7 +34,6 @@ Typography creates visual hierarchy that guides users through content:
 4. **Captions and supporting text** provide context
 
 Well-executed typographic hierarchy reduces cognitive load by helping users quickly:
-
 - Understand what information is available
 - Determine which content is most important
 - Decide what to read first, skim, or skip

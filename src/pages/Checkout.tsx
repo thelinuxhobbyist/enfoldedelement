@@ -144,7 +144,19 @@ const Checkout = () => {
                       </div>
                     </div>
 
-                    {/* Removed inclusions list from order summary */}
+                    {packageData.inclusions && (
+                      <div className="pt-4 border-t border-border">
+                        <h4 className="font-semibold mb-2 text-sm">Package Includes:</h4>
+                        <ul className="space-y-1 text-sm text-muted-foreground">
+                          {packageData.inclusions.map((inclusion, index) => (
+                            <li key={index} className="flex items-start">
+                              <span className="text-accent mr-2">✓</span>
+                              <span>{inclusion}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
                   </div>
                 </CardContent>
               </Card>

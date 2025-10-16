@@ -26,11 +26,14 @@ export const getRecommendedPackages = (
     const priceScore = 3 * (1 - Math.min(priceDiff / currentPackage.price, 1));
     score += priceScore;
 
-    // Text similarity between short descriptions (medium-low weight)
-    const a = pkg.shortDescription.toLowerCase();
-    const b = currentPackage.shortDescription.toLowerCase();
-    const overlap = a.split(/\W+/).filter(w => w.length > 3 && b.includes(w)).length;
-    score += Math.min(overlap, 5) * 0.4;
+    // Common inclusions (medium-low weight)
+    const commonInclusions = pkg.inclusions.filter(inclusion =>
+      currentPackage.inclusions.some(currInclusion =>
+        currInclusion.toLowerCase().includes(inclusion.toLowerCase()) ||
+        inclusion.toLowerCase().includes(currInclusion.toLowerCase())
+      )
+    ).length;
+    score += commonInclusions * 0.5;
 
     // Featured packages get a small boost
     if (pkg.featured) {

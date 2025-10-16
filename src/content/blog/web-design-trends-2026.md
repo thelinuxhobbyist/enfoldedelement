@@ -18,7 +18,6 @@ As we approach 2026, web design continues to evolve at a rapid pace. Staying ahe
 Micro-interactions have evolved beyond simple hover effects. In 2026, expect to see context-aware micro-interactions that adapt to user behavior patterns and provide meaningful feedback throughout the user journey.
 
 **Key features:**
-
 - Predictive animations that guide users before they act
 - Haptic feedback integration across devices
 - Personalized interaction patterns based on user history
@@ -28,7 +27,6 @@ Micro-interactions have evolved beyond simple hover effects. In 2026, expect to 
 As the line between devices continues to blur, web interfaces are adapting to function seamlessly across traditional screens, AR/VR environments, and ambient computing scenarios.
 
 **Implementation examples:**
-
 - Spatial navigation systems for cross-device experiences
 - Environment-responsive layouts that adapt to physical contexts
 - Voice and gesture integration alongside traditional inputs
