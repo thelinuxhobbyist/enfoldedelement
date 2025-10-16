@@ -44,21 +44,25 @@ When choosing your brand colors, consider:
 A complete brand color palette typically includes:
 
 ### Primary Color(s)
+
 - Your main brand color(s)
 - Should be instantly recognizable and closely tied to your brand identity
 - Often used in logos and primary brand elements
 
 ### Secondary Colors
+
 - Complementary colors that provide contrast and variety
 - Support the primary colors without competing for attention
 - Expand the range of design possibilities
 
 ### Accent Colors
+
 - Used sparingly for emphasis, calls to action, and highlighting
 - Create visual interest and direct user attention
 - Often brighter or more saturated than other palette colors
 
 ### Neutral Colors
+
 - Provide balance and function as background elements
 - Usually include variations of white, black, and gray
 - Create breathing room and improve readability
