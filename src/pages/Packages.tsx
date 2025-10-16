@@ -47,6 +47,9 @@ const Packages = () => {
                 className="pl-10 h-12"
               />
             </div>
+            <div className="flex items-center text-sm text-muted-foreground">
+              {filteredPackages.length} package{filteredPackages.length === 1 ? '' : 's'} found
+            </div>
           </div>
         </div>
       </section>

@@ -46,11 +46,15 @@ const PackageCard = ({ package: pkg, onClick }: PackageCardProps) => {
                 {feat}
               </li>
             ))}
-            {pkg.packageFeatures.length > 2 && (
-              <li className="text-sm text-muted-foreground italic">
-                + {pkg.packageFeatures.length - 2} more features
-              </li>
-            )}
+            {pkg.packageFeatures.length > 2 && (() => {
+              const remaining = Math.max(pkg.packageFeatures.length - 2, 0);
+              if (!remaining) return null;
+              return (
+                <li className="text-sm text-muted-foreground italic">
+                  + {remaining} more {remaining === 1 ? 'feature' : 'features'}
+                </li>
+              );
+            })()}
           </ul>
         ) : null}
       </CardContent>
