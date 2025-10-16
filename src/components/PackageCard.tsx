@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Package } from "@/data/packages";
+import type { Package } from "@/types/package";
 import { ArrowRight, Star } from "lucide-react";
 
 interface PackageCardProps {
@@ -33,22 +33,24 @@ const PackageCard = ({ package: pkg, onClick }: PackageCardProps) => {
       <CardContent className="flex-grow">
         <div className="flex items-baseline mb-4">
           <span className="text-4xl font-bold text-primary">
-            £{pkg.price}
+            {pkg.priceDisplay}
           </span>
         </div>
-        <ul className="space-y-2">
-          {pkg.inclusions.slice(0, 3).map((inclusion, index) => (
-            <li key={index} className="flex items-start text-sm text-muted-foreground">
-              <span className="text-accent mr-2 mt-0.5">✓</span>
-              {inclusion}
-            </li>
-          ))}
-          {pkg.inclusions.length > 3 && (
-            <li className="text-sm text-muted-foreground italic">
-              + {pkg.inclusions.length - 3} more features
-            </li>
-          )}
-        </ul>
+        {pkg.packageFeatures?.length ? (
+          <ul className="space-y-2">
+            {pkg.packageFeatures.slice(0, 3).map((feat, index) => (
+              <li key={index} className="flex items-start text-sm text-muted-foreground">
+                <span className="text-accent mr-2 mt-0.5">✓</span>
+                {feat}
+              </li>
+            ))}
+            {pkg.packageFeatures.length > 3 && (
+              <li className="text-sm text-muted-foreground italic">
+                + {pkg.packageFeatures.length - 3} more features
+              </li>
+            )}
+          </ul>
+        ) : null}
       </CardContent>
       <CardFooter>
         <Button 

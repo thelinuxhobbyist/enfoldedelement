@@ -23,7 +23,7 @@ const Checkout = () => {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({ 
-          amount: packageData.price,
+          amount: packageData.priceNumeric,
           currency: 'gbp' // Changed to GBP since you're using £ symbols
         }),
       })
@@ -62,7 +62,7 @@ const Checkout = () => {
     );
   }
 
-  const total = packageData.price;
+  const total = packageData.priceNumeric ?? 0;
   const vat = total * 0.2;
   const totalWithVat = total + vat;
 
@@ -132,7 +132,7 @@ const Checkout = () => {
                     <div className="pt-4 border-t border-border space-y-2">
                       <div className="flex justify-between text-sm">
                         <span className="text-muted-foreground">Subtotal</span>
-                        <span>£{total}</span>
+                        <span>£{total.toFixed(2)}</span>
                       </div>
                       <div className="flex justify-between text-sm">
                         <span className="text-muted-foreground">VAT (20%)</span>
@@ -144,19 +144,7 @@ const Checkout = () => {
                       </div>
                     </div>
 
-                    {packageData.inclusions && (
-                      <div className="pt-4 border-t border-border">
-                        <h4 className="font-semibold mb-2 text-sm">Package Includes:</h4>
-                        <ul className="space-y-1 text-sm text-muted-foreground">
-                          {packageData.inclusions.map((inclusion, index) => (
-                            <li key={index} className="flex items-start">
-                              <span className="text-accent mr-2">✓</span>
-                              <span>{inclusion}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    )}
+                    {/* No inclusions displayed on checkout summary in new schema */}
                   </div>
                 </CardContent>
               </Card>

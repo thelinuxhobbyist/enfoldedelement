@@ -1,10 +1,5 @@
 import { nanoid } from 'nanoid';
 
-export interface PackageFeature {
-  title: string;
-  description: string;
-}
-
 export interface OnboardingField {
   id: string;
   type: 'text' | 'textarea' | 'select' | 'radio' | 'checkbox';
@@ -15,16 +10,26 @@ export interface OnboardingField {
 }
 
 export interface Package {
-  name: string;          // Package name
-  slug: string;          // URL-friendly name
-  price: number;         // Price in GBP
-  description: string;   // Full description
-  shortDescription: string; // Brief description
-  inclusions: string[];  // What's included
-  perfectFor: string;   // Description of who this package is perfect for
-  category: string;     // Category like "Branding", "Web Design"
-  featured?: boolean;   // Optional: show as featured
-  onboardingTemplate: string; // ID of the onboarding template to use
+  // Identity
+  name: string;                  // Package name
+  slug: string;                  // URL-friendly identifier (map from provided id)
+
+  // Pricing
+  priceDisplay: string;          // e.g., "£120", "£100/month", "£799+"
+  priceNumeric: number;          // parsed numeric used in checkout/VAT
+
+  // Content
+  description: string;            // Long description (map from longDescription)
+  shortDescription: string;       // Brief summary
+  packageFeatures: string[];      // Shown on packages list (first 2 + "+N more")
+  detailFeatures: string[];       // Shown on details page
+  hosting: string | null;         // Hosting info or null if not applicable
+
+  // Optional metadata retained for compatibility
+  category?: string;              // Optional category badge if provided/derived
+  featured?: boolean;             // Optional elevate on list
+  onboardingTemplate?: string;    // Optional; retained to avoid breaking other flows
+  perfectFor?: string;            // Optional legacy field, unused
 }
 
 export interface PackageWithId extends Package {

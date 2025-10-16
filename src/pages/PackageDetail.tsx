@@ -87,21 +87,23 @@ const PackageDetail = () => {
                 <p className="text-xl text-muted-foreground">{currentPackage.description}</p>
               </div>
 
-              <Card>
-                <CardContent className="p-8">
-                  <h2 className="text-2xl font-bold mb-6">What's Included</h2>
-                  <div className="space-y-4">
-                    {currentPackage.inclusions.map((inclusion, index) => (
-                      <div key={index} className="flex items-start">
-                        <div className="flex-shrink-0 w-6 h-6 bg-accent/10 rounded-full flex items-center justify-center mr-4 mt-0.5">
-                          <Check className="w-4 h-4 text-accent" />
+              {currentPackage.detailFeatures?.length ? (
+                <Card>
+                  <CardContent className="p-8">
+                    <h2 className="text-2xl font-bold mb-6">What's Included</h2>
+                    <div className="space-y-4">
+                      {currentPackage.detailFeatures.map((feat, index) => (
+                        <div key={index} className="flex items-start">
+                          <div className="flex-shrink-0 w-6 h-6 bg-accent/10 rounded-full flex items-center justify-center mr-4 mt-0.5">
+                            <Check className="w-4 h-4 text-accent" />
+                          </div>
+                          <span className="text-base">{feat}</span>
                         </div>
-                        <span className="text-base">{inclusion}</span>
-                      </div>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
+                      ))}
+                    </div>
+                  </CardContent>
+                </Card>
+              ) : null}
 
               <Card className="bg-secondary/30">
                 <CardContent className="p-8">
@@ -123,7 +125,7 @@ const PackageDetail = () => {
                       <p className="text-sm text-muted-foreground mb-2">Package Price</p>
                       <div className="flex items-baseline">
                         <span className="text-5xl font-bold text-primary">
-                          £{currentPackage.price}
+                          {currentPackage.priceDisplay}
                         </span>
                       </div>
                     </div>
@@ -160,6 +162,12 @@ const PackageDetail = () => {
                         <Check className="w-4 h-4 mr-2 text-accent" />
                         Source files provided
                       </div>
+                      {currentPackage.hosting && (
+                        <div className="flex items-start pt-1">
+                          <Check className="w-4 h-4 mr-2 text-accent mt-0.5" />
+                          <span>Hosting: {currentPackage.hosting}</span>
+                        </div>
+                      )}
                     </div>
                   </CardContent>
                 </Card>
