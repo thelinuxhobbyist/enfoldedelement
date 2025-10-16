@@ -1,83 +1,105 @@
 import { Package, PackageWithId, createPackagesWithIds } from '@/types/package';
 
-// Define the base packages without IDs — reverted to pre-13-package dataset
+// Define the base packages without IDs — restored to working set with exactly one Test Package
 const basePackages: Package[] = [
   {
-    name: "Starter Website (1 page)",
-    slug: "starter-website-1-page",
-    price: 299,
-    shortDescription: "A single-page website to get your business online quickly",
-    description: "One professionally designed landing page with mobile responsiveness, basic SEO, and a contact form.",
-    category: "Web Design",
+    name: "Test Package",
+    slug: "test-package",
+    price: 0.30,
+    shortDescription: "A test package for system verification",
+    description: "This is a low-cost test package to verify the payment system is working correctly.",
+    category: "Test",
+    featured: false,
+    perfectFor: "Testing the system",
+    onboardingTemplate: "marketing_basic"
+  },
+  {
+    name: "Startup Brand Pack",
+    slug: "startup-brand-pack",
+    price: 150,
+    shortDescription: "Complete branding solution for startups launching their identity",
+    description: "Launch your startup with a comprehensive brand identity that makes a lasting impression. Perfect for new businesses looking to establish a professional presence.",
+    category: "Branding",
     featured: true,
-    perfectFor: "Small businesses and freelancers who need a simple online presence",
-    onboardingTemplate: "web_basic"
+    perfectFor: "New businesses and startups looking to establish a strong brand identity",
+    onboardingTemplate: "branding_basic"
   },
   {
-    name: "Small Business Website (3 pages)",
-    slug: "small-business-website-3-pages",
-    price: 599,
-    shortDescription: "Multi-page website for growing businesses",
-    description: "Up to 3 pages (Home, About, Services) with responsive design, SEO basics, and content guidance.",
-    category: "Web Design",
-    featured: true,
-    perfectFor: "Small businesses that need a professional multi-page site",
-    onboardingTemplate: "web_standard"
-  },
-  {
-    name: "E-commerce Starter",
-    slug: "ecommerce-starter",
-    price: 1299,
-    shortDescription: "Launch a small online store with payment and product management",
-    description: "Setup for up to 20 products, payment gateway integration, and order management.",
-    category: "E-commerce",
-    featured: false,
-    perfectFor: "Small retailers and shops starting online",
-    onboardingTemplate: "ecommerce_basic"
-  },
-  {
-    name: "Translation Package — 1 language",
-    slug: "translation-1-language",
-    price: 0.10,
-    shortDescription: "Professional translation for website content per word",
-    description: "Human translation by professional linguists. Price shown is GBP per word and will be calculated on checkout based on word count.",
-    category: "Localization",
-    featured: false,
-    perfectFor: "Websites and marketing content that need accurate human translation",
-    onboardingTemplate: "translation_simple"
-  },
-  {
-    name: "Translation Package — 2 languages",
-    slug: "translation-2-languages",
-    price: 0.18,
-    shortDescription: "Translation for two target languages (per word)",
-    description: "Human translation into two languages. Price is GBP per word and will be calculated on checkout based on word count and languages chosen.",
-    category: "Localization",
-    featured: false,
-    perfectFor: "Content that needs to be available in multiple languages",
-    onboardingTemplate: "translation_multi"
-  },
-  {
-    name: "SEO Starter",
-    slug: "seo-starter",
-    price: 299,
-    shortDescription: "Basic SEO setup and recommendations",
-    description: "On-page SEO fixes, sitemap setup, and a short keyword strategy report.",
+    name: "Event Poster Design",
+    slug: "event-poster-design",
+    price: 60,
+    shortDescription: "Eye-catching poster design for any event or promotion",
+    description: "Make your event unforgettable with a stunning poster design that captures attention and drives engagement.",
     category: "Marketing",
     featured: false,
-    perfectFor: "New sites needing essential SEO setup",
-    onboardingTemplate: "seo_basic"
+    perfectFor: "Event organizers and promoters looking for eye-catching promotional materials",
+    onboardingTemplate: "marketing_basic"
   },
   {
-    name: "Monthly Content Retainer",
-    slug: "monthly-content-retainer",
-    price: 499,
-    shortDescription: "Ongoing content creation and updates (per month)",
-    description: "Monthly content creation including blog posts, social snippets, and minor site updates.",
-    category: "Content",
+    name: "Social Media Package",
+    slug: "social-media-package",
+    price: 120,
+    shortDescription: "30-day content package to boost your social presence",
+    description: "Elevate your social media presence with professionally designed content that engages your audience and builds your brand.",
+    category: "Social Media",
     featured: true,
-    perfectFor: "Businesses wanting consistent content and SEO growth",
-    onboardingTemplate: "content_retainer"
+    perfectFor: "Brands and businesses looking to build a cohesive social media presence",
+    onboardingTemplate: "social_media"
+  },
+  {
+    name: "Website Design Package",
+    slug: "website-design-package",
+    price: 450,
+    shortDescription: "Modern, responsive website design up to 5 pages",
+    description: "Transform your online presence with a beautifully designed, user-friendly website that converts visitors into customers.",
+    category: "Web Design",
+    featured: true,
+    perfectFor: "Businesses needing a professional online presence",
+    onboardingTemplate: "web_design"
+  },
+  {
+    name: "Business Card Design",
+    slug: "business-card-design",
+    price: 45,
+    shortDescription: "Professional business card design with multiple concepts",
+    description: "Leave a memorable impression with premium business card designs that reflect your professional brand.",
+    category: "Print Design",
+    featured: false,
+    perfectFor: "Professionals and businesses needing high-quality business cards",
+    onboardingTemplate: "print_design"
+  },
+  {
+    name: "Logo Design Pro",
+    slug: "logo-design-pro",
+    price: 200,
+    shortDescription: "Premium logo design with unlimited revisions",
+    description: "Get a distinctive, memorable logo that perfectly represents your brand with our premium design service.",
+    category: "Branding",
+    featured: false,
+    perfectFor: "Businesses needing a professional, versatile logo with comprehensive file formats",
+    onboardingTemplate: "logo_design"
+  },
+  {
+    name: "Email Newsletter Template",
+    slug: "email-newsletter-template",
+    price: 85,
+    shortDescription: "Custom email newsletter design for your campaigns",
+    description: "Engage your subscribers with beautifully designed email newsletters that drive clicks and conversions.",
+    category: "Marketing",
+    featured: false,
+    perfectFor: "Businesses looking to improve their email marketing with professional templates",
+    onboardingTemplate: "marketing_basic"
+  },
+  {
+    name: "Brand Refresh Package",
+    slug: "brand-refresh-package",
+    price: 350,
+    shortDescription: "Modernize your existing brand identity",
+    description: "Breathe new life into your brand with a comprehensive refresh that maintains recognition while elevating your image.",
+    category: "Branding",
+    featured: false,
+    perfectFor: "Established businesses looking to modernize their brand while maintaining recognition",
+    onboardingTemplate: "branding_basic"
   }
 ];
 
