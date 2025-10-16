@@ -35,7 +35,7 @@ export const Footer = () => {
             <Link to="/" className="flex items-center space-x-2">
               <span className="text-xl font-bold text-primary">Enfolded Media</span>
             </Link>
-            <p className="text-muted-foreground">
+            <p className="text-sm text-muted-foreground">
               Multilingual. Impactful. Designed for your audience.
             </p>
           </div>

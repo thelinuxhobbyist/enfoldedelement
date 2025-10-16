@@ -20,11 +20,13 @@ const PackageCard = ({ package: pkg, onClick }: PackageCardProps) => {
             Featured
           </Badge>
         )}
-        <div className="mb-2">
-          <Badge variant="secondary" className="text-xs">
-            {pkg.category}
-          </Badge>
-        </div>
+        {pkg.category && (
+          <div className="mb-2">
+            <Badge variant="secondary" className="text-xs">
+              {pkg.category}
+            </Badge>
+          </div>
+        )}
         <CardTitle className="text-2xl font-bold group-hover:text-primary transition-colors">
           {pkg.name}
         </CardTitle>
@@ -38,15 +40,15 @@ const PackageCard = ({ package: pkg, onClick }: PackageCardProps) => {
         </div>
         {pkg.packageFeatures?.length ? (
           <ul className="space-y-2">
-            {pkg.packageFeatures.slice(0, 3).map((feat, index) => (
+            {pkg.packageFeatures.slice(0, 2).map((feat, index) => (
               <li key={index} className="flex items-start text-sm text-muted-foreground">
                 <span className="text-accent mr-2 mt-0.5">✓</span>
                 {feat}
               </li>
             ))}
-            {pkg.packageFeatures.length > 3 && (
+            {pkg.packageFeatures.length > 2 && (
               <li className="text-sm text-muted-foreground italic">
-                + {pkg.packageFeatures.length - 3} more features
+                + {pkg.packageFeatures.length - 2} more features
               </li>
             )}
           </ul>

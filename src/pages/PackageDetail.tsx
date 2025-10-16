@@ -80,9 +80,11 @@ const PackageDetail = () => {
             {/* Main Content */}
             <div className="lg:col-span-2 space-y-8">
               <div>
-                <Badge variant="secondary" className="mb-4">
-                  {currentPackage.category}
-                </Badge>
+                {currentPackage.category && (
+                  <Badge variant="secondary" className="mb-4">
+                    {currentPackage.category}
+                  </Badge>
+                )}
                 <h1 className="text-5xl font-bold mb-4">{currentPackage.name}</h1>
                 <p className="text-xl text-muted-foreground">{currentPackage.description}</p>
               </div>

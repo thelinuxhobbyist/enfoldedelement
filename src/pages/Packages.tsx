@@ -4,27 +4,17 @@ import Footer from "@/components/Footer";
 import PackageCard from "@/components/PackageCard";
 import { packages } from "@/data/packages";
 import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
-import { Search, Filter } from "lucide-react";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
+import { Search } from "lucide-react";
 
 const Packages = () => {
   const [searchTerm, setSearchTerm] = useState("");
-  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
-
-  const categories = Array.from(new Set(packages.map((pkg) => pkg.category)));
+  // Category filtering removed; search only
 
   const filteredPackages = packages.filter((pkg) => {
     const matchesSearch =
       pkg.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
       pkg.description.toLowerCase().includes(searchTerm.toLowerCase());
-    const matchesCategory = !selectedCategory || pkg.category === selectedCategory;
-    return matchesSearch && matchesCategory;
+    return matchesSearch;
   });
 
   return (
@@ -57,24 +47,6 @@ const Packages = () => {
                 className="pl-10 h-12"
               />
             </div>
-            <DropdownMenu>
-              <DropdownMenuTrigger asChild>
-                <Button variant="outline" className="h-12 px-6">
-                  <Filter className="mr-2 h-4 w-4" />
-                  {selectedCategory || "All Categories"}
-                </Button>
-              </DropdownMenuTrigger>
-              <DropdownMenuContent align="end" className="w-48">
-                <DropdownMenuItem onClick={() => setSelectedCategory(null)}>
-                  All Categories
-                </DropdownMenuItem>
-                {categories.map((category) => (
-                  <DropdownMenuItem key={category} onClick={() => setSelectedCategory(category)}>
-                    {category}
-                  </DropdownMenuItem>
-                ))}
-              </DropdownMenuContent>
-            </DropdownMenu>
           </div>
         </div>
       </section>
