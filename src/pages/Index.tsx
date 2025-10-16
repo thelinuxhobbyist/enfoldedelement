@@ -18,7 +18,9 @@ const Index = () => {
               <span className="hero-sub block mt-3 text-base font-medium">— and so should your business.</span>
             </h1>
 
-            {/* Hero lead removed to keep the header focused */}
+            <p className="lead-paragraph">
+              Recognising language as a bridge to cultural connection, we design for impact and help you reach new audiences in a multicultural Britain.
+            </p>
 
             <p className="hero-sub mt-4">
               Browse our Packages or get in touch for something custom.
@@ -40,9 +42,6 @@ const Index = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="section-title mb-4">Why Multilingual Matters</h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-4">
-              Recognising language as a bridge to cultural connection, we design for impact and help you reach new audiences in a multicultural Britain.
-            </p>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               The days when diverse talents and communities are valued by consumers and drive success.
             </p>
