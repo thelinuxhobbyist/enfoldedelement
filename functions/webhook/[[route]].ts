@@ -16,10 +16,11 @@ export async function onRequestPost(context) {
     console.log('Webhook event type:', event.type);
 
     switch (event.type) {
-      case "payment_intent.succeeded":
-        const paymentIntent = event.data.object;
+      case "payment_intent.succeeded": {
+        const paymentIntent = event.data.object as Stripe.PaymentIntent;
         console.log("Payment succeeded:", paymentIntent.id);
         break;
+      }
       // Add other webhook events as needed
     }
 
@@ -29,10 +30,11 @@ export async function onRequestPost(context) {
         "Access-Control-Allow-Origin": "*",
       },
     });
-  } catch (error) {
+  } catch (error: unknown) {
     console.error('Webhook error:', error);
+    const message = error instanceof Error ? error.message : 'Unknown error';
     return new Response(JSON.stringify({ 
-      error: error.message 
+      error: message 
     }), { 
       status: 400,
       headers: {

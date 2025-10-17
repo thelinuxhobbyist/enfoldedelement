@@ -12,7 +12,6 @@ const BlogPost = () => {
 
   const markdown = useMemo(() => (post ? post.content : ""), [post]);
 
-  if (!post) return <Navigate to="/blog" replace />;
   useEffect(() => {
     if (!post) return;
     document.title = `${post.frontmatter.title} | Enfolded Media`;
@@ -26,6 +25,8 @@ const BlogPost = () => {
       document.head.appendChild(meta);
     }
   }, [post]);
+
+  if (!post) return <Navigate to="/blog" replace />;
 
   const rawImg = typeof post.frontmatter.image === 'string' ? post.frontmatter.image : post.frontmatter.image?.url;
   const img = rawImg && (rawImg.startsWith('/assets/blog-images') || rawImg.startsWith('/assets/blog-images-v2')) ? rawImg : undefined;

@@ -33,6 +33,12 @@ const PackageDetail = () => {
     navigate(`/checkout/${currentPackage.slug}`);
   };
 
+  // Get recommended packages based on multiple factors
+  const recommendedPackages = useMemo(() => 
+    currentPackage ? getRecommendedPackages(currentPackage, packages) : [],
+    [currentPackage]
+  );
+
   if (!currentPackage) {
     return (
       <div className="min-h-screen bg-background">
@@ -46,12 +52,6 @@ const PackageDetail = () => {
       </div>
     );
   }
-
-  // Get recommended packages based on multiple factors
-  const recommendedPackages = useMemo(() => 
-    getRecommendedPackages(currentPackage, packages),
-    [currentPackage]
-  );
 
   const handleBuyNow = () => {
     navigate(`/checkout/${slug}`);

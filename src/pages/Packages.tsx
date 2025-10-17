@@ -41,12 +41,17 @@ const Packages = () => {
               <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
               <Input
                 type="text"
-                placeholder="Search packages..."
+                placeholder="Search packages (e.g., logo, website, brochure)"
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
                 className="pl-10 h-12"
+                aria-label="Search packages"
               />
-              {searchTerm.trim().length > 0 && (
+              {searchTerm.trim().length === 0 ? (
+                <div className="mt-2 text-xs sm:text-sm text-muted-foreground">
+                  Type to search packages. Try keywords like "logo", "website", or "brochure".
+                </div>
+              ) : (
                 <div className="mt-2 text-xs sm:text-sm text-muted-foreground">
                   {filteredPackages.length} package{filteredPackages.length === 1 ? '' : 's'} found
                 </div>
