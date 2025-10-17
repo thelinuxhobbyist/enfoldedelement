@@ -12,6 +12,7 @@ import PaymentSuccess from "./pages/PaymentSuccess";
 import PaymentCancelled from "./pages/PaymentCancelled";
 import Privacy from "./pages/Privacy";
 import Terms from "./pages/Terms";
+import Cookies from "./pages/Cookies";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
 import Onboarding from "./pages/Onboarding";
@@ -35,6 +36,7 @@ const App = () => (
           <Route path="/payment/cancelled" element={<PaymentCancelled />} />
           <Route path="/privacy" element={<Privacy />} />
           <Route path="/terms" element={<Terms />} />
+          <Route path="/cookies" element={<Cookies />} />
           <Route path="/onboarding" element={<Onboarding />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
