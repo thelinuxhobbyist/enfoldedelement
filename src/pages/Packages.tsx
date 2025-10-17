@@ -37,16 +37,18 @@ const Packages = () => {
       <section className="py-8 border-b border-border bg-background sticky top-16 z-40">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col gap-2 sm:gap-4 sm:flex-row">
-            <div className="relative flex-grow">
-              <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
-              <Input
-                type="text"
-                placeholder="Search packages (e.g., logo, website, brochure)"
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-                className="pl-10 h-12"
-                aria-label="Search packages"
-              />
+            <div className="flex-grow">
+              <div className="relative">
+                <Search className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
+                <Input
+                  type="text"
+                  placeholder="Search packages (e.g., logo, website, brochure)"
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
+                  className="pl-10 h-12"
+                  aria-label="Search packages"
+                />
+              </div>
               {searchTerm.trim().length === 0 ? (
                 <div className="mt-2 text-xs sm:text-sm text-muted-foreground">
                   Type to search packages. Try keywords like "logo", "website", or "brochure".
