@@ -38,25 +38,28 @@ const PackageCard = ({ package: pkg, onClick }: PackageCardProps) => {
             {pkg.priceDisplay}
           </span>
         </div>
-        {pkg.packageFeatures?.length ? (
-          <ul className="space-y-2">
-            {pkg.packageFeatures.slice(0, 2).map((feat, index) => (
+        {(() => {
+          const features = pkg.packageFeatures && pkg.packageFeatures.length > 0
+            ? pkg.packageFeatures
+            : (pkg.detailFeatures || []);
+          if (!features.length) return null;
+          const remaining = Math.max(features.length - 2, 0);
+          return (
+            <ul className="space-y-2">
+              {features.slice(0, 2).map((feat, index) => (
               <li key={index} className="flex items-start text-sm text-muted-foreground">
                 <span className="text-accent mr-2 mt-0.5">✓</span>
                 {feat}
               </li>
-            ))}
-            {pkg.packageFeatures.length > 2 && (() => {
-              const remaining = Math.max(pkg.packageFeatures.length - 2, 0);
-              if (!remaining) return null;
-              return (
+              ))}
+              {remaining > 0 && (
                 <li className="text-sm text-muted-foreground italic">
                   + {remaining} more {remaining === 1 ? 'feature' : 'features'}
                 </li>
-              );
-            })()}
-          </ul>
-        ) : null}
+              )}
+            </ul>
+          );
+        })()}
       </CardContent>
       <CardFooter>
         <Button 

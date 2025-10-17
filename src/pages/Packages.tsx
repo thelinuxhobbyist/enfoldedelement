@@ -36,7 +36,7 @@ const Packages = () => {
       {/* Search and Filter */}
       <section className="py-8 border-b border-border bg-background sticky top-16 z-40">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col sm:flex-row gap-4">
+          <div className="flex flex-col gap-2 sm:gap-4 sm:flex-row">
             <div className="relative flex-grow">
               <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
               <Input
@@ -46,9 +46,9 @@ const Packages = () => {
                 onChange={(e) => setSearchTerm(e.target.value)}
                 className="pl-10 h-12"
               />
-            </div>
-            <div className="flex items-center text-sm text-muted-foreground">
-              {filteredPackages.length} package{filteredPackages.length === 1 ? '' : 's'} found
+              <div className="mt-2 text-xs sm:text-sm text-muted-foreground">
+                {filteredPackages.length} package{filteredPackages.length === 1 ? '' : 's'} found
+              </div>
             </div>
           </div>
         </div>
