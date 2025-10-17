@@ -36,7 +36,7 @@ const Index = () => {
       </section>
 
       {/* Why Multilingual Matters Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-white font-sans">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="section-title mb-4">Why Multilingual Matters</h2>
