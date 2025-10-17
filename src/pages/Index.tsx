@@ -41,10 +41,10 @@ const Index = () => {
           <div className="text-center mb-16">
             <h2 className="section-title mb-4">Why Multilingual Matters</h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-4">
-              Recognising language as a bridge to cultural connection, we design for impact and help you reach new audiences in a multicultural Britain.
+              Diversity is Britain’s strength. With over 300 languages spoken nationwide, and 1 in 6 residents using a language other than English at home, communication that reflects this richness is more than good practice — it’s good business.
             </p>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              The days when diverse talents and communities are valued by consumers and drive success.
+              By speaking your audience’s language — literally and culturally — your brand earns trust, loyalty, and deeper impact.
             </p>
           </div>
           
