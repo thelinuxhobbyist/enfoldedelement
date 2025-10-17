@@ -34,7 +34,7 @@ export const Footer = () => {
             <Link to="/" className="flex items-center space-x-2">
               <span className="text-xl font-bold text-primary">Enfolded Media</span>
             </Link>
-            <p className="text-sm text-muted-foreground">
+            <p className="text-sm text-foreground/80">
               Multilingual. Impactful. Designed for your audience.
             </p>
           </div>
@@ -48,7 +48,7 @@ export const Footer = () => {
                   <li key={linkIndex}>
                     <Link
                       to={link.href}
-                      className="text-muted-foreground hover:text-primary transition-colors"
+                      className="text-foreground/80 hover:text-primary transition-colors"
                     >
                       {link.name}
                     </Link>
@@ -61,7 +61,7 @@ export const Footer = () => {
           {/* Stay in touch (newsletter) */}
           <div className="space-y-4">
             <h3 className="font-semibold">Follow</h3>
-            <p className="text-sm text-muted-foreground">Follow Enfolded Media for updates, case studies, and behind-the-scenes.</p>
+            <p className="text-sm text-foreground/80">Follow Enfolded Media for updates, case studies, and behind-the-scenes.</p>
             <div className="flex space-x-4 mt-2">
               {socialLinks.map((social, index) => (
                 <a
@@ -69,7 +69,7 @@ export const Footer = () => {
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-muted-foreground hover:text-primary transition-colors"
+                  className="text-foreground/80 hover:text-primary transition-colors"
                   aria-label={`Link to social ${index}`}
                 >
                   <social.icon className="h-5 w-5" />
@@ -82,17 +82,17 @@ export const Footer = () => {
         {/* Bottom Section */}
         <div className="pt-8 border-t border-border">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <p className="text-sm text-muted-foreground">
+            <p className="text-sm text-foreground/80">
               © {currentYear} Enfolded Media. All rights reserved.
             </p>
             <div className="flex space-x-6 text-sm">
-              <Link to="/terms" className="text-muted-foreground hover:text-primary transition-colors">
+              <Link to="/terms" className="text-foreground/80 hover:text-primary transition-colors">
                 Terms
               </Link>
-              <Link to="/privacy" className="text-muted-foreground hover:text-primary transition-colors">
+              <Link to="/privacy" className="text-foreground/80 hover:text-primary transition-colors">
                 Privacy
               </Link>
-              <Link to="/cookies" className="text-muted-foreground hover:text-primary transition-colors">
+              <Link to="/cookies" className="text-foreground/80 hover:text-primary transition-colors">
                 Cookies
               </Link>
             </div>
