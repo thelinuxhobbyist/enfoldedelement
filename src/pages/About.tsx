@@ -126,9 +126,7 @@ const About = () => {
           </div>
         </section>
 
-        <div className="mt-6 text-center text-sm text-foreground/70">
-          <p>Enfolded Media — Multilingual. Impactful. Designed for your audience.</p>
-        </div>
+        {/* Page-level sign-off removed to avoid duplication with footer */}
       </main>
 
       <Footer />

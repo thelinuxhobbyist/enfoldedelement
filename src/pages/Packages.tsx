@@ -46,9 +46,11 @@ const Packages = () => {
                 onChange={(e) => setSearchTerm(e.target.value)}
                 className="pl-10 h-12"
               />
-              <div className="mt-2 text-xs sm:text-sm text-muted-foreground">
-                {filteredPackages.length} package{filteredPackages.length === 1 ? '' : 's'} found
-              </div>
+              {searchTerm.trim().length > 0 && (
+                <div className="mt-2 text-xs sm:text-sm text-muted-foreground">
+                  {filteredPackages.length} package{filteredPackages.length === 1 ? '' : 's'} found
+                </div>
+              )}
             </div>
           </div>
         </div>
