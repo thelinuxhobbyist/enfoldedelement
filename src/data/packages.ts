@@ -28,4 +28,9 @@ const basePackages: Package[] = [
   { slug: "premium-package-v2", name: "Premium Package", shortDescription: "Custom designs and advanced features for large or complex projects.", description: "Tailored for clients with specific needs, including custom design, WooCommerce integration, and advanced features like memberships or custom integrations. Hosting options will be adjusted based on requirements.", priceDisplay: "£799", priceNumeric: parsePriceNumeric("£799"), hosting: "Hosting included for small to medium sites (External hosting may be required for large projects)", packageFeatures: ["Custom design", "Unlimited website pages", "Free SSL certificate", "Advanced SEO tools", "Mobile optimization", "Custom domain name setup", "Advanced e-commerce features (WooCommerce)", "Membership systems and custom integrations"], detailFeatures: ["Bespoke design tailored to client needs", "Full WooCommerce store setup (multiple currencies, discount codes, etc.)", "Custom integrations with third-party services", "Dedicated support for complex projects"] }
 ];
 
-export const packages: PackageWithId[] = createPackagesWithIds(basePackages);
+// Exclude premium packages across the site
+const publicPackages = basePackages.filter(
+  (p) => p.slug !== "premium-package-v2" && !/premium/i.test(p.name)
+);
+
+export const packages: PackageWithId[] = createPackagesWithIds(publicPackages);
