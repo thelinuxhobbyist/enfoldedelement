@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import PackageCard from "@/components/PackageCard";
@@ -8,6 +8,13 @@ import { Search } from "lucide-react";
 
 const Packages = () => {
   const [searchTerm, setSearchTerm] = useState("");
+  useEffect(() => {
+    document.title = "Packages | Enfolded Media – Multilingual Digital Media";
+    const el = document.querySelector('meta[name="description"]');
+    if (el) {
+      el.setAttribute('content', 'Professional multilingual digital media services in the UK');
+    }
+  }, []);
   // Category filtering removed; search only
 
   const filteredPackages = packages.filter((pkg) => {

@@ -1,9 +1,17 @@
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 const Index = () => {
+  useEffect(() => {
+    document.title = "Enfolded Media – Multilingual Digital Media";
+    const el = document.querySelector('meta[name="description"]');
+    if (el) {
+      el.setAttribute('content', 'Professional multilingual digital media services in the UK');
+    }
+  }, []);
   return (
     <div className="min-h-screen">
       <Navbar />
