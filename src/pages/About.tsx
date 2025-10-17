@@ -61,7 +61,7 @@ const About = () => {
               <li><strong>Community Campaigns</strong> — accessible print and digital campaigns for local impact.</li>
             </ul>
             <p className="mt-3">
-              <a href="#services" className="text-[#0b72ff] font-semibold hover:underline">Explore services →</a>
+              <Link to="/packages" className="text-[#0b72ff] font-semibold hover:underline">Explore services →</Link>
             </p>
           </article>
         </section>
@@ -105,20 +105,25 @@ const About = () => {
 
         {/* CTA */}
         <section id="contact" className="mt-9 rounded-xl border border-blue-100 bg-gradient-to-b from-blue-50 to-white p-6 dark:border-blue-900/30 dark:from-blue-950/20 dark:to-background">
-          <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-            <div>
+          <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+            <div className="w-full md:w-auto">
               <h4 className="text-base font-semibold mb-1">Let's create together</h4>
               <p className="text-foreground/80 m-0">Ready to reach new audiences? Contact us and we’ll discuss your project.</p>
             </div>
-            <div className="text-right min-w-[220px]">
-              <p className="m-0 font-bold">📞 07836 319 635</p>
-              <p className="m-0">✉ info@enfoldedmedia.com</p>
-              <p className="mt-2">
-                <a href="https://wa.me/447836319635" target="_blank" rel="noopener noreferrer" className="inline-block rounded-md bg-[#25D366] text-white px-3 py-2 font-semibold">Chat on WhatsApp</a>
-              </p>
+            <div className="w-full md:w-auto text-left md:text-right">
+              <a
+                href="https://wa.me/447836319635"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center rounded-md bg-[#25D366] text-white px-4 py-2 font-semibold w-full md:w-auto"
+                aria-label="Chat on WhatsApp"
+              >
+                Chat on WhatsApp
+              </a>
+              <p className="mt-2 text-sm">or email us at <a href="mailto:info@enfoldedmedia.com" className="underline">info@enfoldedmedia.com</a></p>
             </div>
           </div>
-          <div className="mt-4 text-center md:text-right">
+          <div className="hidden md:block mt-4 text-right">
             <p className="text-xs text-foreground/70">Scan to chat on WhatsApp</p>
             <div className="inline-block rounded-md overflow-hidden mt-1">
               <img src="/assets/qr.png" alt="WhatsApp QR Code" className="w-24 h-24" />
