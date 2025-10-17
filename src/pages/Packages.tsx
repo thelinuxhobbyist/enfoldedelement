@@ -56,11 +56,7 @@ const Packages = () => {
                   aria-label="Search packages"
                 />
               </div>
-              {searchTerm.trim().length === 0 ? (
-                <div className="mt-2 text-xs sm:text-sm text-muted-foreground">
-                  Type to search packages. Try keywords like "logo", "website", or "brochure".
-                </div>
-              ) : (
+              {searchTerm.trim().length > 0 && (
                 <div className="mt-2 text-xs sm:text-sm text-muted-foreground">
                   {filteredPackages.length} package{filteredPackages.length === 1 ? '' : 's'} found
                 </div>
