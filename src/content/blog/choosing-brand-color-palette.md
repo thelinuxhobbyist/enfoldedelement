@@ -1,7 +1,7 @@
 ---
 title: "Designing for Inclusion: Beyond Translation"
 description: "Explore how to design content that speaks to everyone - not just in their language, but in their lived experience. Learn the principles of truly inclusive design."
-pubDate: 2025-10-18
+pubDate: 2024-06-22
 author: "Enfolded Media"
 image:
   url: "/assets/blog-images/inclusive-design.jpg"

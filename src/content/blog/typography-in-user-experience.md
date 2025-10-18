@@ -1,7 +1,7 @@
 ---
 title: "Common Pitfalls in Multilingual Marketing (and How to Avoid Them)"
 description: "Learn the most common mistakes businesses make in multilingual marketing and discover practical strategies to avoid them for more effective cross-cultural communication."
-pubDate: 2025-10-18
+pubDate: 2024-03-14
 author: "Enfolded Media"
 image:
   url: "/assets/blog-images/multilingual-pitfalls.jpg"

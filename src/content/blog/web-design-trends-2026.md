@@ -1,7 +1,7 @@
 ---
 title: "How to Speak to Different Cultural Audiences Without Stereotyping"
 description: "Learn how to communicate respectfully and authentically with diverse audiences while avoiding harmful stereotypes and building genuine cultural connections."
-pubDate: 2025-10-18
+pubDate: 2024-01-29
 author: "Enfolded Media"
 image:
   url: "/assets/blog-images/cultural-communication.jpg"

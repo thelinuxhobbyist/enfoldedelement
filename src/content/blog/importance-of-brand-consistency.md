@@ -1,7 +1,7 @@
 ---
 title: "The Business Value of Speaking Your Customer's Language"
 description: "Discover how multilingual communication drives business growth, loyalty, and brand trust while creating genuine connections with diverse UK audiences."
-pubDate: 2025-10-18
+pubDate: 2023-11-08
 author: "Enfolded Media"
 image:
   url: "/assets/blog-images/business-value-multilingual.jpg"

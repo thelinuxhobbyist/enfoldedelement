@@ -1,7 +1,7 @@
 ---
 title: "Accessibility: A Business Imperative"
 description: "Why digital accessibility is not just a legal requirement but a strategic business advantage in today's market."
-pubDate: 2025-10-06
+pubDate: 2023-05-12
 author: "Neil Cass"
 image:
   url: "/assets/blog-images/example-hero.jpg"

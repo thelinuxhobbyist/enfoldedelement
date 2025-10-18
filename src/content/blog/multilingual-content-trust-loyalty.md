@@ -1,7 +1,7 @@
 ---
 title: "How Multilingual Content Boosts Trust and Customer Loyalty"
 description: "Discover how multilingual content builds trust, prevents misunderstandings, and fosters lasting customer loyalty in the diverse UK market."
-pubDate: 2025-10-18
+pubDate: 2023-08-17
 author: "Enfolded Media"
 image:
   url: "/assets/blog-images/multilingual-trust.jpg"

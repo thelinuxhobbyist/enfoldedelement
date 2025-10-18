@@ -1,7 +1,7 @@
 ---
 title: "Why Multilingual Design is the Future of UK Marketing"
 description: "Discover how multilingual design can transform your UK marketing strategy, build stronger community connections, and create competitive advantages in our diverse society."
-pubDate: 2025-10-18
+pubDate: 2024-09-15
 author: "Enfolded Media"
 image:
   url: "/assets/blog-images/multilingual-design.jpg"
