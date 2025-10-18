@@ -9,8 +9,6 @@ image:
 tags: ["Accessibility", "Business Strategy", "Inclusive Design"]
 ---
 
-# Accessibility: A Business Imperative
-
 Digital accessibility has evolved from a niche compliance concern to a fundamental business imperative. Organizations that embrace accessibility as a core principle are discovering strategic advantages beyond mere regulatory compliance.
 
 ## Beyond Compliance: The Business Case
