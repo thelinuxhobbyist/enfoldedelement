@@ -10,8 +10,6 @@ tags: ["Inclusive Design", "Cultural Accessibility", "Localization", "User Exper
 draft: false
 ---
 
-# Designing for Inclusion: Beyond Translation
-
 ## Introduction
 
 Translation is a powerful tool — but it's only one piece of inclusive design.  

@@ -10,8 +10,6 @@ tags: ["Cultural Awareness", "Inclusive Marketing", "Diversity", "Communication"
 draft: false
 ---
 
-# How to Speak to Different Cultural Audiences Without Stereotyping
-
 ## Introduction
 
 Britain's cultural diversity is its strength — but communicating effectively across cultures requires care and understanding.  

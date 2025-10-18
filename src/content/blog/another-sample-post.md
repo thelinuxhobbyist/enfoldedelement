@@ -10,8 +10,6 @@ tags: ["Multilingual Design", "UK Marketing", "Cultural Diversity", "Inclusive D
 draft: false
 ---
 
-# Why Multilingual Design is the Future of UK Marketing
-
 ## Introduction
 
 Modern Britain is a mosaic of cultures and languages. With over **300 languages spoken nationwide**, businesses that communicate in only English risk missing out on vast sections of the market.  

@@ -10,8 +10,6 @@ tags: ["Multilingual Marketing", "Translation", "Cultural Awareness", "Marketing
 draft: false
 ---
 
-# Common Pitfalls in Multilingual Marketing (and How to Avoid Them)
-
 ## Introduction
 
 Multilingual marketing can be transformative — but only if done right.  
