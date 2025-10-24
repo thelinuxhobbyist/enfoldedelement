@@ -154,7 +154,7 @@ All colors MUST be HSL.
 }
 
 .hero-sub {
-  font-size: 1.125rem; /* text-lg */
+  font-size: 1rem; /* text-base, smaller than hero-title for hierarchy */
   font-weight: 600; /* semi-bold */
   opacity: 0.98;
   display: block;

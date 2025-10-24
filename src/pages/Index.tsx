@@ -21,22 +21,24 @@ const Index = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32 relative">
           <div className="max-w-4xl mx-auto text-center space-y-8">
             <h1 className="hero-title">
-              Modern Britain<br />
-              speaks more than English
-              <span className="hero-sub block mt-3 text-base font-medium">— and so should your business.</span>
+              Modern Britain speaks more than English —
             </h1>
+            <span className="hero-sub block mt-2 text-base font-semibold opacity-90" style={{ fontSize: '1.2375rem' }}>and so should your business.</span>
 
-            {/* Hero lead removed to keep the header focused */}
-
-            <p className="hero-sub mt-4">
-              Browse our Packages or get in touch for something custom.
+            <p className="hero-sub mt-4 text-lg font-medium">
+              Connect with diverse audiences through multilingual design and marketing that reflect the real Britain.
             </p>
-            
-            <div className="pt-6">
+
+            <div className="pt-6 flex flex-col sm:flex-row justify-center gap-4">
               <Button size="lg" className="bg-[#4A4FB5] hover:bg-[#3A3F95] text-white px-8 py-3 text-lg font-semibold rounded-md" asChild>
                 <Link to="/packages">
                   View Packages
                 </Link>
+              </Button>
+              <Button size="lg" className="bg-[#4A4FB5] hover:bg-[#3A3F95] text-white px-8 py-3 text-lg font-semibold rounded-md" asChild>
+                <a href="#contact">
+                  Book a Free Consultation
+                </a>
               </Button>
             </div>
           </div>
@@ -47,12 +49,12 @@ const Index = () => {
       <section className="py-20 bg-white font-sans">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="section-title mb-4">Why Multilingual Matters</h2>
+            <h2 className="section-title mb-4">Why Speaking Your Audience’s Language Matters</h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-4">
-              Diversity is Britain’s strength. With over 300 languages spoken nationwide, and 1 in 6 residents using a language other than English at home, communication that reflects this richness is more than good practice — it’s good business.
+              Diversity is Britain’s strength. With over 300 languages spoken nationwide, 1 in 6 residents using a language other than English at home, and £78 billion generated yearly by ethnic minority businesses — inclusive communication isn’t just good practice, it’s smart business.
             </p>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              By speaking your audience’s language — literally and culturally — your brand earns trust, loyalty, and deeper impact.
+              By speaking your audience’s language — literally and culturally — your brand earns trust, loyalty, and long-term growth.
             </p>
           </div>
           
@@ -115,12 +117,12 @@ const Index = () => {
               <div className="w-12 h-12 bg-red-500 rounded-lg flex items-center justify-center mb-4">
                 <span className="text-white text-xl">▶</span>
               </div>
-              <h3 className="font-bold text-xl mb-2">Brand Identity</h3>
+              <h3 className="font-bold text-xl mb-2">Culturally Resonant Brand Design</h3>
               <p className="text-sm text-gray-600">
-                Logo, color palette, typography & brand guidelines that resonate across cultures
+                Logo, color palette, typography & brand guidelines that resonate across cultures.
               </p>
               <p className="text-xs text-gray-500 mt-2">
-                Creative direction that speaks to your audience
+                Creative direction that speaks to your audience.
               </p>
             </div>
             
@@ -128,12 +130,12 @@ const Index = () => {
               <div className="w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center mb-4">
                 <span className="text-white text-xl">£</span>
               </div>
-              <h3 className="font-bold text-xl mb-2">Online Presence</h3>
+              <h3 className="font-bold text-xl mb-2">Multilingual Web & Digital Marketing</h3>
               <p className="text-sm text-gray-600">
-                Web design, social media, email & SEO content with effective multilingual impact
+                Web design, social media, email & SEO content with effective multilingual impact.
               </p>
               <p className="text-xs text-gray-500 mt-2">
-                Digital marketing that connects with diverse audiences
+                Digital marketing that connects with diverse audiences.
               </p>
             </div>
             
@@ -141,12 +143,12 @@ const Index = () => {
               <div className="w-12 h-12 bg-red-500 rounded-lg flex items-center justify-center mb-4">
                 <span className="text-white text-xl">⚡</span>
               </div>
-              <h3 className="font-bold text-xl mb-2">Promotional Design</h3>
+              <h3 className="font-bold text-xl mb-2">Culturally Aware Advertising Materials</h3>
               <p className="text-sm text-gray-600">
-                Posters, flyers, banners that work across cultural contexts in your community
+                Posters, flyers, banners that work across cultural contexts in your community.
               </p>
               <p className="text-xs text-gray-500 mt-2">
-                Print and digital materials that engage your target audience
+                Print and digital materials that engage your target audience.
               </p>
             </div>
             
@@ -154,12 +156,12 @@ const Index = () => {
               <div className="w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center mb-4">
                 <span className="text-white text-xl">🌐</span>
               </div>
-              <h3 className="font-bold text-xl mb-2">Multilingual Digital Media</h3>
+              <h3 className="font-bold text-xl mb-2">Professional Translation with Cultural Impact</h3>
               <p className="text-sm text-gray-600">
-                Translate content, adapt & create engaging multilingual campaigns
+                Translate, adapt, and create engaging multilingual campaigns.
               </p>
               <p className="text-xs text-gray-500 mt-2">
-                Professional translation with cultural insight
+                Professional translation with cultural insight.
               </p>
             </div>
           </div>
@@ -170,9 +172,9 @@ const Index = () => {
       <section className="py-20 bg-gray-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="section-title mb-4">Built for communities that matter</h2>
+            <h2 className="section-title mb-4">Built for Communities That Matter</h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              We support organizations across business, education, healthcare, and community services to engage effectively with diverse communities.
+              We work with organizations that serve real communities — helping them communicate with clarity, empathy, and cultural understanding.
             </p>
           </div>
           
@@ -225,8 +227,9 @@ const Index = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4 text-gray-900">Real impact, real results</h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              See how our expert local businesses and organizations connect with their diverse communities through thoughtful design and translation.
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-4">
+              <span className="font-semibold">Trusted by local businesses and organizations across the UK</span><br />
+              Here’s what our clients say about working with Enfolded Media.
             </p>
           </div>
           
@@ -273,15 +276,16 @@ const Index = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 bg-gray-50">
+  {/* CTA Section */}
+  <section id="contact" className="py-20 bg-gray-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="bg-white rounded-2xl p-12 text-center shadow-sm">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Let's Create Together
+              Let’s Create Together
             </h2>
             <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-              Ready to reach new audiences? Contact us today and we'll discuss your project.
+              Ready to reach new audiences and make a lasting impact?<br />
+              Get in touch today — we’d love to bring your project to life.
             </p>
             
             <div className="flex flex-col md:flex-row justify-center gap-8 mb-8">
