@@ -106,7 +106,7 @@ const Index = () => {
       <section className="py-20 bg-[#4A4FB5] text-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="section-title mb-4 text-white">Our Multilingual Digital Media Services</h2>
+            <h2 className="section-title mb-4" style={{ color: 'white' }}>Our Multilingual Digital Media Services</h2>
             <p className="text-lg max-w-3xl mx-auto">
               We bridge cultural gaps through thoughtful design and multilingual communication
             </p>
@@ -224,41 +224,41 @@ const Index = () => {
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-white p-6 rounded-lg border border-gray-200">
               <div className="flex justify-center mb-4">
-                <div className="flex text-yellow-400 text-sm">
+                <div className="flex text-yellow-400 text-base">
                   ★★★★★
                 </div>
               </div>
-              <p className="text-sm text-gray-600 mb-4">
+              <p className="text-base text-gray-600 mb-4">
                 "The multilingual design helped our neighbourhood restaurant reach previously unreachable demographics. Our business has increased by 30% after working with them."
               </p>
-              <div className="font-bold text-sm">Sarah Chen</div>
-              <div className="text-xs text-gray-500">Restaurant Owner</div>
+              <div className="font-bold text-base">Sarah Chen</div>
+              <div className="text-sm text-gray-500">Restaurant Owner</div>
             </div>
             
             <div className="bg-white p-6 rounded-lg border border-gray-200">
               <div className="flex justify-center mb-4">
-                <div className="flex text-yellow-400 text-sm">
+                <div className="flex text-yellow-400 text-base">
                   ★★★★★
                 </div>
               </div>
-              <p className="text-sm text-gray-600 mb-4">
+              <p className="text-base text-gray-600 mb-4">
                 "Their translation services are exceptional for our community. They understand what works for our community."
               </p>
-              <div className="font-bold text-sm">Ahmed Hassan</div>
-              <div className="text-xs text-gray-500">Community Center Director</div>
+              <div className="font-bold text-base">Ahmed Hassan</div>
+              <div className="text-sm text-gray-500">Community Center Director</div>
             </div>
             
             <div className="bg-white p-6 rounded-lg border border-gray-200">
               <div className="flex justify-center mb-4">
-                <div className="flex text-yellow-400 text-sm">
+                <div className="flex text-yellow-400 text-base">
                   ★★★★★
                 </div>
               </div>
-              <p className="text-sm text-gray-600 mb-4">
+              <p className="text-base text-gray-600 mb-4">
                 "Professional, understanding, and exceptionally responsive. They got our message across in our organization."
               </p>
-              <div className="font-bold text-sm">Maya Patel</div>
-              <div className="text-xs text-gray-500">Charity UK Director</div>
+              <div className="font-bold text-base">Maya Patel</div>
+              <div className="text-sm text-gray-500">Charity UK Director</div>
             </div>
           </div>
         </div>
