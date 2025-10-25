@@ -106,7 +106,7 @@ const Index = () => {
       <section className="py-20 bg-[#4A4FB5] text-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="section-title mb-4">Our Multilingual Digital Media Services</h2>
+            <h2 className="section-title mb-4 text-white">Our Multilingual Digital Media Services</h2>
             <p className="text-lg max-w-3xl mx-auto">
               We bridge cultural gaps through thoughtful design and multilingual communication
             </p>
@@ -118,11 +118,8 @@ const Index = () => {
                 <span className="text-white text-xl">▶</span>
               </div>
               <h3 className="font-bold text-xl mb-2">Culturally Resonant Brand Design</h3>
-              <p className="text-sm text-gray-600">
+              <p className="text-base text-gray-600">
                 Logo, color palette, typography & brand guidelines that resonate across cultures.
-              </p>
-              <p className="text-xs text-gray-500 mt-2">
-                Creative direction that speaks to your audience.
               </p>
             </div>
             
@@ -131,11 +128,8 @@ const Index = () => {
                 <span className="text-white text-xl">£</span>
               </div>
               <h3 className="font-bold text-xl mb-2">Multilingual Web & Digital Marketing</h3>
-              <p className="text-sm text-gray-600">
+              <p className="text-base text-gray-600">
                 Web design, social media, email & SEO content with effective multilingual impact.
-              </p>
-              <p className="text-xs text-gray-500 mt-2">
-                Digital marketing that connects with diverse audiences.
               </p>
             </div>
             
@@ -144,11 +138,8 @@ const Index = () => {
                 <span className="text-white text-xl">⚡</span>
               </div>
               <h3 className="font-bold text-xl mb-2">Culturally Aware Advertising Materials</h3>
-              <p className="text-sm text-gray-600">
+              <p className="text-base text-gray-600">
                 Posters, flyers, banners that work across cultural contexts in your community.
-              </p>
-              <p className="text-xs text-gray-500 mt-2">
-                Print and digital materials that engage your target audience.
               </p>
             </div>
             
@@ -157,11 +148,8 @@ const Index = () => {
                 <span className="text-white text-xl">🌐</span>
               </div>
               <h3 className="font-bold text-xl mb-2">Professional Translation with Cultural Impact</h3>
-              <p className="text-sm text-gray-600">
+              <p className="text-base text-gray-600">
                 Translate, adapt, and create engaging multilingual campaigns.
-              </p>
-              <p className="text-xs text-gray-500 mt-2">
-                Professional translation with cultural insight.
               </p>
             </div>
           </div>
@@ -184,7 +172,7 @@ const Index = () => {
                 <span className="text-white text-xl">🏢</span>
               </div>
               <h3 className="font-bold text-xl mb-2">Local Businesses</h3>
-              <p className="text-sm text-gray-600">
+              <p className="text-base text-gray-600">
                 Supporting independent businesses in Britain to reach ethnic minority customers through effective cultural content marketing
               </p>
             </div>
@@ -194,7 +182,7 @@ const Index = () => {
                 <span className="text-white text-xl">🏫</span>
               </div>
               <h3 className="font-bold text-xl mb-2">Schools & Councils</h3>
-              <p className="text-sm text-gray-600">
+              <p className="text-base text-gray-600">
                 Helping educational institutions and local government create inclusive classrooms and multilingual communities
               </p>
             </div>
@@ -204,7 +192,7 @@ const Index = () => {
                 <span className="text-white text-xl">👥</span>
               </div>
               <h3 className="font-bold text-xl mb-2">Community Groups</h3>
-              <p className="text-sm text-gray-600">
+              <p className="text-base text-gray-600">
                 Empowering community organizations to reach diverse residents and provide more effective support services
               </p>
             </div>
@@ -214,7 +202,7 @@ const Index = () => {
                 <span className="text-white text-xl">🏥</span>
               </div>
               <h3 className="font-bold text-xl mb-2">Healthcare & Services</h3>
-              <p className="text-sm text-gray-600">
+              <p className="text-base text-gray-600">
                 Creating clear, accessible communications to ensure all patients and service users receive equal care regardless of language barriers
               </p>
             </div>
