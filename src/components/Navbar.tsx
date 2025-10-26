@@ -17,12 +17,30 @@ const Navbar = () => {
   const isActive = (path: string) => location.pathname === path;
 
   return (
-    <nav className="sticky top-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
+  <nav className="sticky top-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border" style={{ position: 'relative' }}>
+  <div className="container mx-auto px-4 sm:px-6 lg:px-8" style={{ position: 'relative' }}>
+  <div className="flex items-center justify-between h-16" style={{ position: 'relative' }}>
           <Link to="/" className="flex items-center">
             <img src={logo} alt="Enfolded Media" className="h-10 w-auto" />
           </Link>
+          {/* Animated border under navbar */}
+          <style>{`
+            @keyframes borderMove {
+              0% { background-position: 0% 50%; }
+              100% { background-position: 100% 50%; }
+            }
+          `}</style>
+          <div style={{
+            position: 'absolute',
+            left: 0,
+            bottom: 0,
+            width: '100%',
+            height: '1px',
+            background: 'linear-gradient(90deg, #e3342f, #4A4FB5, #e3342f)',
+            backgroundSize: '200% 100%',
+            animation: 'borderMove 2s linear infinite',
+            zIndex: 51
+          }} />
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
@@ -30,9 +48,7 @@ const Navbar = () => {
               <Link
                 key={item.path}
                 to={item.path}
-                className={`text-sm font-medium transition-colors hover:text-primary ${
-                  isActive(item.path) ? "text-primary" : "text-muted-foreground"
-                }`}
+                className={`text-sm font-medium transition-colors ${isActive(item.path) ? "text-primary" : "text-muted-foreground"} hover:text-[#e3342f]`}
               >
                 {item.name}
               </Link>

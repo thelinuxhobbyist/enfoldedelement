@@ -21,7 +21,7 @@ const Index = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32 relative">
           <div className="max-w-4xl mx-auto text-center space-y-8">
             <h1 className="hero-title">
-              Modern Britain speaks more than English —
+              Modern Britain speaks more than <span style={{ color: '#e3342f', fontWeight: 700 }}>English</span> —
             </h1>
             <span className="hero-sub block mt-2 text-base font-semibold opacity-90" style={{ fontSize: '1.2375rem' }}>and so should your business.</span>
 
@@ -36,7 +36,7 @@ const Index = () => {
                 </Link>
               </Button>
               <Button size="lg" className="bg-[#4A4FB5] hover:bg-[#3A3F95] text-white px-8 py-3 text-lg font-semibold rounded-md" asChild>
-                <a href="#contact">
+                <a href="#contact" className="hover:text-[#e3342f] hover:bg-white transition-colors duration-200">
                   Book a Free Consultation
                 </a>
               </Button>
