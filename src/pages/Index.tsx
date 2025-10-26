@@ -31,7 +31,7 @@ const Index = () => {
 
             <div className="pt-6 flex flex-col sm:flex-row justify-center gap-4">
               <Button size="lg" className="bg-[#4A4FB5] hover:bg-[#3A3F95] text-white px-8 py-3 text-lg font-semibold rounded-md" asChild>
-                <Link to="/packages">
+                <Link to="/packages" className="bg-[#e3342f] hover:bg-[#c81e1e] text-white px-8 py-3 text-lg font-semibold rounded-md">
                   View Packages
                 </Link>
               </Button>
