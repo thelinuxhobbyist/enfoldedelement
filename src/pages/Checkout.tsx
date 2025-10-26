@@ -63,8 +63,9 @@ const Checkout = () => {
   }
 
   const total = packageData.priceNumeric ?? 0;
-  const vat = total * 0.2;
-  const totalWithVat = total + vat;
+  // VAT logic removed for businesses under threshold. To restore, revert this commit.
+  // const vat = total * 0.2;
+  // const totalWithVat = total + vat;
 
   return (
     <div className="min-h-screen bg-background">
@@ -130,17 +131,9 @@ const Checkout = () => {
                     </div>
 
                     <div className="pt-4 border-t border-border space-y-2">
-                      <div className="flex justify-between text-sm">
-                        <span className="text-muted-foreground">Subtotal</span>
-                        <span>£{total.toFixed(2)}</span>
-                      </div>
-                      <div className="flex justify-between text-sm">
-                        <span className="text-muted-foreground">VAT (20%)</span>
-                        <span>£{vat.toFixed(2)}</span>
-                      </div>
                       <div className="flex justify-between font-bold text-lg pt-2 border-t border-border">
                         <span>Total</span>
-                        <span>£{totalWithVat.toFixed(2)}</span>
+                        <span>£{total.toFixed(2)}</span>
                       </div>
                     </div>
 
