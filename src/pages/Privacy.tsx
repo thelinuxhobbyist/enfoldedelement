@@ -1,6 +1,7 @@
 import React from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import EmailLink from '@/components/EmailLink';
 
 const Privacy = () => {
   return (
@@ -103,7 +104,7 @@ const Privacy = () => {
           <p>If you have questions or concerns about this policy or your data, please contact us:</p>
           <p>
             Enfolded Media<br />
-            Email: info@enfoldedmedia.com<br />
+            <EmailLink email="info@enfoldedmedia.com" /><br />
             Website: https://enfoldedmedia.com
           </p>
         </article>

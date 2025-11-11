@@ -1,6 +1,7 @@
 import React from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import EmailLink from '@/components/EmailLink';
 
 const Cookies = () => {
   return (
@@ -39,7 +40,7 @@ const Cookies = () => {
 
           <h2>5. Contact Us</h2>
           <p>If you have any questions about our Cookies Policy, you can reach us at:<br />
-          📧 info@enfoldedmedia.com</p>
+          <EmailLink email="info@enfoldedmedia.com" /></p>
         </article>
       </main>
 
