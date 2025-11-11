@@ -1,6 +1,7 @@
 import React from 'react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import EmailLink from '@/components/EmailLink';
 
 const Terms = () => {
   return (
@@ -57,8 +58,15 @@ const Terms = () => {
 
           <h2>10. Contact Us</h2>
           <p>For any questions about these Terms of Service, please contact us at:</p>
-          <p>📧 info@enfoldedmedia.com<br />
-          🌐 enfoldedmedia.com</p>
+          <p>
+            <EmailLink email="info@enfoldedmedia.com" /><br />
+            <a
+              href="https://enfoldedmedia.com"
+              className="text-foreground/80 hover:text-primary transition-colors"
+            >
+              enfoldedmedia.com
+            </a>
+          </p>
         </article>
       </main>
 
