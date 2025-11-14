@@ -6,26 +6,172 @@ const parsePriceNumeric = (display: string): number => {
   return match ? Number(match[1]) : 0;
 };
 
-// Define the base packages without IDs – mapped from the provided list
+// ==========================
+//   ENFOLDED MEDIA PACKAGES
+// ==========================
+
 const basePackages: Package[] = [
-  { slug: "event-poster", name: "Event Poster Design", shortDescription: "Print and digital format poster design", description: "Beautiful, bold posters delivered in both print-ready and digital format. Multilingual options can be discussed directly with you.", priceDisplay: "£60", priceNumeric: parsePriceNumeric("£60"), hosting: null, packageFeatures: ["Print & digital formats", "Fast delivery (3-5 days)"], detailFeatures: ["Print-ready high resolution", "Digital format included", "Up to 3 revision rounds", "Professional layout design"] },
-  { slug: "global-pack", name: "Startup Brand Pack", shortDescription: "Logo, business cards, flyer, and 3 social templates.", description: "Get your brand ready to launch: professional logo, business cards, flyer, and matching social media templates.", priceDisplay: "£150", priceNumeric: parsePriceNumeric("£150"), hosting: null, packageFeatures: ["Professional design", "Fast delivery (3-5 days)"], detailFeatures: ["Professional logo design", "Business card design", "Promotional flyer design", "3 social media templates", "Brand guideline document"] },
-  { slug: "quick-amendments", name: "Quick Amendments", shortDescription: "Make fast changes to your existing designs.", description: "Already have a design but need a few tweaks? Let us update or replace your images, text, or other elements quickly to meet your needs.", priceDisplay: "£25", priceNumeric: parsePriceNumeric("£25"), hosting: null, packageFeatures: ["Fast design updates", "Up to 2 rounds of revisions", "Print-ready PDF provided"], detailFeatures: ["Minor image and text replacements", "Quick turnaround (1-2 days)", "Print-ready high resolution file", "Up to two revision rounds"] },
-  { slug: "layout-design", name: "Layout Design", shortDescription: "Custom design layout for your content.", description: "You provide the content, and we'll create a custom layout to bring your vision to life, tailored to your specific needs and branding.", priceDisplay: "£50", priceNumeric: parsePriceNumeric("£50"), hosting: null, packageFeatures: ["One custom layout design", "Fast delivery (3-5 days)"], detailFeatures: ["Tailored layout design based on your brief", "Print-ready and digital formats included", "Quick turnaround (3-5 days)"] },
-  { slug: "recreate-design", name: "Recreate Design", shortDescription: "Recreate or redesign your existing artwork.", description: "Need to give your current design a fresh look? We can help you recreate or redesign existing artwork to make it more professional or updated.", priceDisplay: "£75", priceNumeric: parsePriceNumeric("£75"), hosting: null, packageFeatures: ["Recreation of existing design", "Print and digital formats"], detailFeatures: ["Redesign or recreate your artwork from scratch", "Print and digital versions included", "Professional layout and high-quality files"] },
-  { slug: "full-design-package", name: "Full Design Package", shortDescription: "End-to-end design service for complete branding or event creation.", description: "Need a full design service from start to finish? We handle everything, from concept to creation, ensuring consistency and professional quality.", priceDisplay: "£120", priceNumeric: parsePriceNumeric("£120"), hosting: null, packageFeatures: ["Full design service from concept to print", "Brand guidelines included"], detailFeatures: ["Up to three design concepts", "Brand style guide and asset delivery", "Print and digital formats included"] },
-  { slug: "small-business-starter", name: "Small Business Starter Package", shortDescription: "A one-page static website with free hosting.", description: "Get your business online with a professional one-page website. Includes free hosting, but you'll need to purchase the domain.", priceDisplay: "£100", priceNumeric: parsePriceNumeric("£100"), hosting: "Free hosting (Domain purchase required)", packageFeatures: ["Professional design", "Fast delivery (3-5 days)", "Free hosting (Domain purchase required)"], detailFeatures: ["One-page responsive website", "Mobile-optimized design", "Contact form integration", "SEO-friendly structure", "Domain purchase required", "SSL certificate included"] },
-  { slug: "branding-refresh", name: "Branding Refresh", shortDescription: "Logo redesign, color scheme, and font style guide.", description: "Rejuvenate your brand with a new logo, updated color palette, and a complete style guide that fits your business vision.", priceDisplay: "£120", priceNumeric: parsePriceNumeric("£120"), hosting: null, packageFeatures: ["Professional design", "Fast delivery (3-5 days)"], detailFeatures: ["Logo redesign", "Color scheme development", "Font style guide", "Brand identity document", "Vector files provided"] },
-  { slug: "email-marketing", name: "Email Marketing Setup", shortDescription: "Email template design and setup on Mailchimp or similar.", description: "Reach your customers effectively with a customized email template designed to match your brand, and setup on Mailchimp or another platform.", priceDisplay: "£90", priceNumeric: parsePriceNumeric("£90"), hosting: null, packageFeatures: ["Professional design", "Fast delivery (3-5 days)"], detailFeatures: ["Custom email template design", "Platform setup (Mailchimp/similar)", "Brand-matched styling", "Mobile-responsive design", "Basic analytics setup"] },
-  { slug: "website-maintenance", name: "Website Maintenance & Updates", shortDescription: "Ongoing updates, backups, and security for your site.", description: "Ensure your website remains secure, up-to-date, and running smoothly with monthly maintenance, backups, and content updates.", priceDisplay: "£100/month", priceNumeric: parsePriceNumeric("£100"), hosting: null, packageFeatures: ["Monthly maintenance", "Security updates", "Content updates"], detailFeatures: ["Monthly security updates", "Regular backups", "Content updates (up to 2 hours/month)", "Performance monitoring", "Security scanning", "Priority support"] },
-  { slug: "blog-setup", name: "Blog Setup & Content Writing", shortDescription: "Set up and write content for your blog.", description: "We help you set up a professional blog with SEO-friendly layout and initial content creation. Great for businesses looking to start a blog or improve existing blogs.", priceDisplay: "£150", priceNumeric: parsePriceNumeric("£150"), hosting: "Paid hosting (Domain purchase required)", packageFeatures: ["Professional design", "Fast delivery (3-5 days)"], detailFeatures: ["Blog setup and design", "3 professionally written posts", "SEO optimization", "Comment system setup", "Social sharing integration", "Paid hosting (Domain purchase required)"] },
-  { slug: "landing-page", name: "Landing Page Design", shortDescription: "High-converting landing page for your product or service.", description: "We design a focused landing page that drives conversions for your product, service, or promotional offer.", priceDisplay: "£120", priceNumeric: parsePriceNumeric("£120"), hosting: "Free hosting (Domain purchase required)", packageFeatures: ["Professional design", "Fast delivery (3-5 days)"], detailFeatures: ["Conversion-optimized design", "Mobile-responsive layout", "Contact form integration", "Analytics setup", "A/B testing recommendations", "Domain purchase required"] },
-  { slug: "portfolio", name: "Online Portfolio for Creatives", shortDescription: "A stunning portfolio website for photographers, designers, or artists.", description: "Showcase your creative work with a custom-designed portfolio, perfect for any artist, photographer, or designer.", priceDisplay: "£200", priceNumeric: parsePriceNumeric("£200"), hosting: "Paid hosting required", packageFeatures: ["Professional design", "Fast delivery (3-5 days)"], detailFeatures: ["Custom portfolio design", "Gallery functionality", "Contact form integration", "Mobile-optimized display", "Client testimonials section", "Social media integration"] },
-  { slug: "multilingual-website", name: "Multilingual Website Setup", shortDescription: "Expand your reach with a multilingual website.", description: "Reach new audiences in the UK with a multilingual website. You provide the content, or we can translate it for you.", priceDisplay: "£250", priceNumeric: parsePriceNumeric("£250"), hosting: "Free hosting (Domain purchase required)", packageFeatures: ["Professional design", "Fast delivery (3-5 days)", "Free hosting (Domain purchase required)"], detailFeatures: ["Multi-language setup", "You provide content or we can translate it", "SEO optimization for each language", "Cultural adaptation guidance", "Domain purchase required"] },
-  { slug: "standard-package-v2", name: "Standard Package", shortDescription: "Ideal for small business or personal websites.", description: "For those needing more pages and basic functionality, this package includes up to 5 pages and the option for a simple blog setup. Great for small businesses or personal websites.", priceDisplay: "£149", priceNumeric: parsePriceNumeric("£149"), hosting: "Free hosting included (for simple sites)", packageFeatures: ["Up to 5 Website pages", "Free hosting", "Free SSL certificate", "Basic SEO tools", "Mobile optimization", "Custom domain name setup", "Contact form and social media links"], detailFeatures: ["Custom domain name setup", "Responsive design for all devices", "Basic SEO tools for search engine visibility", "Social media integration for easy sharing"] },
-  { slug: "business-package-v2", name: "Business Package", shortDescription: "For growing businesses with more advanced needs.", description: "This package includes up to 10 website pages with essential features like a contact form and custom design. Perfect for small businesses or personal brands. Free hosting included for simple sites.", priceDisplay: "£299", priceNumeric: parsePriceNumeric("£299"), hosting: "Free hosting included (for simple sites; external hosting may be required for more complex needs)", packageFeatures: ["Up to 10 Website pages", "Free hosting (for simple sites)", "Free SSL certificate", "Advanced SEO tools", "Mobile optimization", "Contact forms, social media links, and newsletter signup"], detailFeatures: ["Custom domain name setup", "Advanced SEO tools for better ranking", "Responsive design for mobile and desktop", "Basic contact form integration"] },
-  { slug: "woocommerce-package-v2", name: "E-commerce Package (WooCommerce)", shortDescription: "Fully functional online store with essential e-commerce features.", description: "A complete online store with product listings, cart, checkout, and payment gateway integration, using WooCommerce. Ideal for businesses aiming to sell online.", priceDisplay: "£499", priceNumeric: parsePriceNumeric("£499"), hosting: "WooCommerce requires external hosting for full functionality", packageFeatures: ["Up to 50 products", "WooCommerce integration (product pages, cart, checkout)", "Payment gateway integration (PayPal, Stripe)", "Free SSL certificate", "Advanced SEO tools", "Mobile optimization", "Shipping options, product variants, discounts", "Analytics integration"], detailFeatures: ["Custom domain name setup", "Responsive design for mobile and desktop", "Full store setup with product catalog and checkout", "Payment gateway integration", "Shipping and product variant setup"] },
-  { slug: "premium-package-v2", name: "Premium Package", shortDescription: "Custom designs and advanced features for large or complex projects.", description: "Tailored for clients with specific needs, including custom design, WooCommerce integration, and advanced features like memberships or custom integrations. Hosting options will be adjusted based on requirements.", priceDisplay: "£799", priceNumeric: parsePriceNumeric("£799"), hosting: "Hosting included for small to medium sites (External hosting may be required for large projects)", packageFeatures: ["Custom design", "Unlimited website pages", "Free SSL certificate", "Advanced SEO tools", "Mobile optimization", "Custom domain name setup", "Advanced e-commerce features (WooCommerce)", "Membership systems and custom integrations"], detailFeatures: ["Bespoke design tailored to client needs", "Full WooCommerce store setup (multiple currencies, discount codes, etc.)", "Custom integrations with third-party services", "Dedicated support for complex projects"] }
+  {
+    slug: "multilingual-brand-starter",
+    name: "Multilingual Brand Starter",
+    shortDescription: "Logo + cultural adaptations for diverse UK audiences.",
+    description:
+      "A foundational brand identity designed with cultural sensitivity in mind. Includes a multilingual-ready logo, colour palette and typography recommendations.",
+    priceDisplay: "£180",
+    priceNumeric: parsePriceNumeric("£180"),
+    hosting: null,
+    packageFeatures: [
+      "Multilingual-ready design",
+      "Cultural colour palette",
+      "3–5 day delivery"
+    ],
+    detailFeatures: [
+      "Primary logo + variations",
+      "Culturally appropriate colour palette",
+      "Typography system",
+      "Mini brand guideline",
+      "Up to 3 revisions"
+    ]
+  },
+
+  {
+    slug: "community-outreach-poster-pack",
+    name: "Community Outreach Poster Pack",
+    shortDescription: "Print + digital posters suitable for multicultural communities.",
+    description:
+      "Ideal for schools, councils, and community groups. Posters designed for maximum clarity, accessibility and cultural resonance.",
+    priceDisplay: "£70",
+    priceNumeric: parsePriceNumeric("£70"),
+    hosting: null,
+    packageFeatures: [
+      "Print + digital formats",
+      "Inclusive visual design",
+      "Fast delivery"
+    ],
+    detailFeatures: [
+      "A4/A3 print-ready files",
+      "Social media versions included",
+      "Accessible typography",
+      "Culturally sensitive imagery guidance",
+      "Up to 2 revisions"
+    ]
+  },
+
+  {
+    slug: "cultural-social-media-kit",
+    name: "Cultural Social Media Kit",
+    shortDescription: "Templates designed to engage multilingual or diverse audiences.",
+    description:
+      "A toolkit of branded templates tailored for communities, minority-owned businesses and local organisations.",
+    priceDisplay: "£120",
+    priceNumeric: parsePriceNumeric("£120"),
+    hosting: null,
+    packageFeatures: [
+      "10 branded templates",
+      "Multilingual-ready layout",
+      "Cultural design considerations"
+    ],
+    detailFeatures: [
+      "Square, story and banner formats",
+      "Brand-matched colours",
+      "Inclusive design patterns",
+      "Guidance on multilingual posting",
+      "Up to 3 revisions"
+    ]
+  },
+
+  {
+    slug: "translation-design-bundle",
+    name: "Translation + Design Bundle",
+    shortDescription: "Translated copy + matching visual design.",
+    description:
+      "Perfect for organisations needing culturally aware translation paired with professional visual layout. You provide the content, we adapt and design it.",
+    priceDisplay: "£95",
+    priceNumeric: parsePriceNumeric("£95"),
+    hosting: null,
+    packageFeatures: [
+      "Professional translation",
+      "Culturally sensitive adaptation",
+      "Designed for print & digital"
+    ],
+    detailFeatures: [
+      "Up to 300 words translated",
+      "1-page poster or leaflet layout",
+      "Print + digital formats",
+      "Cultural insight notes",
+      "Up to 2 revision rounds"
+    ]
+  },
+
+  {
+    slug: "multilingual-website-starter",
+    name: "Multilingual Website Starter",
+    shortDescription: "One-page multilingual-ready website.",
+    description:
+      "A fast, accessible one-page site built with multilingual support. Ideal for local businesses, community services, or cultural events.",
+    priceDisplay: "£220",
+    priceNumeric: parsePriceNumeric("£220"),
+    hosting: "Free hosting (Domain required)",
+    packageFeatures: [
+      "One-page responsive site",
+      "Multilingual setup",
+      "Free hosting"
+    ],
+    detailFeatures: [
+      "Mobile-first design",
+      "Two languages included (content provided)",
+      "SEO-friendly structure",
+      "Social links + contact form",
+      "SSL included",
+      "Domain required"
+    ]
+  },
+
+  {
+    slug: "cultural-event-promo-pack",
+    name: "Cultural Event Promo Pack",
+    shortDescription: "Full promotional kit for community or cultural events.",
+    description:
+      "Designed for councils, schools, or community organisations. Includes posters, flyers, social templates and optional multilingual versions.",
+    priceDisplay: "£150",
+    priceNumeric: parsePriceNumeric("£150"),
+    hosting: null,
+    packageFeatures: [
+      "Posters + flyers",
+      "Social media versions",
+      "Multilingual-ready"
+    ],
+    detailFeatures: [
+      "A4/A3 poster",
+      "DL or A5 flyer",
+      "Social media templates",
+      "Optional multilingual adaptation (content provided)",
+      "Accessible typography"
+    ]
+  },
+
+  {
+    slug: "local-business-identity-kit",
+    name: "Local Business Identity Kit",
+    shortDescription: "Branding tailored to neighbourhood and cultural communities.",
+    description:
+      "Designed with small ethnic-minority businesses in mind. Creates trust and cultural connection through tailored local design.",
+    priceDisplay: "£130",
+    priceNumeric: parsePriceNumeric("£130"),
+    hosting: null,
+    packageFeatures: [
+      "Logo + mini brand guide",
+      "Community-focused design",
+      "Fast turnaround"
+    ],
+    detailFeatures: [
+      "Primary logo",
+      "Colour palette for target community",
+      "Typography choices",
+      "Social profile image set",
+      "Two revision rounds"
+    ]
+  }
 ];
 
 // Exclude premium packages across the site
