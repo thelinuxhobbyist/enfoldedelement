@@ -11,7 +11,7 @@ export const Footer = () => {
       title: "Company",
       links: [
         { name: "About Us", href: "/about" },
-        { name: "Contact", href: "#contact" },
+        { name: "Contact", href: "/contact" },
   { name: "Blog", href: "/blog" },
         // Legal links removed here to avoid duplication; see bottom legal section
       ],

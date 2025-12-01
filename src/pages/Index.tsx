@@ -267,38 +267,47 @@ const Index = () => {
   {/* CTA Section */}
   <section id="contact" className="py-20 bg-gray-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-white rounded-2xl p-12 text-center shadow-sm">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Let’s Create Together
-            </h2>
-            <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-              Ready to reach new audiences and make a lasting impact?<br />
-              Get in touch today — we’d love to bring your project to life.
-            </p>
-            
-            <div className="flex flex-col md:flex-row justify-center gap-8 mb-8">
-              <div className="flex items-center justify-center gap-2">
-                <div className="w-8 h-8 bg-red-500 rounded-full flex items-center justify-center">
-                  <span className="text-white text-sm">📞</span>
-                </div>
-                <span className="font-bold">07836 319 635</span>
-              </div>
-              <div className="flex items-center justify-center gap-2">
-                <div className="w-8 h-8 bg-red-500 rounded-full flex items-center justify-center">
-                  <span className="text-white text-sm">✉</span>
-                </div>
-                <span className="font-bold">info@enfoldedmedia.com</span>
-              </div>
+          <div className="bg-white rounded-2xl p-12 shadow-sm max-w-2xl mx-auto">
+            <div className="text-center">
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">
+                Let's Create Together
+              </h2>
+              <p className="text-lg text-gray-600 mb-8">
+                Ready to reach new audiences and make a lasting impact?<br />
+                Get in touch today — we'd love to bring your project to life.
+              </p>
+              
+              <Button asChild size="lg" className="bg-red-500 hover:bg-red-600 text-white px-8 mb-8">
+                <Link to="/contact">Send us a Message</Link>
+              </Button>
             </div>
             
-            <div className="text-center">
-              <p className="text-sm text-gray-600 mb-4">Connect instantly on WhatsApp</p>
-              <div className="inline-block rounded-lg overflow-hidden">
-                <img
-                  src="/assets/qr.png"
-                  alt="WhatsApp QR Code"
-                  className="w-32 h-32 rounded-md"
-                />
+            <div className="border-t border-gray-200 pt-8">
+              <p className="text-sm text-gray-600 text-center mb-8">Or reach us directly:</p>
+              <div className="flex flex-col md:flex-row justify-center gap-8 mb-8">
+                <div className="flex items-center justify-center gap-2">
+                  <div className="w-8 h-8 bg-red-500 rounded-full flex items-center justify-center">
+                    <span className="text-white text-sm">📞</span>
+                  </div>
+                  <span className="font-bold">07836 319 635</span>
+                </div>
+                <div className="flex items-center justify-center gap-2">
+                  <div className="w-8 h-8 bg-red-500 rounded-full flex items-center justify-center">
+                    <span className="text-white text-sm">✉</span>
+                  </div>
+                  <span className="font-bold">info@enfoldedmedia.com</span>
+                </div>
+              </div>
+              
+              <div className="text-center">
+                <p className="text-sm text-gray-600 mb-4">Connect instantly on WhatsApp</p>
+                <div className="inline-block rounded-lg overflow-hidden">
+                  <img
+                    src="/assets/qr.png"
+                    alt="WhatsApp QR Code"
+                    className="w-32 h-32 rounded-md"
+                  />
+                </div>
               </div>
             </div>
           </div>
