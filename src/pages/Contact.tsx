@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { motion } from "framer-motion";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ContactForm from "@/components/ContactForm";
@@ -12,6 +13,39 @@ const Contact = () => {
     }
   }, []);
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.15,
+        delayChildren: 0.2,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.8, ease: "easeOut" },
+    },
+  };
+
+  const cardVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6, ease: "easeOut" },
+    },
+    hover: {
+      y: -10,
+      transition: { duration: 0.3 },
+    },
+  };
+
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
@@ -19,12 +53,19 @@ const Contact = () => {
       {/* Hero Section */}
       <section className="bg-[#4A4FB5] text-white py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-5xl font-bold mb-4">Get in Touch</h1>
-            <p className="text-xl opacity-90">
+          <motion.div 
+            className="max-w-3xl mx-auto text-center"
+            variants={containerVariants}
+            initial="hidden"
+            animate="visible"
+          >
+            <motion.h1 className="text-5xl font-bold mb-4" variants={itemVariants}>
+              Get in Touch
+            </motion.h1>
+            <motion.p className="text-xl opacity-90" variants={itemVariants}>
               Have a question about our services? We'd love to hear from you. Send us a message and we'll get back to you as soon as possible.
-            </p>
-          </div>
+            </motion.p>
+          </motion.div>
         </div>
       </section>
 
@@ -37,8 +78,14 @@ const Contact = () => {
             </div>
 
             {/* Additional Contact Methods */}
-            <div className="mt-16 grid md:grid-cols-3 gap-8">
-              <div className="text-center">
+            <motion.div 
+              className="mt-16 grid md:grid-cols-3 gap-8"
+              variants={containerVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-100px" }}
+            >
+              <motion.div className="text-center" variants={cardVariants}>
                 <div className="w-12 h-12 bg-red-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-white text-xl">📞</span>
                 </div>
@@ -48,9 +95,9 @@ const Contact = () => {
                     07836 319 635
                   </a>
                 </p>
-              </div>
+              </motion.div>
 
-              <div className="text-center">
+              <motion.div className="text-center" variants={cardVariants}>
                 <div className="w-12 h-12 bg-red-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-white text-xl">✉</span>
                 </div>
@@ -60,9 +107,9 @@ const Contact = () => {
                     info@enfoldedmedia.com
                   </a>
                 </p>
-              </div>
+              </motion.div>
 
-              <div className="text-center">
+              <motion.div className="text-center" variants={cardVariants}>
                 <div className="w-12 h-12 bg-red-500 rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-white text-xl">💬</span>
                 </div>
@@ -75,8 +122,8 @@ const Contact = () => {
                     className="w-24 h-24 rounded-md"
                   />
                 </div>
-              </div>
-            </div>
+              </motion.div>
+            </motion.div>
           </div>
         </div>
       </section>
