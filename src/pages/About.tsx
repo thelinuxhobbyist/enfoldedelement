@@ -126,7 +126,7 @@ const About = () => {
           <div className="hidden md:block mt-4 text-right">
             <p className="text-xs text-foreground/70">Scan to chat on WhatsApp</p>
             <div className="inline-block rounded-md overflow-hidden mt-1">
-              <img src="/assets/qr.png" alt="WhatsApp QR Code" className="w-24 h-24" />
+              <img src="https://cdn.enfoldedmedia.com/enfolded-images/enfqr.png" alt="WhatsApp QR Code" className="w-24 h-24" />
             </div>
           </div>
         </section>

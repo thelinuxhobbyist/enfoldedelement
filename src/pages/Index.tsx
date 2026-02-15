@@ -407,7 +407,7 @@ const Index = () => {
                 <p className="text-sm text-gray-600 mb-4">Connect instantly on WhatsApp</p>
                 <div className="inline-block rounded-lg overflow-hidden">
                   <img
-                    src="/assets/qr.png"
+                    src="https://cdn.enfoldedmedia.com/enfolded-images/enfqr.png"
                     alt="WhatsApp QR Code"
                     className="w-32 h-32 rounded-md"
                   />

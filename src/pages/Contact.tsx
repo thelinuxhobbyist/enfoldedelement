@@ -117,7 +117,7 @@ const Contact = () => {
                 <p className="text-gray-600 mb-4">Connect instantly</p>
                 <div className="inline-block">
                   <img
-                    src="/assets/qr.png"
+                    src="https://cdn.enfoldedmedia.com/enfolded-images/enfqr.png"
                     alt="WhatsApp QR Code"
                     className="w-24 h-24 rounded-md"
                   />
