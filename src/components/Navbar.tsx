@@ -2,7 +2,6 @@ import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
-import logo from "@/assets/logo.png";
 
 const Navbar = () => {
   const location = useLocation();
@@ -20,7 +19,7 @@ const Navbar = () => {
   <div className="container mx-auto px-4 sm:px-6 lg:px-8" style={{ position: 'relative' }}>
   <div className="flex items-center justify-between h-16" style={{ position: 'relative' }}>
           <Link to="/" className="flex items-center">
-            <img src={logo} alt="Enfolded Media" className="h-10 w-auto" />
+            <img src="https://cdn.enfoldedmedia.com/enfolded-images/logo.png" alt="Enfolded Media" className="h-10 w-auto" />
           </Link>
           {/* Animated border under navbar */}
           <style>{`
