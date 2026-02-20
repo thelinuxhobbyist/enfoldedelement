@@ -24,6 +24,9 @@ const Packages = () => {
     return matchesSearch;
   });
 
+  const designPackages = filteredPackages.filter((p) => p.category === "Design");
+  const websitePackages = filteredPackages.filter((p) => p.category === "Website");
+
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
@@ -32,9 +35,9 @@ const Packages = () => {
   <section className="bg-secondary/30 py-16 border-b border-border">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
-            <h1 className="text-5xl font-bold mb-4">Our Design Packages</h1>
+            <h1 className="text-5xl font-bold mb-4">Our Packages</h1>
             <p className="text-xl text-muted-foreground">
-              Professional design solutions for every need. Choose the perfect package to bring your vision to life.
+              We provide design services only — we do not offer printing or print fulfilment. Browse our Design and Website packages below.
             </p>
           </div>
         </div>
@@ -49,7 +52,7 @@ const Packages = () => {
                 <Search className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
                 <Input
                   type="text"
-                  placeholder="Search packages (e.g., logo, website, brochure)"
+                  placeholder="Search packages (e.g., logo, website)"
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
                   className="pl-10 h-12"
@@ -74,10 +77,28 @@ const Packages = () => {
               <p className="text-xl text-muted-foreground">No packages found matching your criteria.</p>
             </div>
           ) : (
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {filteredPackages.map((pkg) => (
-                <PackageCard key={pkg.id} package={pkg} />
-              ))}
+            <div className="space-y-12">
+              {designPackages.length > 0 && (
+                <div>
+                  <h2 className="text-2xl font-semibold mb-6">Design Packages</h2>
+                  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    {designPackages.map((pkg) => (
+                      <PackageCard key={pkg.id} package={pkg} />
+                    ))}
+                  </div>
+                </div>
+              )}
+
+              {websitePackages.length > 0 && (
+                <div>
+                  <h2 className="text-2xl font-semibold mb-6">Website Packages</h2>
+                  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    {websitePackages.map((pkg) => (
+                      <PackageCard key={pkg.id} package={pkg} />
+                    ))}
+                  </div>
+                </div>
+              )}
             </div>
           )}
         </div>

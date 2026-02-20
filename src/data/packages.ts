@@ -11,6 +11,7 @@ const basePackages: Package[] = [
   {
     slug: "event-poster",
     name: "Event Poster Design",
+    category: "Design",
     shortDescription: "Print & digital posters designed for multicultural audiences.",
     description:
       "Bold, accessible posters produced in print-ready and digital formats that consider cultural context and multilingual readability. Ideal for community events and local outreach.",
@@ -29,6 +30,7 @@ const basePackages: Package[] = [
   {
     slug: "global-pack",
     name: "Startup Brand Pack",
+    category: "Design",
     shortDescription: "Brand identity with cultural considerations and social templates.",
     description:
       "A cohesive starter brand kit for new ventures that need culturally-aware visual identity: logo, business cards, a flyer, and social templates tuned for diverse audiences.",
@@ -47,6 +49,7 @@ const basePackages: Package[] = [
   {
     slug: "quick-amendments",
     name: "Quick Amendments",
+    category: "Design",
     shortDescription: "Fast edits and small updates with community-minded care.",
     description:
       "Quick, reliable updates to existing materials — text, images, or minor layout changes — handled with sensitivity to multilingual layouts and accessibility where needed.",
@@ -65,6 +68,7 @@ const basePackages: Package[] = [
   {
     slug: "layout-design",
     name: "Layout Design",
+    category: "Design",
     shortDescription: "Custom layout for multilingual print or digital content.",
     description:
       "A single bespoke layout designed to present your content clearly across languages — suitable for leaflets, reports, newsletters or web content blocks.",
@@ -83,6 +87,7 @@ const basePackages: Package[] = [
   {
     slug: "recreate-design",
     name: "Recreate Design",
+    category: "Design",
     shortDescription: "Professional recreation or redesign of existing artwork.",
     description:
       "We recreate or modernise your existing designs with improved accessibility, print quality and multilingual readiness — perfect when source files are outdated or missing.",
@@ -101,6 +106,7 @@ const basePackages: Package[] = [
   {
     slug: "full-design-package",
     name: "Full Design Package",
+    category: "Design",
     shortDescription: "End-to-end multilingual design for campaigns or brands.",
     description:
       "Comprehensive design service covering concept to delivery with cultural and language considerations — suitable for brand launches, major events or full campaigns.",
@@ -119,6 +125,7 @@ const basePackages: Package[] = [
   {
     slug: "small-business-starter",
     name: "Small Business Starter Package",
+    category: "Website",
     shortDescription: "One-page multilingual-ready website with hosting guidance.",
     description:
       "A professional one-page site designed to present your business clearly to diverse local audiences. Includes multilingual structure and guidance for future language additions.",
@@ -137,6 +144,7 @@ const basePackages: Package[] = [
   {
     slug: "branding-refresh",
     name: "Branding Refresh",
+    category: "Design",
     shortDescription: "Update your visual identity with multilingual considerations.",
     description:
       "Rejuvenate your existing brand with refined logo, colour updates and a short multilingual style guide to help communications feel consistent across languages.",
@@ -155,6 +163,7 @@ const basePackages: Package[] = [
   {
     slug: "email-marketing",
     name: "Email Marketing Setup",
+    category: "Design",
     shortDescription: "Email template design & setup with multilingual-ready structure.",
     description:
       "Design and configure a branded email template on Mailchimp (or similar) with responsive design and guidance for translated versions and audience segmentation.",
@@ -173,6 +182,7 @@ const basePackages: Package[] = [
   {
     slug: "website-maintenance",
     name: "Website Maintenance & Updates",
+    category: "Website",
     shortDescription: "Monthly care, backups and multilingual checks.",
     description:
       "Keep your multilingual website secure and current with monthly updates, backups and small multilingual content edits to ensure consistent messaging across languages.",
@@ -191,6 +201,7 @@ const basePackages: Package[] = [
   {
     slug: "blog-setup",
     name: "Blog Setup & Content Writing",
+    category: "Website",
     shortDescription: "Multilingual-friendly blog setup and initial content.",
     description:
       "Set up an SEO-friendly blog structure and receive professionally written posts that can be used as source content for translated versions and community storytelling.",
@@ -209,6 +220,7 @@ const basePackages: Package[] = [
   {
     slug: "landing-page",
     name: "Landing Page Design",
+    category: "Website",
     shortDescription: "Conversion-focused bilingual landing page for campaigns.",
     description:
       "A focused landing page designed to convert visitors and prepared for bilingual content — ideal for event sign-ups, campaigns or short-term promotions.",
@@ -227,6 +239,7 @@ const basePackages: Package[] = [
   {
     slug: "portfolio",
     name: "Online Portfolio for Creatives",
+    category: "Website",
     shortDescription: "Multilingual portfolio site for photographers & creatives.",
     description:
       "A showcase site designed for creative professionals with multilingual navigation and gallery functionality that helps reach diverse client bases.",
@@ -245,6 +258,7 @@ const basePackages: Package[] = [
   {
     slug: "multilingual-website",
     name: "Multilingual Website Setup",
+    category: "Website",
     shortDescription: "Multi-language website setup with localisation guidance.",
     description:
       "Build or expand a website with structured multilingual support. We handle language structure, localisation advice and basic SEO for each language included.",
@@ -263,6 +277,7 @@ const basePackages: Package[] = [
   {
     slug: "website-design-farsi",
     name: "Website Design (Farsi)",
+    category: "Website",
     shortDescription: "RTL website design and localisation for Farsi audiences.",
     description:
       "Full right-to-left website build tuned for Farsi (Persian) content, with correct typography, layout and localisation support to ensure readability and cultural fit.",
@@ -281,6 +296,7 @@ const basePackages: Package[] = [
   {
     slug: "standard-package-v2",
     name: "Standard Package",
+    category: "Website",
     shortDescription: "Up to 5 pages with multilingual-ready structure.",
     description:
       "A solid small-business website package with up to 5 pages, multilingual-ready templates and guidance to help you reach local, multilingual customers.",
@@ -299,6 +315,7 @@ const basePackages: Package[] = [
   {
     slug: "business-package-v2",
     name: "Business Package",
+    category: "Website",
     shortDescription: "Up to 10 pages with multilingual & accessibility checks.",
     description:
       "A robust site for growing businesses with up to 10 pages, improved SEO, multilingual structure and accessibility-first considerations for community audiences.",
@@ -317,6 +334,7 @@ const basePackages: Package[] = [
   {
     slug: "woocommerce-package-v2",
     name: "E-commerce Package (WooCommerce)",
+    category: "Website",
     shortDescription: "Online store setup with multilingual product support.",
     description:
       "A fully functional online store using WooCommerce with product pages, payment integrations and optional multilingual product descriptions to serve diverse customers.",
@@ -339,6 +357,7 @@ const basePackages: Package[] = [
   {
     slug: "premium-package-v2",
     name: "Premium Package",
+    category: "Website",
     shortDescription: "Custom projects and large-scale multilingual builds.",
     description:
       "Tailored for complex, large or bespoke projects requiring advanced integrations, membership systems or large multilingual rollouts. Hosting options scale to requirements.",
