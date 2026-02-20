@@ -1,6 +1,6 @@
 import { useParams, Link } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { Elements } from '@stripe/react-stripe-js';
+import { Elements, useStripe, useElements } from '@stripe/react-stripe-js';
 import Navbar from "@/components/Navbar";
 import { packages } from "@/data/packages";
 import { Button } from "@/components/ui/button";
@@ -88,65 +88,152 @@ const Checkout = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
           <h1 className="text-4xl font-bold mb-8">Checkout</h1>
 
-          <div className="flex flex-col-reverse lg:grid lg:grid-cols-3 gap-8">
-            {/* Payment Form */}
-            <div className="lg:col-span-2 mt-8 lg:mt-0">
-              <Card>
-                <CardHeader>
-                  <CardTitle>Payment Information</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  {clientSecret ? (
-                    <Elements stripe={stripePromise} options={{
-                      clientSecret,
-                      appearance: {
-                        theme: 'stripe',
-                        variables: {
-                          colorPrimary: '#0F172A',
-                        },
-                      },
-                    }}>
-                      <CheckoutForm />
-                    </Elements>
-                  ) : (
+          {clientSecret ? (
+            <Elements stripe={stripePromise} options={{
+              clientSecret,
+              appearance: {
+                theme: 'stripe',
+                variables: {
+                  colorPrimary: '#0F172A',
+                },
+              },
+            }}>
+              <CheckoutGrid packageData={packageData} total={total} />
+            </Elements>
+          ) : (
+            <div className="flex flex-col-reverse lg:grid lg:grid-cols-3 gap-8">
+              {/* Payment Form */}
+              <div className="lg:col-span-2 mt-8 lg:mt-0">
+                <Card>
+                  <CardHeader>
+                    <CardTitle>Payment Information</CardTitle>
+                  </CardHeader>
+                  <CardContent>
                     <div className="flex items-center justify-center p-8">
                       <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary"></div>
                     </div>
-                  )}
-                </CardContent>
-              </Card>
-            </div>
+                  </CardContent>
+                </Card>
+              </div>
 
-            {/* Order Summary */}
-            <div className="lg:order-last">
-              <Card>
-                <CardHeader>
-                  <CardTitle>Order Summary</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <div className="space-y-4">
-                    <div>
-                      <h3 className="font-semibold text-lg mb-2">{packageData.name}</h3>
-                      <p className="text-sm text-muted-foreground">{packageData.shortDescription}</p>
-                    </div>
-
-                    <div className="pt-4 border-t border-border space-y-2">
-                      <div className="flex justify-between font-bold text-lg pt-2 border-t border-border">
-                        <span>Total</span>
-                        <span>£{total.toFixed(2)}</span>
+              {/* Order Summary */}
+              <div className="lg:order-last">
+                <Card>
+                  <CardHeader>
+                    <CardTitle>Order Summary</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <div className="space-y-4">
+                      <div>
+                        <h3 className="font-semibold text-lg mb-2">{packageData.name}</h3>
+                        <p className="text-sm text-muted-foreground">{packageData.shortDescription}</p>
                       </div>
-                    </div>
 
-                    {/* No inclusions displayed on checkout summary in new schema */}
-                  </div>
-                </CardContent>
-              </Card>
+                      <div className="pt-4 border-t border-border space-y-2">
+                        <div className="flex justify-between font-bold text-lg pt-2 border-t border-border">
+                          <span>Total</span>
+                          <span>£{total.toFixed(2)}</span>
+                        </div>
+                      </div>
+
+                      {/* No inclusions displayed on checkout summary in new schema */}
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
             </div>
-          </div>
+          )}
         </div>
       </section>
     </div>
   );
 };
+
+// Grid component placed inside Elements so child components can access Stripe hooks.
+function CheckoutGrid({ packageData, total }: { packageData: any; total: number }) {
+  const returnUrl = `${window.location.origin}/onboarding?package=${window.location.pathname.split('/').pop()}`;
+
+  return (
+    <div className="flex flex-col-reverse lg:grid lg:grid-cols-3 gap-8">
+      {/* Payment Form */}
+      <div className="lg:col-span-2 mt-8 lg:mt-0">
+        <Card>
+          <CardHeader>
+            <CardTitle>Payment Information</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <CheckoutForm />
+          </CardContent>
+        </Card>
+      </div>
+
+      {/* Order Summary with confirm button */}
+      <div className="lg:order-last">
+        <Card>
+          <CardHeader>
+            <CardTitle>Order Summary</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <div className="space-y-4">
+              <div>
+                <h3 className="font-semibold text-lg mb-2">{packageData.name}</h3>
+                <p className="text-sm text-muted-foreground">{packageData.shortDescription}</p>
+              </div>
+
+              <div className="pt-4 border-t border-border space-y-2">
+                <div className="flex justify-between font-bold text-lg pt-2 border-t border-border">
+                  <span>Total</span>
+                  <span>£{total.toFixed(2)}</span>
+                </div>
+              </div>
+
+              <div className="pt-4">
+                <ConfirmPaymentButton returnUrl={returnUrl} />
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+      </div>
+    </div>
+  );
+}
+
+function ConfirmPaymentButton({ returnUrl }: { returnUrl: string }) {
+  const stripe = useStripe();
+  const elements = useElements();
+  const [isProcessing, setIsProcessing] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
+
+  const handleClick = async () => {
+    if (!stripe || !elements) return;
+    setIsProcessing(true);
+
+    const { error } = await stripe.confirmPayment({
+      elements,
+      confirmParams: { return_url: returnUrl },
+    });
+
+    if (error) {
+      setErrorMessage(error.message ?? 'An unexpected error occurred.');
+    }
+
+    setIsProcessing(false);
+  };
+
+  return (
+    <>
+      <Button
+        onClick={handleClick}
+        disabled={!stripe || isProcessing}
+        className="w-full"
+      >
+        {isProcessing ? 'Processing...' : 'Buy now'}
+      </Button>
+      {errorMessage && (
+        <div className="text-red-500 text-sm mt-3">{errorMessage}</div>
+      )}
+    </>
+  );
+}
 
 export default Checkout;
