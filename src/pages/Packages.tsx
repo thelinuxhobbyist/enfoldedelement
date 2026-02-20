@@ -44,7 +44,7 @@ const Packages = () => {
       </section>
 
       {/* Search and Filter */}
-      <section className="py-8 border-b border-border bg-background sticky top-16 z-40">
+      <section className="py-8 border-b border-border bg-background">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col gap-2 sm:gap-4 sm:flex-row">
             <div className="flex-grow">
