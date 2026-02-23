@@ -71,7 +71,7 @@ const Index = () => {
               className="hero-sub mt-2 text-lg md:text-xl font-semibold max-w-3xl mx-auto"
               variants={itemVariants}
             >
-              By building trust in their native language
+              Unlock new growth by connecting with more customers in their language.
             </motion.p>
 
             <motion.span 
@@ -298,8 +298,8 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Testimonials Section */}
-      <section className="py-20 bg-white">
+      {/* Testimonials Section (hidden for now) */}
+      <section className="py-20 bg-white hidden">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4 text-gray-900">Real impact, real results</h2>
