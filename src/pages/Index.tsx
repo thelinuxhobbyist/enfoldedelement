@@ -74,12 +74,7 @@ const Index = () => {
               Unlock new growth by connecting with more customers in their language.
             </motion.p>
 
-            <motion.span 
-              className="hero-support block mt-4 text-base font-medium opacity-90"
-              variants={itemVariants}
-            >
-              Modern Britain speaks more than <span style={{ color: '#e3342f', fontWeight: 700 }}>English</span> — creating new opportunities for growth.
-            </motion.span>
+            {/* supporting sentence removed as requested */}
 
             <motion.div 
               className="pt-6 flex flex-col sm:flex-row justify-center gap-4"
