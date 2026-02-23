@@ -85,8 +85,8 @@ const Index = () => {
               className="pt-6 flex flex-col sm:flex-row justify-center gap-4"
               variants={itemVariants}
             >
-              <Button size="lg" className="bg-white text-gray-900 px-8 py-3 text-lg font-semibold rounded-md" asChild>
-                <Link to="/packages" className="px-8 py-3 text-lg font-semibold">
+              <Button variant="secondary" size="lg" className="px-8 py-3 text-lg font-semibold rounded-md" asChild>
+                <Link to="/packages">
                   View Packages
                 </Link>
               </Button>
