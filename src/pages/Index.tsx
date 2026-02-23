@@ -61,39 +61,38 @@ const Index = () => {
             animate="visible"
           >
             <motion.h1 
-              className="hero-title"
+              className="hero-title text-3xl md:text-4xl lg:text-5xl font-bold"
               variants={itemVariants}
             >
-              Modern Britain speaks more than <span style={{ color: '#e3342f', fontWeight: 700 }}>English</span>
+              Reach Multicultural Customers
             </motion.h1>
-            <motion.span 
-              className="hero-sub block mt-2 text-base font-semibold opacity-90" 
-              style={{ fontSize: '1.2375rem' }}
-              variants={itemVariants}
-            >
-              — and so should your business.
-            </motion.span>
 
             <motion.p 
-              className="hero-sub mt-4 text-lg font-medium"
+              className="hero-sub mt-2 text-lg md:text-xl font-semibold max-w-3xl mx-auto"
               variants={itemVariants}
             >
-              Connect with diverse audiences through multilingual design and marketing that reflect the real Britain.
+              By building trust in their native language
             </motion.p>
+
+            <motion.span 
+              className="hero-support block mt-4 text-base font-medium opacity-90"
+              variants={itemVariants}
+            >
+              Modern Britain speaks more than <span style={{ color: '#e3342f', fontWeight: 700 }}>English</span> — creating new opportunities for growth.
+            </motion.span>
 
             <motion.div 
               className="pt-6 flex flex-col sm:flex-row justify-center gap-4"
               variants={itemVariants}
             >
-              <Button size="lg" className="bg-[#4A4FB5] hover:bg-[#3A3F95] text-white px-8 py-3 text-lg font-semibold rounded-md" asChild>
-                <Link to="/packages" className="bg-[#e3342f] hover:bg-[#c81e1e] text-white px-8 py-3 text-lg font-semibold rounded-md">
+              <Button size="lg" className="bg-white text-gray-900 px-8 py-3 text-lg font-semibold rounded-md" asChild>
+                <Link to="/packages" className="px-8 py-3 text-lg font-semibold">
                   View Packages
                 </Link>
               </Button>
-              <Button size="lg" className="bg-[#3A3F95] hover:bg-[#23275c] text-white px-8 py-3 text-lg font-semibold rounded-md" asChild>
-                <a href="#contact" style={{ boxShadow: '0 0 0 2px #fff', borderRadius: '0.375rem' }} className="hover:text-[#e3342f] hover:bg-white transition-colors duration-200">
-                  Book a Free Consultation
-                </a>
+
+              <Button size="lg" className="bg-red-500 hover:bg-red-600 text-white px-8 py-3 text-lg font-semibold rounded-md shadow-lg" asChild>
+                <a href="#contact" className="px-8 py-3 text-lg font-semibold">Book a Free Consultation</a>
               </Button>
             </motion.div>
           </motion.div>
@@ -109,7 +108,7 @@ const Index = () => {
               Diversity is Britain’s strength. With over 300 languages spoken nationwide, 1 in 6 residents using a language other than English at home, and £78 billion generated yearly by ethnic minority businesses — inclusive communication isn’t just good practice, it’s smart business.
             </p>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              By speaking your audience’s language — literally and culturally — your brand earns trust, loyalty, and long-term growth.
+              By speaking your audience’s language — literally and culturally — your brand increases trust, boosts engagement, and drives measurable growth in revenue and conversions.
             </p>
           </div>
           
@@ -154,6 +153,7 @@ const Index = () => {
               </p>
             </motion.div>
           </div>
+          <p className="text-sm text-gray-500 text-center mt-6">Source: UK Census & government data.</p>
         </div>
       </section>
 
@@ -163,7 +163,7 @@ const Index = () => {
           <div className="text-center mb-16">
             <h2 className="section-title mb-4" style={{ color: 'white' }}>Our Multilingual Digital Media Services</h2>
             <p className="text-lg max-w-3xl mx-auto">
-              We bridge cultural gaps through thoughtful design and multilingual communication
+              We drive measurable outcomes — increased trust, higher engagement, better conversion rates and revenue — through culturally intelligent branding and multilingual marketing.
             </p>
           </div>
           
@@ -181,7 +181,7 @@ const Index = () => {
               </div>
               <h3 className="font-bold text-xl mb-2">Culturally Resonant Brand Design</h3>
               <p className="text-base text-gray-600">
-                Logo, color palette, typography & brand guidelines that resonate across cultures.
+                Brand identity that builds trust with multicultural customers and increases conversions.
               </p>
             </motion.div>
             
@@ -198,7 +198,7 @@ const Index = () => {
               </div>
               <h3 className="font-bold text-xl mb-2">Multilingual Web & Digital Marketing</h3>
               <p className="text-base text-gray-600">
-                Web design, social media, email & SEO content with effective multilingual impact.
+                Multilingual websites, SEO and campaigns that increase engagement, leads and revenue.
               </p>
             </motion.div>
             
@@ -215,7 +215,7 @@ const Index = () => {
               </div>
               <h3 className="font-bold text-xl mb-2">Culturally Aware Advertising Materials</h3>
               <p className="text-base text-gray-600">
-                Posters, flyers, banners that work across cultural contexts in your community.
+                Ad creatives and collateral crafted to boost response rates and conversions in target communities.
               </p>
             </motion.div>
             
@@ -232,9 +232,14 @@ const Index = () => {
               </div>
               <h3 className="font-bold text-xl mb-2">Professional Translation with Cultural Impact</h3>
               <p className="text-base text-gray-600">
-                Translate, adapt, and create engaging multilingual campaigns.
+                Translation and localisation that reduce friction, increase engagement and improve campaign ROI.
               </p>
             </motion.div>
+          </div>
+          <div className="mt-8 text-center">
+            <Button size="lg" className="bg-red-500 hover:bg-red-600 text-white px-10 py-3 text-lg font-semibold rounded-md shadow-lg">
+              <a href="#contact">Book a Free Consultation</a>
+            </Button>
           </div>
         </div>
       </section>
