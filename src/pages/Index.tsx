@@ -67,7 +67,12 @@ const Index = () => {
               Reach Multicultural Customers
             </motion.h1>
 
-            {/* supporting sentence removed as requested */}
+            <motion.p
+              className="hero-sub mt-2 text-lg md:text-xl font-semibold max-w-3xl mx-auto"
+              variants={itemVariants}
+            >
+              by building trust in their native language
+            </motion.p>
 
             <motion.div 
               className="pt-6 flex flex-col sm:flex-row justify-center gap-4"
