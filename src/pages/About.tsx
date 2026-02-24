@@ -12,9 +12,7 @@ const About = () => {
         {/* Hero */}
         <section className="flex flex-col lg:flex-row items-center gap-6">
           <div className="flex-1 min-w-[260px]">
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-2">
-              Modern Britain speaks more than English — and so should your business.
-            </h1>
+            
             <p className="text-base sm:text-lg text-foreground/80 mb-3">
               At <strong>Enfolded Media</strong> we recognise <em>language as a bridge to cultural affinity</em> — designing for impact and helping you reach new audiences in a multicultural Britain.
             </p>
