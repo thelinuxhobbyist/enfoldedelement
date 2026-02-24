@@ -53,7 +53,7 @@ const Navbar = () => {
             ))}
             {!isActive("/packages") && (
               <Button variant="hero" size="sm" asChild>
-                <Link to="/packages">Get Started</Link>
+                <Link to="/#contact">Get Started</Link>
               </Button>
             )}
           </div>
@@ -89,7 +89,7 @@ const Navbar = () => {
             {!isActive("/packages") && (
               <div className="pt-2">
                 <Button variant="hero" className="w-full" asChild>
-                  <Link to="/packages" onClick={() => setMobileMenuOpen(false)}>
+                  <Link to="/#contact" onClick={() => setMobileMenuOpen(false)}>
                     Get Started
                   </Link>
                 </Button>
