@@ -107,8 +107,8 @@ const Index = () => {
           
           <div className="grid md:grid-cols-4 gap-8">
             <motion.div className="text-center" variants={cardVariants}>
-              <div className="w-16 h-16 bg-red-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-white text-2xl font-bold">1</span>
+              <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-red-600 text-2xl font-bold">1</span>
               </div>
               <h3 className="text-xl font-bold mb-2">1 in 6 UK</h3>
               <p className="text-sm text-gray-600">
@@ -117,8 +117,8 @@ const Index = () => {
             </motion.div>
             
             <motion.div className="text-center" variants={cardVariants}>
-              <div className="w-16 h-16 bg-yellow-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-white text-2xl font-bold">£</span>
+              <div className="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-yellow-600 text-2xl font-bold">£</span>
               </div>
               <h3 className="text-xl font-bold mb-2">£78 Billion</h3>
               <p className="text-sm text-gray-600">
@@ -127,8 +127,8 @@ const Index = () => {
             </motion.div>
             
             <motion.div className="text-center" variants={cardVariants}>
-              <div className="w-16 h-16 bg-red-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-white text-2xl font-bold">❤</span>
+              <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-red-600 text-2xl font-bold">❤</span>
               </div>
               <h3 className="text-xl font-bold mb-2">Cultural</h3>
               <p className="text-sm text-gray-600">
@@ -137,8 +137,8 @@ const Index = () => {
             </motion.div>
             
             <motion.div className="text-center" variants={cardVariants}>
-              <div className="w-16 h-16 bg-red-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-white text-2xl font-bold">300</span>
+              <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-red-600 text-2xl font-bold">300</span>
               </div>
               <h3 className="text-xl font-bold mb-2">300+</h3>
               <p className="text-sm text-gray-600">
@@ -169,8 +169,8 @@ const Index = () => {
               whileHover="hover"
               viewport={{ once: true, margin: "-100px" }}
             >
-              <div className="w-12 h-12 bg-red-500 rounded-lg flex items-center justify-center mb-4">
-                <span className="text-white text-xl">▶</span>
+              <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4">
+                <span className="text-red-600 text-xl">▶</span>
               </div>
               <h3 className="font-bold text-xl mb-2">Culturally Resonant Brand Design</h3>
               <p className="text-base text-gray-600">
@@ -186,8 +186,8 @@ const Index = () => {
               whileHover="hover"
               viewport={{ once: true, margin: "-100px" }}
             >
-              <div className="w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center mb-4">
-                <span className="text-white text-xl">£</span>
+              <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                <span className="text-blue-600 text-xl">£</span>
               </div>
               <h3 className="font-bold text-xl mb-2">Multilingual Web & Digital Marketing</h3>
               <p className="text-base text-gray-600">
@@ -203,8 +203,8 @@ const Index = () => {
               whileHover="hover"
               viewport={{ once: true, margin: "-100px" }}
             >
-              <div className="w-12 h-12 bg-red-500 rounded-lg flex items-center justify-center mb-4">
-                <span className="text-white text-xl">⚡</span>
+              <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4">
+                <span className="text-red-600 text-xl">⚡</span>
               </div>
               <h3 className="font-bold text-xl mb-2">Culturally Aware Advertising Materials</h3>
               <p className="text-base text-gray-600">
@@ -220,8 +220,8 @@ const Index = () => {
               whileHover="hover"
               viewport={{ once: true, margin: "-100px" }}
             >
-              <div className="w-12 h-12 bg-blue-500 rounded-lg flex items-center justify-center mb-4">
-                <span className="text-white text-xl">🌐</span>
+              <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                <span className="text-blue-600 text-xl">🌐</span>
               </div>
               <h3 className="font-bold text-xl mb-2">Professional Translation with Cultural Impact</h3>
               <p className="text-base text-gray-600">
@@ -249,9 +249,9 @@ const Index = () => {
           
           <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-white p-8 rounded-lg shadow-sm">
-              <div className="w-12 h-12 bg-red-500 rounded-lg flex items-center justify-center mb-4">
-                <span className="text-white text-xl">🏢</span>
-              </div>
+              <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4">
+                  <span className="text-red-600 text-xl">🏢</span>
+                </div>
               <h3 className="font-bold text-xl mb-2">Local Businesses</h3>
               <p className="text-base text-gray-600">
                 Supporting independent businesses in Britain to reach ethnic minority customers through effective cultural content marketing
@@ -259,8 +259,8 @@ const Index = () => {
             </div>
             
             <div className="bg-white p-8 rounded-lg shadow-sm">
-              <div className="w-12 h-12 bg-red-500 rounded-lg flex items-center justify-center mb-4">
-                <span className="text-white text-xl">🏫</span>
+              <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4">
+                <span className="text-red-600 text-xl">🏫</span>
               </div>
               <h3 className="font-bold text-xl mb-2">Schools & Councils</h3>
               <p className="text-base text-gray-600">
@@ -269,8 +269,8 @@ const Index = () => {
             </div>
             
             <div className="bg-white p-8 rounded-lg shadow-sm">
-              <div className="w-12 h-12 bg-red-500 rounded-lg flex items-center justify-center mb-4">
-                <span className="text-white text-xl">👥</span>
+              <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4">
+                <span className="text-red-600 text-xl">👥</span>
               </div>
               <h3 className="font-bold text-xl mb-2">Community Groups</h3>
               <p className="text-base text-gray-600">
@@ -279,8 +279,8 @@ const Index = () => {
             </div>
             
             <div className="bg-white p-8 rounded-lg shadow-sm">
-              <div className="w-12 h-12 bg-red-500 rounded-lg flex items-center justify-center mb-4">
-                <span className="text-white text-xl">🏥</span>
+              <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mb-4">
+                <span className="text-red-600 text-xl">🏥</span>
               </div>
               <h3 className="font-bold text-xl mb-2">Healthcare & Services</h3>
               <p className="text-base text-gray-600">

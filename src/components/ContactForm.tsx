@@ -60,8 +60,8 @@ const ContactForm = () => {
   if (isSubmitted) {
     return (
       <div className="bg-green-50 border border-green-200 rounded-lg p-6 text-center">
-        <div className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
-          <span className="text-white text-xl">✓</span>
+        <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+          <span className="text-green-700 text-xl">✓</span>
         </div>
         <h3 className="text-xl font-bold text-green-900 mb-2">Message Sent!</h3>
         <p className="text-green-700">
