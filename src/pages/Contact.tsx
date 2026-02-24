@@ -3,6 +3,8 @@ import { motion } from "framer-motion";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ContactForm from "@/components/ContactForm";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { ICONS } from '@/lib/icons';
 
 const Contact = () => {
   useEffect(() => {
@@ -86,8 +88,8 @@ const Contact = () => {
               viewport={{ once: true, margin: "-100px" }}
             >
               <motion.div className="text-center" variants={cardVariants}>
-                <div className="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <span className="text-red-600 text-xl">📞</span>
+                <div className="w-12 h-12 bg-[#2C3192]/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <FontAwesomeIcon icon={ICONS.phone} className="text-[#C12735] text-xl" />
                   </div>
                 <h3 className="font-bold text-lg mb-2">Phone</h3>
                 <p className="text-gray-600">
@@ -98,8 +100,8 @@ const Contact = () => {
               </motion.div>
 
               <motion.div className="text-center" variants={cardVariants}>
-                <div className="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-red-600 text-xl">✉</span>
+                <div className="w-12 h-12 bg-[#2C3192]/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <FontAwesomeIcon icon={ICONS.email} className="text-[#C12735] text-xl" />
                 </div>
                 <h3 className="font-bold text-lg mb-2">Email</h3>
                 <p className="text-gray-600">
@@ -110,8 +112,8 @@ const Contact = () => {
               </motion.div>
 
               <motion.div className="text-center" variants={cardVariants}>
-                <div className="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-red-600 text-xl">💬</span>
+                <div className="w-12 h-12 bg-[#2C3192]/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <FontAwesomeIcon icon={ICONS.comments} className="text-[#C12735] text-xl" />
                 </div>
                 <h3 className="font-bold text-lg mb-2">WhatsApp</h3>
                 <p className="text-gray-600 mb-4">Connect instantly</p>

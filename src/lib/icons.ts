@@ -1,6 +1,6 @@
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { 
-  faArrowRight, 
+import {
+  faArrowRight,
   faStar,
   faBars,
   faShoppingCart,
@@ -12,8 +12,19 @@ import {
   faImage,
   faCode,
   faPrint,
-  faPaintBrush, // replacing faBrandingCraft with faPaintBrush for branding icon
-  faChartLine
+  faPaintBrush,
+  faChartLine,
+  faHashtag,
+  faPoundSign,
+  faHeart,
+  faGlobe,
+  faPlay,
+  faBolt,
+  faBuilding,
+  faSchool,
+  faUsers,
+  faHospital,
+  faComments
 } from '@fortawesome/free-solid-svg-icons';
 
 // Add icons to library for global use
@@ -30,8 +41,19 @@ library.add(
   faImage,
   faCode,
   faPrint,
-  faBrandingCraft,
-  faChartLine
+  faPaintBrush,
+  faChartLine,
+  faHashtag,
+  faPoundSign,
+  faHeart,
+  faGlobe,
+  faPlay,
+  faBolt,
+  faBuilding,
+  faSchool,
+  faUsers,
+  faHospital,
+  faComments
 );
 
 // Icon name mapping for consistent usage
@@ -49,7 +71,18 @@ export const ICONS = {
   code: faCode,
   print: faPrint,
   branding: faPaintBrush,
-  analytics: faChartLine
+  analytics: faChartLine,
+  hashtag: faHashtag,
+  pound: faPoundSign,
+  heart: faHeart,
+  globe: faGlobe,
+  play: faPlay,
+  bolt: faBolt,
+  building: faBuilding,
+  school: faSchool,
+  users: faUsers,
+  hospital: faHospital,
+  comments: faComments
 } as const;
 
 export type IconName = keyof typeof ICONS;

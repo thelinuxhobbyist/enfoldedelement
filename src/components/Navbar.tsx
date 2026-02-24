@@ -1,4 +1,4 @@
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
@@ -6,6 +6,7 @@ import { useState } from "react";
 const Navbar = () => {
   const location = useLocation();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const navigate = useNavigate();
 
   const navItems = [
     { name: "Home", path: "/" },
@@ -53,7 +54,25 @@ const Navbar = () => {
             ))}
             {!isActive("/packages") && (
               <Button variant="hero" size="sm" asChild>
-                <Link to="/#contact">Get Started</Link>
+                <a
+                  href="/#contact"
+                  onClick={(e: any) => {
+                    e.preventDefault();
+                    setMobileMenuOpen(false);
+                    if (location.pathname === "/") {
+                      const el = document.getElementById('contact');
+                      if (el) el.scrollIntoView({ behavior: 'smooth' });
+                    } else {
+                      navigate('/', { replace: false });
+                      setTimeout(() => {
+                        const el = document.getElementById('contact');
+                        if (el) el.scrollIntoView({ behavior: 'smooth' });
+                      }, 120);
+                    }
+                  }}
+                >
+                  Get Started
+                </a>
               </Button>
             )}
           </div>
@@ -89,9 +108,25 @@ const Navbar = () => {
             {!isActive("/packages") && (
               <div className="pt-2">
                 <Button variant="hero" className="w-full" asChild>
-                  <Link to="/#contact" onClick={() => setMobileMenuOpen(false)}>
+                  <a
+                    href="/#contact"
+                    onClick={(e: any) => {
+                      e.preventDefault();
+                      setMobileMenuOpen(false);
+                      if (location.pathname === "/") {
+                        const el = document.getElementById('contact');
+                        if (el) el.scrollIntoView({ behavior: 'smooth' });
+                      } else {
+                        navigate('/', { replace: false });
+                        setTimeout(() => {
+                          const el = document.getElementById('contact');
+                          if (el) el.scrollIntoView({ behavior: 'smooth' });
+                        }, 120);
+                      }
+                    }}
+                  >
                     Get Started
-                  </Link>
+                  </a>
                 </Button>
               </div>
             )}
