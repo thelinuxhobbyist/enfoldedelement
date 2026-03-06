@@ -164,7 +164,7 @@ const Index = () => {
           
           <div className="grid md:grid-cols-4 gap-6">
             <motion.div 
-              className="bg-white text-gray-900 p-6 rounded-lg"
+              className="bg-white text-gray-900 p-4 rounded-lg"
               variants={cardVariants}
               initial="hidden"
               whileInView="visible"
@@ -181,7 +181,7 @@ const Index = () => {
             </motion.div>
             
             <motion.div 
-              className="bg-white text-gray-900 p-6 rounded-lg"
+              className="bg-white text-gray-900 p-4 rounded-lg"
               variants={cardVariants}
               initial="hidden"
               whileInView="visible"
@@ -198,7 +198,7 @@ const Index = () => {
             </motion.div>
             
             <motion.div 
-              className="bg-white text-gray-900 p-6 rounded-lg"
+              className="bg-white text-gray-900 p-4 rounded-lg"
               variants={cardVariants}
               initial="hidden"
               whileInView="visible"
@@ -210,12 +210,12 @@ const Index = () => {
               </div>
               <h3 className="font-bold text-xl mb-2">Culturally Aware Advertising Materials</h3>
               <p className="text-base text-gray-600">
-                Ad creatives and collateral crafted to boost response rates and conversions in target communities.
+                Designing advertising materials that are culturally appropriate and easy for diverse audiences to understand.
               </p>
             </motion.div>
             
             <motion.div 
-              className="bg-white text-gray-900 p-6 rounded-lg"
+              className="bg-white text-gray-900 p-4 rounded-lg"
               variants={cardVariants}
               initial="hidden"
               whileInView="visible"
@@ -227,7 +227,7 @@ const Index = () => {
               </div>
               <h3 className="font-bold text-xl mb-2">Professional Translation with Cultural Impact</h3>
               <p className="text-base text-gray-600">
-                Translation and localisation that reduce friction, increase engagement and improve campaign ROI.
+                Accurate translation and localisation to help your message make sense across different languages and cultures.
               </p>
             </motion.div>
           </div>
@@ -250,7 +250,7 @@ const Index = () => {
           </div>
           
           <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-white p-8 rounded-lg shadow-sm">
+            <div className="bg-white p-4 rounded-lg shadow-sm">
               <div className="w-12 h-12 bg-[#2C3192]/10 rounded-lg flex items-center justify-center mb-4">
                   <FontAwesomeIcon icon={ICONS.building} className="text-[#C12735] text-xl" />
                 </div>
@@ -260,17 +260,17 @@ const Index = () => {
               </p>
             </div>
             
-            <div className="bg-white p-8 rounded-lg shadow-sm">
+            <div className="bg-white p-4 rounded-lg shadow-sm">
               <div className="w-12 h-12 bg-[#2C3192]/10 rounded-lg flex items-center justify-center mb-4">
                 <FontAwesomeIcon icon={ICONS.school} className="text-[#C12735] text-xl" />
               </div>
               <h3 className="font-bold text-xl mb-2">Schools & Councils</h3>
               <p className="text-base text-gray-600">
-                Helping educational institutions and local government create inclusive classrooms and multilingual communities
+                Supporting schools and local authorities with inclusive and multilingual materials.
               </p>
             </div>
             
-            <div className="bg-white p-8 rounded-lg shadow-sm">
+            <div className="bg-white p-4 rounded-lg shadow-sm">
               <div className="w-12 h-12 bg-[#2C3192]/10 rounded-lg flex items-center justify-center mb-4">
                 <FontAwesomeIcon icon={ICONS.users} className="text-[#C12735] text-xl" />
               </div>
@@ -280,7 +280,7 @@ const Index = () => {
               </p>
             </div>
             
-            <div className="bg-white p-8 rounded-lg shadow-sm">
+            <div className="bg-white p-4 rounded-lg shadow-sm">
               <div className="w-12 h-12 bg-[#2C3192]/10 rounded-lg flex items-center justify-center mb-4">
                 <FontAwesomeIcon icon={ICONS.hospital} className="text-[#C12735] text-xl" />
               </div>
