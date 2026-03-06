@@ -41,7 +41,7 @@ Good communication starts with understanding.
 
 - Learn about the history, customs, and values of the community.  
 - Understand what topics, colors, or visuals may carry cultural meaning.  
-- Engage with community organizations or leaders for insights.
+- Engage with community organisations or leaders for insights.
 
 ---
 

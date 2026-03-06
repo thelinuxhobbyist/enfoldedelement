@@ -25,7 +25,7 @@ Britain's diversity is one of its greatest strengths.
 According to national data, **1 in 6 residents** uses a language other than English at home.  
 That means a huge portion of the UK audience is more comfortable, and more engaged, when brands communicate in their preferred language.
 
-Businesses that recognize this — and design accordingly — are seeing real results. From local councils to global brands, organizations are realising that multilingual design **builds trust** and **strengthens connections** with communities.
+Businesses that recognize this — and design accordingly — are seeing real results. From local councils to global brands, organisations are realising that multilingual design **builds trust** and **strengthens connections** with communities.
 
 ---
 

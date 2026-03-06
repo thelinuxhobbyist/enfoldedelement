@@ -49,7 +49,7 @@ The number of digital accessibility lawsuits has increased dramatically in recen
 | 2021 | 4,055              |
 | 2022 | 4,395              |
 
-By prioritizing accessibility, organizations reduce their legal exposure while demonstrating social responsibility.
+By prioritizing accessibility, organisations reduce their legal exposure while demonstrating social responsibility.
 
 ## Core Principles of Accessible Design
 
@@ -112,6 +112,6 @@ Foster a culture where all team members understand the importance of accessibili
 
 ## Conclusion
 
-Accessibility isn't just a checkbox for compliance or a moral imperative—it's a business advantage. Organizations that embrace inclusive design reach more customers, drive innovation, improve their SEO, reduce legal risk, and ultimately create better experiences for everyone.
+Accessibility isn't just a checkbox for compliance or a moral imperative—it's a business advantage. Organisations that embrace inclusive design reach more customers, drive innovation, improve their SEO, reduce legal risk, and ultimately create better experiences for everyone.
 
 As the market becomes increasingly focused on inclusivity, companies that prioritize accessibility will have a distinct competitive edge over those that don't. The question isn't whether you can afford to invest in accessibility, but whether you can afford not to.

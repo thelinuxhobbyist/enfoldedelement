@@ -99,9 +99,12 @@ const Index = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="section-title mb-4">Why Speaking Your Audience’s Language Matters</h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-4">
-              Diversity is Britain’s strength. With over 300 languages spoken nationwide, 1 in 6 residents using a language other than English at home, and £78 billion generated yearly by ethnic minority businesses — inclusive communication isn’t just good practice, it’s smart business.
-            </p>
+            <div className="max-w-3xl mx-auto mb-6">
+              <div className="bg-gray-50 border border-gray-100 rounded-xl p-8 shadow-sm">
+                <p className="text-lg text-gray-800">Behind every data point is a person who wants to be seen and understood. With 1 in 6 UK residents speaking a language other than English at home, inclusive communication is how you turn "target audiences" into loyal communities. We help your brand speak the language of home.</p>
+                <p className="text-lg font-semibold text-gray-900 mt-4">Your area is multilingual — why isn't your marketing?</p>
+              </div>
+            </div>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               By speaking your audience’s language — literally and culturally — your brand increases trust, boosts engagement, and drives measurable growth in revenue and conversions.
             </p>
@@ -231,7 +234,7 @@ const Index = () => {
               </p>
             </motion.div>
           </div>
-          <div className="mt-8 text-center">
+          <div className="mt-12 text-center">
             <Button size="lg" className="bg-red-500 hover:bg-red-600 text-white px-10 py-3 text-lg font-semibold rounded-md shadow-lg">
               <a href="#contact">Book a Free Consultation</a>
             </Button>
@@ -244,8 +247,8 @@ const Index = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="section-title mb-4">Built for Communities That Matter</h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              We work with organizations that serve real communities — helping them communicate with clarity, empathy, and cultural understanding.
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              We work with organisations that serve real communities — helping them communicate with clarity, empathy, and cultural understanding.
             </p>
           </div>
           
@@ -276,7 +279,7 @@ const Index = () => {
               </div>
               <h3 className="font-bold text-xl mb-2">Community Groups</h3>
               <p className="text-base text-gray-600">
-                Empowering community organizations to reach diverse residents and provide more effective support services
+                Empowering community organisations to reach diverse residents and provide more effective support services
               </p>
             </div>
             
@@ -298,8 +301,8 @@ const Index = () => {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-4 text-gray-900">Real impact, real results</h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-4">
-              <span className="font-semibold">Trusted by local businesses and organizations across the UK</span><br />
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-4">
+              <span className="font-semibold">Trusted by local businesses and organisations across the UK</span><br />
               Here’s what our clients say about working with Enfolded Media.
             </p>
           </div>
@@ -359,7 +362,7 @@ const Index = () => {
                 </div>
               </div>
               <p className="text-base text-gray-600 mb-4">
-                "Professional, understanding, and exceptionally responsive. They got our message across in our organization."
+                "Professional, understanding, and exceptionally responsive. They got our message across in our organisation."
               </p>
               <div className="font-bold text-base">Maya Patel</div>
               <div className="text-sm text-gray-500">Charity UK Director</div>

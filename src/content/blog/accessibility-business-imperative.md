@@ -9,7 +9,7 @@ image:
 tags: ["Accessibility", "Business Strategy", "Inclusive Design"]
 ---
 
-Digital accessibility has evolved from a niche compliance concern to a fundamental business imperative. Organizations that embrace accessibility as a core principle are discovering strategic advantages beyond mere regulatory compliance.
+Digital accessibility has evolved from a niche compliance concern to a fundamental business imperative. Organisations that embrace accessibility as a core principle are discovering strategic advantages beyond mere regulatory compliance.
 
 ## Beyond Compliance: The Business Case
 
@@ -43,7 +43,7 @@ Companies known for accessibility excellence build stronger brands:
 
 - **Values alignment**: 71% of consumers prefer purchasing from companies that reflect their values
 - **Brand advocacy**: Users who feel included become powerful brand advocates
-- **Talent attraction**: Top talent increasingly considers organizational values when choosing employers
+-- **Talent attraction**: Top talent increasingly considers organisational values when choosing employers
 
 ## Strategic Implementation Approaches
 
@@ -66,7 +66,7 @@ The most cost-effective approach embeds accessibility throughout the development
 
 ### Team Capabilities
 
-Building organizational capability requires:
+Building organisational capability requires:
 
 - Cross-functional training programs
 - Accessibility champions across departments
@@ -91,7 +91,7 @@ Quantify the business impact through metrics like:
 - **Third-party components**: Vendor accessibility varies widely
 - **Emerging technologies**: New tech often lacks accessibility standards initially
 
-### Organizational Obstacles
+### Organisational Obstacles
 
 - **Knowledge gaps**: Teams may lack accessibility expertise
 - **Competing priorities**: Accessibility may compete with feature development
@@ -99,4 +99,4 @@ Quantify the business impact through metrics like:
 
 ## Conclusion
 
-Digital accessibility has transformed from a compliance checkbox to a strategic business advantage. Organizations that recognize this shift are reaping benefits in market expansion, innovation, user experience, and brand equity. By integrating accessibility into business strategy rather than treating it as a technical requirement, companies position themselves for sustainable growth in an increasingly inclusive digital economy.
+Digital accessibility has transformed from a compliance checkbox to a strategic business advantage. Organisations that recognize this shift are reaping benefits in market expansion, innovation, user experience, and brand equity. By integrating accessibility into business strategy rather than treating it as a technical requirement, companies position themselves for sustainable growth in an increasingly inclusive digital economy.

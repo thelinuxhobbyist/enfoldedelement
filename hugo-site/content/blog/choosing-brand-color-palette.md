@@ -89,7 +89,7 @@ Brands like Spotify and Coca-Cola leverage distinctive colors that become instan
 
 ### The Complementary System
 
-Organizations like National Geographic use complementary colors to create visual interest and energy.
+Organisations like National Geographic use complementary colors to create visual interest and energy.
 
 ## Conclusion
 
