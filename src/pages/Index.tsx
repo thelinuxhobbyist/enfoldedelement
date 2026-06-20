@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import PopularPackages from "@/components/ui/PopularPackages";
 
 const Index = () => {
   useEffect(() => {
@@ -57,7 +58,7 @@ const Index = () => {
       <section className="relative overflow-hidden bg-[#4A4FB5] text-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32 relative">
           <motion.div 
-            className="max-w-4xl mx-auto text-center space-y-8"
+            className="max-w-4xl mx-auto text-center space-y-6"
             variants={containerVariants}
             initial="hidden"
             animate="visible"
@@ -66,14 +67,14 @@ const Index = () => {
               className="hero-title text-3xl md:text-4xl lg:text-5xl font-bold"
               variants={itemVariants}
             >
-              Reach Multicultural Customers
+              Web & Design Support for Local Businesses.
             </motion.h1>
 
             <motion.p
               className="hero-sub mt-2 text-lg md:text-xl font-semibold max-w-3xl mx-auto"
               variants={itemVariants}
             >
-              by building trust in their native language
+              No corporate jargon. No massive agency price tags. Just straightforward website updates, logos, and marketing for trades, restaurants, and solo traders.
             </motion.p>
 
             <motion.div 
@@ -94,74 +95,43 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Why Multilingual Matters Section */}
-      <section className="py-20 bg-white font-sans">
+      {/* Who We Help Section (replaces 'Why Multilingual Matters') */}
+      <section className="py-16 bg-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="section-title mb-4">Why Speaking Your Audience’s Language Matters</h2>
-            <div className="max-w-3xl mx-auto mb-6">
-              <p className="text-lg text-gray-800">
-                Behind every data point is a person who wants to be seen and understood. With 1 in 6 UK residents speaking a language other than English at home, inclusive communication turns "target audiences" into loyal communities. We help your brand speak the language of home.
-              </p>
-              <p className="text-lg font-semibold text-gray-900 mt-4">Your area is multilingual — why isn't your marketing?</p>
+          <div className="text-center mb-8">
+            <h2 className="text-3xl font-bold">Who We Help</h2>
+            <p className="text-gray-600 mt-2 max-w-2xl mx-auto">Practical digital support for local businesses and solo traders—no jargon, no long contracts.</p>
+          </div>
+
+          <div className="grid sm:grid-cols-3 gap-6 max-w-4xl mx-auto text-center">
+            <div className="p-6 border rounded-lg shadow-sm">
+              <h3 className="font-bold text-xl">Restaurants & Cafes</h3>
+              <p className="text-sm text-gray-600 mt-2">Menu updates, social graphics, and keeping your local customers informed.</p>
             </div>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              By speaking your audience’s language — literally and culturally — your brand increases trust, boosts engagement, and drives measurable growth in revenue and conversions.
-            </p>
+
+            <div className="p-6 border rounded-lg shadow-sm">
+              <h3 className="font-bold text-xl">Trades & Solo Traders</h3>
+              <p className="text-sm text-gray-600 mt-2">Professional logos, business cards, and simple websites that build trust.</p>
+            </div>
+
+            <div className="p-6 border rounded-lg shadow-sm">
+              <h3 className="font-bold text-xl">Play Centres & Local Venues</h3>
+              <p className="text-sm text-gray-600 mt-2">Engaging flyers, booking page edits, and community marketing.</p>
+            </div>
           </div>
-          
-          <div className="grid md:grid-cols-4 gap-8">
-            <motion.div className="text-center" variants={cardVariants}>
-              <div className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition">
-                <div className="w-16 h-16 bg-[#2C3192]/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <FontAwesomeIcon icon={ICONS.hashtag} className="text-[#C12735] text-2xl" />
-                </div>
-                <h3 className="text-xl font-bold mb-2">1 in 6 UK</h3>
-                <p className="text-sm text-gray-600">residents speak a language other than English at home</p>
-              </div>
-            </motion.div>
-
-            <motion.div className="text-center" variants={cardVariants}>
-              <div className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition">
-                <div className="w-16 h-16 bg-[#2C3192]/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <FontAwesomeIcon icon={ICONS.pound} className="text-[#C12735] text-2xl" />
-                </div>
-                <h3 className="text-xl font-bold mb-2">£78 Billion</h3>
-                <p className="text-sm text-gray-600">yearly revenue generated by ethnic minority businesses</p>
-              </div>
-            </motion.div>
-
-            <motion.div className="text-center" variants={cardVariants}>
-              <div className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition">
-                <div className="w-16 h-16 bg-[#2C3192]/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <FontAwesomeIcon icon={ICONS.heart} className="text-[#C12735] text-2xl" />
-                </div>
-                <h3 className="text-xl font-bold mb-2">Cultural</h3>
-                <p className="text-sm text-gray-600">native local insights offer a deeper connection with your audience</p>
-              </div>
-            </motion.div>
-
-            <motion.div className="text-center" variants={cardVariants}>
-              <div className="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition">
-                <div className="w-16 h-16 bg-[#2C3192]/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <FontAwesomeIcon icon={ICONS.globe} className="text-[#C12735] text-2xl" />
-                </div>
-                <h3 className="text-xl font-bold mb-2">300+</h3>
-                <p className="text-sm text-gray-600">languages spoken across the UK today</p>
-              </div>
-            </motion.div>
-          </div>
-          <p className="text-sm text-gray-500 text-center mt-6">Source: UK Census & government data.</p>
         </div>
       </section>
+
+      {/* Popular Packages Section (kept after Who We Help) */}
+      <PopularPackages />
 
       {/* Services Section */}
       <section className="py-20 bg-[#4A4FB5] text-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="section-title mb-4" style={{ color: 'white' }}>Our Multilingual Digital Media Services</h2>
+            <h2 className="section-title mb-4" style={{ color: 'white' }}>Simple Packages. Clear Pricing. No Hidden Fees.</h2>
             <p className="text-lg max-w-3xl mx-auto">
-              We drive measurable outcomes — increased trust, higher engagement, better conversion rates and revenue — through culturally intelligent branding and multilingual marketing.
+              We know web design and marketing firms can feel intimidating. That’s why we don’t do complicated contracts or confusing jargon. We offer straightforward, fixed-price packages for everyday design and tech tasks.
             </p>
           </div>
           
@@ -242,55 +212,28 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Communities Section */}
-      <section className="py-20 bg-gray-50">
+      {/* Why Local Businesses Choose Us */}
+      <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="section-title mb-4">Built for Communities That Matter</h2>
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              We work with organisations that serve real communities — helping them communicate with clarity, empathy, and cultural understanding.
-            </p>
+          <div className="text-center mb-8">
+            <h2 className="text-3xl font-bold">Why Local Businesses Choose Us</h2>
+            <p className="text-gray-600 mt-2 max-w-2xl mx-auto">Practical help that fits your day-to-day needs.</p>
           </div>
-          
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-white p-4 rounded-lg shadow-sm">
-              <div className="w-12 h-12 bg-[#2C3192]/10 rounded-lg flex items-center justify-center mb-4">
-                  <FontAwesomeIcon icon={ICONS.building} className="text-[#C12735] text-xl" />
-                </div>
-              <h3 className="font-bold text-xl mb-2">Local Businesses</h3>
-              <p className="text-base text-gray-600">
-                Supporting independent businesses in Britain to reach ethnic minority customers through effective cultural content marketing
-              </p>
+
+          <div className="max-w-3xl mx-auto text-center grid sm:grid-cols-3 gap-6">
+            <div className="p-6 bg-white rounded-lg shadow-sm">
+              <h3 className="font-bold">No Long Contracts</h3>
+              <p className="text-sm text-gray-600 mt-2">Pay only for what you need, when you need it.</p>
             </div>
-            
-            <div className="bg-white p-4 rounded-lg shadow-sm">
-              <div className="w-12 h-12 bg-[#2C3192]/10 rounded-lg flex items-center justify-center mb-4">
-                <FontAwesomeIcon icon={ICONS.school} className="text-[#C12735] text-xl" />
-              </div>
-              <h3 className="font-bold text-xl mb-2">Schools & Councils</h3>
-              <p className="text-base text-gray-600">
-                Supporting schools and local authorities with inclusive and multilingual materials.
-              </p>
+
+            <div className="p-6 bg-white rounded-lg shadow-sm">
+              <h3 className="font-bold">Jargon-Free Support</h3>
+              <p className="text-sm text-gray-600 mt-2">We speak plain English, not confusing tech-talk.</p>
             </div>
-            
-            <div className="bg-white p-4 rounded-lg shadow-sm">
-              <div className="w-12 h-12 bg-[#2C3192]/10 rounded-lg flex items-center justify-center mb-4">
-                <FontAwesomeIcon icon={ICONS.users} className="text-[#C12735] text-xl" />
-              </div>
-              <h3 className="font-bold text-xl mb-2">Community Groups</h3>
-              <p className="text-base text-gray-600">
-                Empowering community organisations to reach diverse residents and provide more effective support services
-              </p>
-            </div>
-            
-            <div className="bg-white p-4 rounded-lg shadow-sm">
-              <div className="w-12 h-12 bg-[#2C3192]/10 rounded-lg flex items-center justify-center mb-4">
-                <FontAwesomeIcon icon={ICONS.hospital} className="text-[#C12735] text-xl" />
-              </div>
-              <h3 className="font-bold text-xl mb-2">Healthcare & Services</h3>
-              <p className="text-base text-gray-600">
-                Creating clear, accessible communications to ensure all patients and service users receive equal care regardless of language barriers
-              </p>
+
+            <div className="p-6 bg-white rounded-lg shadow-sm">
+              <h3 className="font-bold">Built for Your Budget</h3>
+              <p className="text-sm text-gray-600 mt-2">Simple, fixed-price packages designed for independent owners.</p>
             </div>
           </div>
         </div>
@@ -377,11 +320,10 @@ const Index = () => {
           <div className="bg-white rounded-2xl p-12 shadow-sm max-w-2xl mx-auto">
             <div className="text-center">
               <h2 className="text-4xl font-bold text-gray-900 mb-4">
-                Let's Create Together
+                Tired of Dealing with Intimidating Agencies?
               </h2>
               <p className="text-lg text-gray-600 mb-8">
-                Ready to reach new audiences and make a lasting impact?<br />
-                Get in touch today — we'd love to bring your project to life.
+                Let’s keep it simple. Explore our straightforward packages or get in touch for a friendly, casual chat about how we can help your business look great online.
               </p>
               
               <Button asChild size="lg" className="bg-red-500 hover:bg-red-600 text-white px-8 mb-8">
