@@ -67,22 +67,8 @@ const Index = () => {
               className="hero-title text-3xl md:text-4xl lg:text-5xl font-bold"
               variants={itemVariants}
             >
-              You do the work. We handle your online presence.
+              We design websites, build online stores, create memorable brands, and deliver marketing that helps your business reach more customers.
             </motion.h1>
-
-            <motion.p
-              className="hero-sub mt-2 text-lg md:text-xl font-semibold max-w-3xl mx-auto"
-              variants={itemVariants}
-            >
-              Simple websites, design, and marketing that bring you more customers.
-            </motion.p>
-
-            <motion.p
-              className="hero-sub mt-2 text-sm md:text-base font-medium max-w-3xl mx-auto text-white/90"
-              variants={itemVariants}
-            >
-              No tech jargon. No hassle
-            </motion.p>
 
             <motion.div 
               className="pt-6 flex flex-col sm:flex-row justify-center gap-4"
