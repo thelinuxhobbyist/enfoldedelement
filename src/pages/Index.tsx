@@ -1,11 +1,23 @@
 import { Link } from "react-router-dom";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { ICONS } from '@/lib/icons';
+import {
+  ArrowRight,
+  CalendarDays,
+  Globe2,
+  Languages,
+  LayoutGrid,
+  Mail,
+  Palette,
+  Phone,
+  Zap,
+} from "lucide-react";
 import { useEffect } from "react";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
+import { IconBadge } from "@/components/IconBadge";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import HeroBackground from "@/components/HeroBackground";
+import HeroHeadline from "@/components/HeroHeadline";
 import PopularPackages from "@/components/ui/PopularPackages";
 
 const Index = () => {
@@ -56,35 +68,32 @@ const Index = () => {
       
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-[#4A4FB5] text-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32 relative">
-          <motion.div 
-            className="max-w-4xl mx-auto text-center space-y-6"
-            variants={containerVariants}
-            initial="hidden"
-            animate="visible"
-          >
-            <motion.h1 
-              className="hero-title text-3xl md:text-4xl lg:text-5xl font-bold"
-              variants={itemVariants}
-            >
-              We design websites, build online stores, create memorable brands, and deliver marketing that helps your business reach more customers.
-            </motion.h1>
+        <HeroBackground />
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32 relative z-10 w-full">
+          <div className="w-full">
+            <HeroHeadline />
 
-            <motion.div 
-              className="pt-6 flex flex-col sm:flex-row justify-center gap-4"
-              variants={itemVariants}
+            <motion.div
+              className="hero-cta flex flex-col sm:flex-row gap-4"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.7, ease: "easeOut" }}
             >
-              <Button variant="white" size="lg" className="px-8 py-3 text-lg font-semibold rounded-md" asChild>
+              <Button variant="white" size="lg" asChild>
                 <Link to="/packages">
+                  <LayoutGrid />
                   View Packages
                 </Link>
               </Button>
 
-              <Button size="lg" className="bg-red-500 hover:bg-red-600 text-white px-8 py-3 text-lg font-semibold rounded-md shadow-lg" asChild>
-                <a href="#contact" className="px-8 py-3 text-lg font-semibold">Book a Free Consultation</a>
+              <Button variant="default" size="lg" asChild>
+                <a href="#contact">
+                  <CalendarDays />
+                  Book a Free Consultation
+                </a>
               </Button>
             </motion.div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -121,25 +130,23 @@ const Index = () => {
       {/* Services Section */}
       <section className="py-20 bg-[#4A4FB5] text-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+          <div className="mb-16 w-full">
             <h2 className="section-title mb-4" style={{ color: 'white' }}>Simple Packages. Clear Pricing. No Hidden Fees.</h2>
-            <p className="text-lg max-w-3xl mx-auto">
+            <p className="text-lg w-full">
               We know web design and marketing firms can feel intimidating. That’s why we don’t do complicated contracts or confusing jargon. We offer straightforward, fixed-price packages for everyday design and tech tasks.
             </p>
           </div>
           
           <div className="grid md:grid-cols-4 gap-6">
             <motion.div 
-              className="bg-white text-gray-900 p-4 rounded-lg"
+              className="bg-white text-gray-900 p-6 rounded-xl border border-white/60 shadow-sm hover:shadow-md transition-shadow"
               variants={cardVariants}
               initial="hidden"
               whileInView="visible"
               whileHover="hover"
               viewport={{ once: true, margin: "-100px" }}
             >
-              <div className="w-12 h-12 bg-[#2C3192]/10 rounded-lg flex items-center justify-center mb-4">
-                <FontAwesomeIcon icon={ICONS.play} className="text-[#C12735] text-xl" />
-              </div>
+              <IconBadge icon={Palette} className="mb-4" />
               <h3 className="font-bold text-xl mb-2">Culturally Resonant Brand Design</h3>
               <p className="text-base text-gray-600">
                 Brand identity that builds trust with multicultural customers and increases conversions.
@@ -147,16 +154,14 @@ const Index = () => {
             </motion.div>
             
             <motion.div 
-              className="bg-white text-gray-900 p-4 rounded-lg"
+              className="bg-white text-gray-900 p-6 rounded-xl border border-white/60 shadow-sm hover:shadow-md transition-shadow"
               variants={cardVariants}
               initial="hidden"
               whileInView="visible"
               whileHover="hover"
               viewport={{ once: true, margin: "-100px" }}
             >
-              <div className="w-12 h-12 bg-[#2C3192]/10 rounded-lg flex items-center justify-center mb-4">
-                <FontAwesomeIcon icon={ICONS.pound} className="text-[#C12735] text-xl" />
-              </div>
+              <IconBadge icon={Globe2} className="mb-4" />
               <h3 className="font-bold text-xl mb-2">Multilingual Web & Digital Marketing</h3>
               <p className="text-base text-gray-600">
                 Multilingual websites, SEO and campaigns that increase engagement, leads and revenue.
@@ -164,16 +169,14 @@ const Index = () => {
             </motion.div>
             
             <motion.div 
-              className="bg-white text-gray-900 p-4 rounded-lg"
+              className="bg-white text-gray-900 p-6 rounded-xl border border-white/60 shadow-sm hover:shadow-md transition-shadow"
               variants={cardVariants}
               initial="hidden"
               whileInView="visible"
               whileHover="hover"
               viewport={{ once: true, margin: "-100px" }}
             >
-              <div className="w-12 h-12 bg-[#2C3192]/10 rounded-lg flex items-center justify-center mb-4">
-                <FontAwesomeIcon icon={ICONS.bolt} className="text-[#C12735] text-xl" />
-              </div>
+              <IconBadge icon={Zap} className="mb-4" />
               <h3 className="font-bold text-xl mb-2">Culturally Aware Advertising Materials</h3>
               <p className="text-base text-gray-600">
                 Designing advertising materials that are culturally appropriate and easy for diverse audiences to understand.
@@ -181,25 +184,26 @@ const Index = () => {
             </motion.div>
             
             <motion.div 
-              className="bg-white text-gray-900 p-4 rounded-lg"
+              className="bg-white text-gray-900 p-6 rounded-xl border border-white/60 shadow-sm hover:shadow-md transition-shadow"
               variants={cardVariants}
               initial="hidden"
               whileInView="visible"
               whileHover="hover"
               viewport={{ once: true, margin: "-100px" }}
             >
-              <div className="w-12 h-12 bg-[#2C3192]/10 rounded-lg flex items-center justify-center mb-4">
-                <FontAwesomeIcon icon={ICONS.globe} className="text-[#C12735] text-xl" />
-              </div>
+              <IconBadge icon={Languages} className="mb-4" />
               <h3 className="font-bold text-xl mb-2">Professional Translation with Cultural Impact</h3>
               <p className="text-base text-gray-600">
                 Accurate translation and localisation to help your message make sense across different languages and cultures.
               </p>
             </motion.div>
           </div>
-          <div className="mt-12 text-center">
-            <Button size="lg" className="bg-red-500 hover:bg-red-600 text-white px-10 py-3 text-lg font-semibold rounded-md shadow-lg">
-              <a href="#contact">Book a Free Consultation</a>
+          <div className="mt-12">
+            <Button size="lg" asChild>
+              <a href="#contact">
+                Book a Free Consultation
+                <ArrowRight />
+              </a>
             </Button>
           </div>
         </div>
@@ -313,32 +317,37 @@ const Index = () => {
           <div className="bg-white rounded-2xl p-12 shadow-sm max-w-2xl mx-auto">
             <div className="text-center">
               <h2 className="text-4xl font-bold text-gray-900 mb-4">
-                Tired of Dealing with Intimidating Agencies?
+                Ready to Get Started?
               </h2>
               <p className="text-lg text-gray-600 mb-8">
-                Let’s keep it simple. Explore our straightforward packages or get in touch for a friendly, casual chat about how we can help your business look great online.
+                Let's bring your ideas to life.
               </p>
               
-              <Button asChild size="lg" className="bg-red-500 hover:bg-red-600 text-white px-8 mb-8">
-                <Link to="/contact">Send us a Message</Link>
+              <Button asChild size="lg" className="mb-8">
+                <Link to="/contact">
+                  <Mail />
+                  Send us a Message
+                </Link>
               </Button>
             </div>
             
             <div className="border-t border-gray-200 pt-8">
               <p className="text-sm text-gray-600 text-center mb-8">Or reach us directly:</p>
               <div className="flex flex-col md:flex-row justify-center gap-8 mb-8">
-                <div className="flex items-center justify-center gap-2">
-                  <div className="w-8 h-8 bg-red-500 rounded-full flex items-center justify-center">
-                    <span className="text-white text-sm">📞</span>
-                  </div>
-                  <span className="font-bold">07836 319 635</span>
-                </div>
-                <div className="flex items-center justify-center gap-2">
-                  <div className="w-8 h-8 bg-red-500 rounded-full flex items-center justify-center">
-                    <span className="text-white text-sm">✉</span>
-                  </div>
-                  <span className="font-bold">info@enfoldedmedia.com</span>
-                </div>
+                <a
+                  href="tel:07836319635"
+                  className="flex items-center justify-center gap-3 text-gray-900 hover:text-[hsl(var(--button-red))] transition-colors"
+                >
+                  <IconBadge icon={Phone} size="sm" />
+                  <span className="font-semibold">07836 319 635</span>
+                </a>
+                <a
+                  href="mailto:info@enfoldedmedia.com"
+                  className="flex items-center justify-center gap-3 text-gray-900 hover:text-[hsl(var(--button-red))] transition-colors"
+                >
+                  <IconBadge icon={Mail} size="sm" />
+                  <span className="font-semibold">info@enfoldedmedia.com</span>
+                </a>
               </div>
               
               <div className="text-center">

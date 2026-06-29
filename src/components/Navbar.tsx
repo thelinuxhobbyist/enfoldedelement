@@ -1,6 +1,6 @@
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ArrowRight } from "lucide-react";
 import { useState } from "react";
 
 const Navbar = () => {
@@ -72,6 +72,7 @@ const Navbar = () => {
                   }}
                 >
                   Get Started
+                  <ArrowRight />
                 </a>
               </Button>
             )}
@@ -126,6 +127,7 @@ const Navbar = () => {
                     }}
                   >
                     Get Started
+                    <ArrowRight />
                   </a>
                 </Button>
               </div>

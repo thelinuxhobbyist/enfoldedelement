@@ -1,10 +1,10 @@
 import { useEffect } from "react";
 import { motion } from "framer-motion";
+import { MessageCircle, Phone, Mail } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ContactForm from "@/components/ContactForm";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { ICONS } from '@/lib/icons';
+import { IconBadge } from "@/components/IconBadge";
 
 const Contact = () => {
   useEffect(() => {
@@ -88,9 +88,7 @@ const Contact = () => {
               viewport={{ once: true, margin: "-100px" }}
             >
               <motion.div className="text-center" variants={cardVariants}>
-                <div className="w-12 h-12 bg-[#2C3192]/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <FontAwesomeIcon icon={ICONS.phone} className="text-[#C12735] text-xl" />
-                  </div>
+                <IconBadge icon={Phone} className="mx-auto mb-4" />
                 <h3 className="font-bold text-lg mb-2">Phone</h3>
                 <p className="text-gray-600">
                   <a href="tel:07836319635" className="hover:text-red-500 transition-colors">
@@ -100,9 +98,7 @@ const Contact = () => {
               </motion.div>
 
               <motion.div className="text-center" variants={cardVariants}>
-                <div className="w-12 h-12 bg-[#2C3192]/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <FontAwesomeIcon icon={ICONS.email} className="text-[#C12735] text-xl" />
-                </div>
+                <IconBadge icon={Mail} className="mx-auto mb-4" />
                 <h3 className="font-bold text-lg mb-2">Email</h3>
                 <p className="text-gray-600">
                   <a href="mailto:info@enfoldedmedia.com" className="hover:text-red-500 transition-colors">
@@ -112,9 +108,7 @@ const Contact = () => {
               </motion.div>
 
               <motion.div className="text-center" variants={cardVariants}>
-                <div className="w-12 h-12 bg-[#2C3192]/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <FontAwesomeIcon icon={ICONS.comments} className="text-[#C12735] text-xl" />
-                </div>
+                <IconBadge icon={MessageCircle} className="mx-auto mb-4" />
                 <h3 className="font-bold text-lg mb-2">WhatsApp</h3>
                 <p className="text-gray-600 mb-4">Connect instantly</p>
                 <div className="inline-block">
