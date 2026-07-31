@@ -13,7 +13,7 @@ const buttonVariants = cva(
           "bg-[hsl(var(--button-red))] text-[hsl(var(--button-red-foreground))] shadow-md hover:bg-[hsl(var(--button-red-hover))] hover:shadow-lg hover:-translate-y-0.5",
         destructive: "bg-destructive text-destructive-foreground hover:bg-destructive/90",
         outline:
-          "border-2 border-[#4A4FB5]/25 bg-background text-[#4A4FB5] hover:bg-[#4A4FB5]/5 hover:border-[#4A4FB5]/40",
+          "border-2 border-[#4A4FB5]/30 bg-white text-[#4A4FB5] hover:bg-[#4A4FB5]/5 hover:border-[#4A4FB5]/50 hover:-translate-y-0.5",
         secondary: "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         white:
           "bg-white text-[#2C3192] shadow-md hover:bg-gray-50 hover:shadow-lg hover:-translate-y-0.5 border border-white/80",

@@ -1,10 +1,10 @@
 import { useRef, useLayoutEffect } from "react";
 import gsap from "gsap";
 
-const HEADLINE = "Websites, Branding & Marketing for Local Businesses";
+const HEADLINE = "Professional Websites, Branding & Marketing Support for Businesses";
 
 const LEAD =
-  "Simple, affordable digital solutions that help your business attract more customers. From professional websites and branding to multilingual marketing, we help local businesses grow without the agency jargon.";
+  "Fixed-price websites, design and marketing support that helps businesses grow — without agency prices or confusing jargon.";
 
 export default function HeroHeadline() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -43,10 +43,10 @@ export default function HeroHeadline() {
 
   return (
     <div ref={containerRef} className="w-full">
-      <h1 data-animate className="hero-title opacity-0">
+      <h1 data-animate className="hero-title opacity-0 tracking-tight">
         {HEADLINE}
       </h1>
-      <p data-animate className="hero-lead opacity-0">
+      <p data-animate className="hero-lead max-w-xl opacity-0">
         {LEAD}
       </p>
     </div>

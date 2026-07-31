@@ -1,14 +1,20 @@
 import { Link } from "react-router-dom";
 import {
   ArrowRight,
+  Banknote,
   CalendarDays,
+  FileText,
   Globe2,
+  Handshake,
   Languages,
   LayoutGrid,
+  LayoutTemplate,
   Mail,
+  Megaphone,
   Palette,
   Phone,
-  Zap,
+  ShieldCheck,
+  Wrench,
 } from "lucide-react";
 import { useEffect } from "react";
 import { motion } from "framer-motion";
@@ -20,189 +26,265 @@ import HeroBackground from "@/components/HeroBackground";
 import HeroHeadline from "@/components/HeroHeadline";
 import PopularPackages from "@/components/ui/PopularPackages";
 
+const trustBadges = [
+  { icon: Banknote, label: "Fixed Pricing" },
+  { icon: Languages, label: "Multilingual Specialists" },
+  { icon: ShieldCheck, label: "No Long Contracts" },
+] as const;
+
+const howWeCanHelp = [
+  {
+    icon: LayoutTemplate,
+    title: "Website Design & Support",
+    description:
+      "Professional websites, updates and improvements to help businesses maintain a strong online presence.",
+  },
+  {
+    icon: Palette,
+    title: "Branding & Design",
+    description:
+      "Logos, brand assets and creative design support for businesses that need professional visuals.",
+  },
+  {
+    icon: Megaphone,
+    title: "Marketing Materials",
+    description:
+      "Flyers, social graphics, documents and promotional materials designed for your audience.",
+  },
+  {
+    icon: Wrench,
+    title: "Digital Support & Updates",
+    description:
+      "Quick edits, content changes and ongoing assistance whenever you need extra support.",
+  },
+  {
+    icon: Languages,
+    title: "Multilingual Marketing",
+    description:
+      "Translation, localisation and culturally aware content to help you connect with different audiences.",
+  },
+  {
+    icon: Handshake,
+    title: "White-Label Design Support",
+    description:
+      "Reliable behind-the-scenes design support for agencies and businesses needing extra capacity.",
+  },
+] as const;
+
+const services = [
+  {
+    icon: Palette,
+    title: "Culturally Resonant Brand Design",
+    description:
+      "Brand identity that builds trust with multicultural customers and increases conversions.",
+  },
+  {
+    icon: Globe2,
+    title: "Multilingual Web & Digital Marketing",
+    description:
+      "Multilingual websites, SEO and campaigns that increase engagement, leads and revenue.",
+  },
+  {
+    icon: Megaphone,
+    title: "Culturally Aware Advertising Materials",
+    description:
+      "Designing advertising materials that are culturally appropriate and easy for diverse audiences to understand.",
+  },
+  {
+    icon: Languages,
+    title: "Professional Translation with Cultural Impact",
+    description:
+      "Accurate translation and localisation to help your message make sense across different languages and cultures.",
+  },
+] as const;
+
+const whyChooseUs = [
+  {
+    icon: ShieldCheck,
+    title: "No Long Contracts",
+    description: "Pay only for what you need, when you need it.",
+  },
+  {
+    icon: FileText,
+    title: "Jargon-Free Support",
+    description: "We speak plain English, not confusing tech-talk.",
+  },
+  {
+    icon: Banknote,
+    title: "Built for Your Budget",
+    description: "Simple, fixed-price packages designed for independent owners.",
+  },
+] as const;
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 14 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.4, ease: "easeOut" },
+  },
+};
+
+const cardClass =
+  "flex h-full flex-col rounded-2xl border border-gray-200/90 bg-white px-6 py-8 shadow-[0_1px_2px_rgba(44,49,146,0.04)] transition-all duration-300 hover:-translate-y-0.5 hover:border-[#4A4FB5]/25 hover:shadow-[0_12px_28px_-14px_rgba(74,79,181,0.28)]";
+
 const Index = () => {
   useEffect(() => {
     document.title = "Enfolded Media – Multilingual Digital Media";
     const el = document.querySelector('meta[name="description"]');
     if (el) {
-      el.setAttribute('content', 'Professional multilingual digital media services in the UK');
+      el.setAttribute(
+        "content",
+        "Professional multilingual digital media services in the UK"
+      );
     }
   }, []);
-
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-        delayChildren: 0.3,
-      },
-    },
-  };
-
-  const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.8, ease: "easeOut" },
-    },
-  };
-
-  const cardVariants = {
-    hidden: { opacity: 0, y: 30 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.6, ease: "easeOut" },
-    },
-    hover: {
-      y: -10,
-      transition: { duration: 0.3 },
-    },
-  };
 
   return (
     <div className="min-h-screen">
       <Navbar />
-      
-      {/* Hero Section */}
+
+      {/* Hero */}
       <section className="relative overflow-hidden bg-[#4A4FB5] text-white">
         <HeroBackground />
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-20 lg:py-32 relative z-10 w-full">
-          <div className="w-full">
+        <div className="container relative z-10 mx-auto w-full px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
+          <div className="w-full max-w-3xl">
             <HeroHeadline />
 
             <motion.div
-              className="hero-cta flex flex-col sm:flex-row gap-4"
+              className="hero-cta flex w-full flex-col gap-3 sm:w-auto sm:flex-row sm:gap-4"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.7, ease: "easeOut" }}
             >
-              <Button variant="white" size="lg" asChild>
+              <Button variant="white" size="lg" className="w-full sm:w-auto" asChild>
                 <Link to="/packages">
-                  <LayoutGrid />
+                  <LayoutGrid aria-hidden="true" />
                   View Packages
                 </Link>
               </Button>
 
-              <Button variant="default" size="lg" asChild>
+              <Button variant="default" size="lg" className="w-full sm:w-auto" asChild>
                 <a href="#contact">
-                  <CalendarDays />
+                  <CalendarDays aria-hidden="true" />
                   Book a Free Consultation
                 </a>
               </Button>
             </motion.div>
+
+            <motion.ul
+              className="mt-8 flex flex-col gap-2.5 sm:mt-10 sm:flex-row sm:flex-wrap sm:gap-3"
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.95, ease: "easeOut" }}
+              aria-label="Key benefits"
+            >
+              {trustBadges.map(({ icon: Icon, label }) => (
+                <li
+                  key={label}
+                  className="inline-flex items-center gap-2.5 rounded-full bg-white/10 px-4 py-2.5 text-sm font-medium text-white ring-1 ring-white/25 backdrop-blur-sm"
+                >
+                  <Icon
+                    className="h-4 w-4 shrink-0 opacity-95"
+                    aria-hidden="true"
+                    strokeWidth={1.75}
+                  />
+                  <span>{label}</span>
+                </li>
+              ))}
+            </motion.ul>
           </div>
         </div>
       </section>
 
-      {/* Who We Help Section (replaces 'Why Multilingual Matters') */}
-      <section className="py-16 bg-white">
+      {/* How We Can Help */}
+      <section
+        className="bg-white py-20 md:py-24"
+        aria-labelledby="how-we-can-help-heading"
+      >
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-8">
-            <h2 className="text-3xl font-bold">Who We Help</h2>
-            <p className="text-gray-600 mt-2 max-w-2xl mx-auto">Practical digital support for local businesses and solo traders—no jargon, no long contracts.</p>
-          </div>
-
-          <div className="grid sm:grid-cols-3 gap-6 max-w-4xl mx-auto text-center">
-            <div className="p-6 border rounded-lg shadow-sm">
-              <h3 className="font-bold text-xl">Restaurants & Cafes</h3>
-              <p className="text-sm text-gray-600 mt-2">Menu updates, social graphics, and keeping your local customers informed.</p>
-            </div>
-
-            <div className="p-6 border rounded-lg shadow-sm">
-              <h3 className="font-bold text-xl">Trades & Solo Traders</h3>
-              <p className="text-sm text-gray-600 mt-2">Professional logos, business cards, and simple websites that build trust.</p>
-            </div>
-
-            <div className="p-6 border rounded-lg shadow-sm">
-              <h3 className="font-bold text-xl">Play Centres & Local Venues</h3>
-              <p className="text-sm text-gray-600 mt-2">Engaging flyers, booking page edits, and community marketing.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Popular Packages Section (kept after Who We Help) */}
-      <PopularPackages />
-
-      {/* Services Section */}
-      <section className="py-20 bg-[#4A4FB5] text-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="mb-16 w-full">
-            <h2 className="section-title mb-4" style={{ color: 'white' }}>Simple Packages. Clear Pricing. No Hidden Fees.</h2>
-            <p className="text-lg w-full">
-              We know web design and marketing firms can feel intimidating. That’s why we don’t do complicated contracts or confusing jargon. We offer straightforward, fixed-price packages for everyday design and tech tasks.
+          <div className="mx-auto mb-12 max-w-2xl text-center">
+            <h2
+              id="how-we-can-help-heading"
+              className="text-3xl font-bold tracking-tight text-gray-900 md:text-[2rem]"
+            >
+              How We Can Help
+            </h2>
+            <p className="mt-3 text-base leading-relaxed text-gray-600 md:text-lg">
+              Supporting businesses, organisations and agencies with practical websites, branding, marketing and digital design support.
             </p>
           </div>
-          
-          <div className="grid md:grid-cols-4 gap-6">
-            <motion.div 
-              className="bg-white text-gray-900 p-6 rounded-xl border border-white/60 shadow-sm hover:shadow-md transition-shadow"
-              variants={cardVariants}
-              initial="hidden"
-              whileInView="visible"
-              whileHover="hover"
-              viewport={{ once: true, margin: "-100px" }}
-            >
-              <IconBadge icon={Palette} className="mb-4" />
-              <h3 className="font-bold text-xl mb-2">Culturally Resonant Brand Design</h3>
-              <p className="text-base text-gray-600">
-                Brand identity that builds trust with multicultural customers and increases conversions.
-              </p>
-            </motion.div>
-            
-            <motion.div 
-              className="bg-white text-gray-900 p-6 rounded-xl border border-white/60 shadow-sm hover:shadow-md transition-shadow"
-              variants={cardVariants}
-              initial="hidden"
-              whileInView="visible"
-              whileHover="hover"
-              viewport={{ once: true, margin: "-100px" }}
-            >
-              <IconBadge icon={Globe2} className="mb-4" />
-              <h3 className="font-bold text-xl mb-2">Multilingual Web & Digital Marketing</h3>
-              <p className="text-base text-gray-600">
-                Multilingual websites, SEO and campaigns that increase engagement, leads and revenue.
-              </p>
-            </motion.div>
-            
-            <motion.div 
-              className="bg-white text-gray-900 p-6 rounded-xl border border-white/60 shadow-sm hover:shadow-md transition-shadow"
-              variants={cardVariants}
-              initial="hidden"
-              whileInView="visible"
-              whileHover="hover"
-              viewport={{ once: true, margin: "-100px" }}
-            >
-              <IconBadge icon={Zap} className="mb-4" />
-              <h3 className="font-bold text-xl mb-2">Culturally Aware Advertising Materials</h3>
-              <p className="text-base text-gray-600">
-                Designing advertising materials that are culturally appropriate and easy for diverse audiences to understand.
-              </p>
-            </motion.div>
-            
-            <motion.div 
-              className="bg-white text-gray-900 p-6 rounded-xl border border-white/60 shadow-sm hover:shadow-md transition-shadow"
-              variants={cardVariants}
-              initial="hidden"
-              whileInView="visible"
-              whileHover="hover"
-              viewport={{ once: true, margin: "-100px" }}
-            >
-              <IconBadge icon={Languages} className="mb-4" />
-              <h3 className="font-bold text-xl mb-2">Professional Translation with Cultural Impact</h3>
-              <p className="text-base text-gray-600">
-                Accurate translation and localisation to help your message make sense across different languages and cultures.
-              </p>
-            </motion.div>
+
+          <div className="mx-auto grid max-w-5xl gap-5 sm:grid-cols-2 lg:grid-cols-3 sm:gap-6">
+            {howWeCanHelp.map((item) => (
+              <motion.article
+                key={item.title}
+                className={`${cardClass} items-start text-left`}
+                variants={cardVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, margin: "-60px" }}
+              >
+                <IconBadge icon={item.icon} size="lg" className="mb-5" />
+                <h3 className="text-xl font-bold tracking-tight text-gray-900">
+                  {item.title}
+                </h3>
+                <p className="mt-3 flex-grow text-[0.95rem] leading-relaxed text-gray-600">
+                  {item.description}
+                </p>
+              </motion.article>
+            ))}
           </div>
-          <div className="mt-12">
+        </div>
+      </section>
+
+      {/* Popular Packages */}
+      <PopularPackages />
+
+      {/* Simple Packages */}
+      <section
+        className="bg-[#4A4FB5] py-20 text-white md:py-24"
+        aria-labelledby="services-heading"
+      >
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="mb-12 max-w-2xl">
+            <h2
+              id="services-heading"
+              className="text-3xl font-bold tracking-tight text-white md:text-[2rem]"
+            >
+              Simple Packages. Clear Pricing. No Hidden Fees.
+            </h2>
+            <p className="mt-4 text-base leading-relaxed text-white/90 md:text-lg">
+              Straightforward, fixed-price packages for everyday design and tech tasks—no complicated contracts or confusing jargon.
+            </p>
+          </div>
+
+          <div className="grid gap-5 sm:grid-cols-2 sm:gap-6 lg:grid-cols-4">
+            {services.map((service) => (
+              <motion.article
+                key={service.title}
+                className="flex h-full flex-col rounded-2xl border border-white/55 bg-white p-6 text-gray-900 shadow-[0_1px_2px_rgba(0,0,0,0.04)] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_14px_30px_-14px_rgba(0,0,0,0.28)]"
+                variants={cardVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, margin: "-60px" }}
+              >
+                <IconBadge icon={service.icon} className="mb-5" />
+                <h3 className="text-lg font-bold leading-snug tracking-tight text-gray-900">
+                  {service.title}
+                </h3>
+                <p className="mt-3 flex-grow text-sm leading-relaxed text-gray-600">
+                  {service.description}
+                </p>
+              </motion.article>
+            ))}
+          </div>
+
+          <div className="mt-10">
             <Button size="lg" asChild>
               <a href="#contact">
                 Book a Free Consultation
-                <ArrowRight />
+                <ArrowRight aria-hidden="true" />
               </a>
             </Button>
           </div>
@@ -210,153 +292,109 @@ const Index = () => {
       </section>
 
       {/* Why Local Businesses Choose Us */}
-      <section className="py-16 bg-gray-50">
+      <section
+        className="bg-[#F7F8FC] py-20 md:py-24"
+        aria-labelledby="why-choose-heading"
+      >
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-8">
-            <h2 className="text-3xl font-bold">Why Local Businesses Choose Us</h2>
-            <p className="text-gray-600 mt-2 max-w-2xl mx-auto">Practical help that fits your day-to-day needs.</p>
-          </div>
-
-          <div className="max-w-3xl mx-auto text-center grid sm:grid-cols-3 gap-6">
-            <div className="p-6 bg-white rounded-lg shadow-sm">
-              <h3 className="font-bold">No Long Contracts</h3>
-              <p className="text-sm text-gray-600 mt-2">Pay only for what you need, when you need it.</p>
-            </div>
-
-            <div className="p-6 bg-white rounded-lg shadow-sm">
-              <h3 className="font-bold">Jargon-Free Support</h3>
-              <p className="text-sm text-gray-600 mt-2">We speak plain English, not confusing tech-talk.</p>
-            </div>
-
-            <div className="p-6 bg-white rounded-lg shadow-sm">
-              <h3 className="font-bold">Built for Your Budget</h3>
-              <p className="text-sm text-gray-600 mt-2">Simple, fixed-price packages designed for independent owners.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Testimonials Section (hidden for now) */}
-      <section className="py-20 bg-white hidden">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-4 text-gray-900">Real impact, real results</h2>
-              <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-4">
-              <span className="font-semibold">Trusted by local businesses and organisations across the UK</span><br />
-              Here’s what our clients say about working with Enfolded Media.
+          <div className="mx-auto mb-12 max-w-2xl text-center">
+            <h2
+              id="why-choose-heading"
+              className="text-3xl font-bold tracking-tight text-gray-900 md:text-[2rem]"
+            >
+              Why Choose Enfolded Media
+            </h2>
+            <p className="mt-3 text-base leading-relaxed text-gray-600 md:text-lg">
+              Practical help that fits your day-to-day needs.
             </p>
           </div>
-          
-          <div className="grid md:grid-cols-3 gap-8">
-            <motion.div 
-              className="bg-white p-6 rounded-lg border border-gray-200"
-              variants={cardVariants}
-              initial="hidden"
-              whileInView="visible"
-              whileHover="hover"
-              viewport={{ once: true, margin: "-100px" }}
-            >
-              <div className="flex justify-center mb-4">
-                <div className="flex text-yellow-400 text-base">
-                  ★★★★★
-                </div>
-              </div>
-              <p className="text-base text-gray-600 mb-4">
-                "The multilingual design helped our neighbourhood restaurant reach previously unreachable demographics. Our business has increased by 30% after working with them."
-              </p>
-              <div className="font-bold text-base">Sarah Chen</div>
-              <div className="text-sm text-gray-500">Restaurant Owner</div>
-            </motion.div>
-            
-            <motion.div 
-              className="bg-white p-6 rounded-lg border border-gray-200"
-              variants={cardVariants}
-              initial="hidden"
-              whileInView="visible"
-              whileHover="hover"
-              viewport={{ once: true, margin: "-100px" }}
-            >
-              <div className="flex justify-center mb-4">
-                <div className="flex text-yellow-400 text-base">
-                  ★★★★★
-                </div>
-              </div>
-              <p className="text-base text-gray-600 mb-4">
-                "Their translation services are exceptional for our community. They understand what works for our community."
-              </p>
-              <div className="font-bold text-base">Ahmed Hassan</div>
-              <div className="text-sm text-gray-500">Community Center Director</div>
-            </motion.div>
-            
-            <motion.div 
-              className="bg-white p-6 rounded-lg border border-gray-200"
-              variants={cardVariants}
-              initial="hidden"
-              whileInView="visible"
-              whileHover="hover"
-              viewport={{ once: true, margin: "-100px" }}
-            >
-              <div className="flex justify-center mb-4">
-                <div className="flex text-yellow-400 text-base">
-                  ★★★★★
-                </div>
-              </div>
-              <p className="text-base text-gray-600 mb-4">
-                "Professional, understanding, and exceptionally responsive. They got our message across in our organisation."
-              </p>
-              <div className="font-bold text-base">Maya Patel</div>
-              <div className="text-sm text-gray-500">Charity UK Director</div>
-            </motion.div>
+
+          <div className="mx-auto grid max-w-4xl gap-5 sm:grid-cols-3 sm:gap-6">
+            {whyChooseUs.map((item) => (
+              <motion.article
+                key={item.title}
+                className={`${cardClass} items-center text-center`}
+                variants={cardVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, margin: "-60px" }}
+              >
+                <IconBadge icon={item.icon} size="lg" className="mb-5" />
+                <h3 className="text-lg font-bold tracking-tight text-gray-900">
+                  {item.title}
+                </h3>
+                <p className="mt-3 text-[0.95rem] leading-relaxed text-gray-600">
+                  {item.description}
+                </p>
+              </motion.article>
+            ))}
           </div>
         </div>
       </section>
 
-  {/* CTA Section */}
-  <section id="contact" className="py-20 bg-gray-50">
+      {/* Final CTA */}
+      <section
+        id="contact"
+        className="bg-white py-20 md:py-24"
+        aria-labelledby="contact-heading"
+      >
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-white rounded-2xl p-12 shadow-sm max-w-2xl mx-auto">
-            <div className="text-center">
-              <h2 className="text-4xl font-bold text-gray-900 mb-4">
-                Ready to Get Started?
-              </h2>
-              <p className="text-lg text-gray-600 mb-8">
-                Let's bring your ideas to life.
-              </p>
-              
-              <Button asChild size="lg" className="mb-8">
+          <div className="mx-auto max-w-2xl rounded-2xl border border-[#4A4FB5]/15 bg-[#F7F8FC] p-8 text-center shadow-[0_1px_2px_rgba(44,49,146,0.04)] sm:p-12">
+            <h2
+              id="contact-heading"
+              className="text-3xl font-bold tracking-tight text-gray-900 md:text-[2rem]"
+            >
+              Need Help With Your Next Digital Project?
+            </h2>
+            <p className="mx-auto mt-3 max-w-lg text-base leading-relaxed text-gray-600 md:text-lg">
+              Whether you need a website, branding, design updates or marketing support, we can help.
+            </p>
+
+            <div className="mt-8 flex flex-col items-stretch justify-center gap-3 sm:flex-row sm:items-center sm:gap-4">
+              <Button asChild size="lg" className="w-full sm:w-auto">
                 <Link to="/contact">
-                  <Mail />
-                  Send us a Message
+                  <Mail aria-hidden="true" />
+                  Send Us a Message
+                </Link>
+              </Button>
+              <Button variant="outline" size="lg" className="w-full sm:w-auto" asChild>
+                <Link to="/contact">
+                  <CalendarDays aria-hidden="true" />
+                  Book a Free Consultation
                 </Link>
               </Button>
             </div>
-            
-            <div className="border-t border-gray-200 pt-8">
-              <p className="text-sm text-gray-600 text-center mb-8">Or reach us directly:</p>
-              <div className="flex flex-col md:flex-row justify-center gap-8 mb-8">
+
+            <div className="mt-10 border-t border-gray-200/90 pt-8">
+              <p className="mb-6 text-sm text-gray-600">Or reach us directly:</p>
+              <div className="mb-8 flex flex-col items-center justify-center gap-5 md:flex-row md:gap-8">
                 <a
                   href="tel:07836319635"
-                  className="flex items-center justify-center gap-3 text-gray-900 hover:text-[hsl(var(--button-red))] transition-colors"
+                  className="flex items-center gap-3 rounded-sm text-gray-900 transition-colors hover:text-[hsl(var(--button-red))] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#4A4FB5] focus-visible:ring-offset-2"
                 >
                   <IconBadge icon={Phone} size="sm" />
                   <span className="font-semibold">07836 319 635</span>
                 </a>
                 <a
                   href="mailto:info@enfoldedmedia.com"
-                  className="flex items-center justify-center gap-3 text-gray-900 hover:text-[hsl(var(--button-red))] transition-colors"
+                  className="flex items-center gap-3 rounded-sm text-gray-900 transition-colors hover:text-[hsl(var(--button-red))] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#4A4FB5] focus-visible:ring-offset-2"
                 >
                   <IconBadge icon={Mail} size="sm" />
                   <span className="font-semibold">info@enfoldedmedia.com</span>
                 </a>
               </div>
-              
-              <div className="text-center">
-                <p className="text-sm text-gray-600 mb-4">Connect instantly on WhatsApp</p>
-                <div className="inline-block rounded-lg overflow-hidden">
+
+              <div>
+                <p className="mb-4 text-sm text-gray-600">Connect instantly on WhatsApp</p>
+                <div className="inline-block overflow-hidden rounded-xl ring-1 ring-gray-200">
                   <img
                     src="https://cdn.enfoldedmedia.com/enfolded-images/enfqr.png"
                     alt="WhatsApp QR Code"
-                    className="w-32 h-32 rounded-md"
+                    className="h-32 w-32 rounded-xl"
+                    width={128}
+                    height={128}
+                    loading="lazy"
+                    decoding="async"
                   />
                 </div>
               </div>

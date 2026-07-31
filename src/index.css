@@ -198,13 +198,29 @@ All colors MUST be HSL.
 
 .section-title {
   font-size: 1.875rem; /* text-3xl */
-  font-weight: 600;
+  font-weight: 700;
+  letter-spacing: -0.02em;
   color: rgb(17 24 39); /* text-gray-900 */
+}
+
+@media (min-width: 768px) {
+  .section-title {
+    font-size: 2rem;
+  }
 }
 
 .cta-accent {
   color: hsl(var(--accent));
   opacity: 0.95;
   font-weight: 600;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-title,
+  .hero-lead {
+    opacity: 1 !important;
+    filter: none !important;
+    transform: none !important;
+  }
 }
 
